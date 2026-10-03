@@ -1,0 +1,11 @@
+{
+  "name": "页间 — 私人书库阅读器",
+  "short_name": "页间",
+  "description": "连接你的 Calibre-Web OPDS 私人书库",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f5f1",
+  "theme_color": "#f6f5f1",
+  "lang": "zh-CN",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
