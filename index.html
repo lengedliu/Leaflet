@@ -955,13 +955,327 @@
     width: 100%;
   }
 }
+
+/* 1. Two-Page Spread (双页对开模式) */
+.reader.two-page-spread #epubFrame {
+  width: min(1180px, 96vw) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background-image: linear-gradient(to right, #f7f5ef 0%, #f7f5ef 49.2%, #e5e0cf 50%, #f7f5ef 50.8%, #f7f5ef 100%) !important;
+}
+
+/* 2. TTS Control Panel (听书控制与定时器) */
+.tts-control-panel {
+  display: none;
+  position: absolute;
+  top: 54px;
+  right: 60px;
+  background: rgba(28, 31, 28, 0.94);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 16px;
+  color: #fff;
+  z-index: 25;
+  width: 290px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tts-control-panel.show {
+  display: flex !important;
+}
+
+.tts-setting-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tts-setting-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tts-pill-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tts-pill {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.tts-pill:hover, .tts-pill.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 3. Highlight Manager Drawer (章节划线高亮管理) */
+.reader-hl-panel {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  width: min(380px, 90vw);
+  background: #fbfaf7;
+  border-left: 1px solid var(--line);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+  z-index: 22;
+  display: none;
+  flex-direction: column;
+  padding: 18px;
+  gap: 12px;
+}
+
+.reader-hl-panel.show {
+  display: flex !important;
+}
+
+.reader-hl-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reader-hl-head h3 {
+  margin: 0;
+  font: 600 16px var(--serif);
+  color: var(--ink);
+}
+
+.reader-hl-filters {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.reader-hl-filter {
+  border: 1px solid #e1ded4;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 11px;
+  color: #555;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.reader-hl-filter.active {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.reader-hl-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reader-hl-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #e6e3d8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.reader-hl-card.yellow { border-left: 4px solid #fbc02d; }
+.reader-hl-card.green { border-left: 4px solid #2e7d32; }
+.reader-hl-card.blue { border-left: 4px solid #1976d2; }
+.reader-hl-card.pink { border-left: 4px solid #e91e63; }
+
+.reader-hl-text {
+  line-height: 1.6;
+  color: #333;
+}
+
+.reader-hl-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: #888;
+}
+
+/* 4. Floating Batch Operations Bar (批量管理栏) */
+.shelf-batch-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c221e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+  z-index: 28;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  backdrop-filter: blur(12px);
+}
+
+.shelf-batch-btn {
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shelf-batch-btn:hover {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.shelf-batch-btn.danger:hover {
+  background: #d63031;
+  border-color: #d63031;
+}
+
+.shelf-card-checkbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.shelf-card-checkbox.checked {
+  background: var(--green);
+  color: #fff;
+}
+
+/* 5. Goal Ring Gauge & Report Card (阅读目标与战报卡片) */
+.goal-ring-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.goal-ring-svg {
+  width: 58px;
+  height: 58px;
+  transform: rotate(-90deg);
+}
+
+.goal-ring-bg {
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.goal-ring-fill {
+  stroke: var(--green);
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.report-card-preview {
+  width: 100%;
+  border-radius: 20px;
+  padding: 28px 24px;
+  background: linear-gradient(145deg, #1f3b30, #13271f);
+  color: #f4f7f4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.report-card-preview.midnight {
+  background: linear-gradient(145deg, #1d2125, #111417);
+}
+
+.report-card-preview.cream {
+  background: linear-gradient(145deg, #f8f4e6, #eae0cb);
+  color: #2b2d29;
+}
+
+.report-card-preview.vermilion {
+  background: linear-gradient(145deg, #7c2626, #481313);
+  color: #fff6f6;
+}
+
+.report-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.report-stat-item {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.report-card-preview.cream .report-stat-item {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.report-stat-num {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--serif);
+}
+
 </style>
 </head>
 <body>
 <div class="shell">
  <header class="topbar"><div class="brand"><div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v17H7.5A2.5 2.5 0 0 1 5 17.5z"/><path d="M5 6v12M9 7h7M9 11h7"/></svg></div>拾阅</div><div class="top-actions"><div class="connection"><span class="dot" id="statusDot"></span><span id="connectionText">书库未连接</span></div><button class="icon-btn" id="connectButton" aria-label="连接书库"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg></button><div class="avatar">林</div></div></header>
  <div class="file-protocol-notice" id="fileProtocolNotice" role="alert" hidden><strong>请通过 HTTP 服务打开阅读器</strong>直接双击 index.html 会阻止书库代理、配置恢复和封面接口。请在项目目录运行 <code>npm run dev</code>，再打开服务地址；或使用 Docker 部署。</div>
- <div class="layout"><aside class="side"><div class="sidebar-group"><div class="side-label">你的空间</div><div class="nav active" data-filter="all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h7v14H4zM14 5h6v14h-6z"/></svg>全部书籍 <span class="count">128</span></div><div class="nav" data-filter="shelf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 4.5h12v16l-6-3.5-6 3.5z"/></svg>书架 <span class="count" id="shelfCount">0</span></div><div class="nav" data-filter="notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>我的笔记 <span class="count" id="notesSideCount">0</span></div><div class="nav" data-filter="recent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>最近阅读</div><div class="nav" data-filter="finished"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 12 4 4L19 6"/></svg>已读完</div></div><div class="sidebar-group"><div class="side-label">分类推荐</div><div class="nav" data-filter="fiction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>文学小说</div><div class="nav" data-filter="science"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>技术科学</div><div class="nav" data-filter="design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>设计生活</div></div><div class="side-bottom"><b>安静地读一本书</b><p>你的阅读进度与笔记会在所有设备间同步。</p></div></aside>
+ <div class="layout"><aside class="side"><div class="sidebar-group"><div class="side-label">你的空间</div><div class="nav active" data-filter="all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h7v14H4zM14 5h6v14h-6z"/></svg>全部书籍 <span class="count">128</span></div><div class="nav" data-filter="shelf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 4.5h12v16l-6-3.5-6 3.5z"/></svg>书架 <span class="count" id="shelfCount">0</span></div><div class="nav" data-filter="notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>我的笔记 <span class="count" id="notesSideCount">0</span></div><div class="nav" data-filter="recent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>最近阅读</div><div class="nav" data-filter="finished"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 12 4 4L19 6"/></svg>已读完</div></div><div class="sidebar-group"><div class="side-label">分类推荐</div><div class="nav" data-filter="fiction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>文学小说</div><div class="nav" data-filter="science"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>技术科学</div><div class="nav" data-filter="design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>设计生活</div></div><div class="sidebar-group" id="playlistSidebarGroup"><div class="side-label" style="display:flex;justify-content:space-between;align-items:center"><span>📌 主题书单</span><button type="button" id="createPlaylistBtn" style="border:0;background:none;color:var(--green);font-size:12px;cursor:pointer;font-weight:600">＋ 新建</button></div><div id="playlistSidebarList" style="display:flex;flex-direction:column;gap:2px"></div></div><div class="side-bottom"><b>安静地读一本书</b><p>你的阅读进度与笔记会在所有设备间同步。</p></div></aside>
   <main class="content"><div class="greeting"><button class="catalog-back" id="catalogBack" aria-label="返回书店">‹</button><div><div class="eyebrow">2026年 10月 2日 · 星期五</div><h1>下午好，林。<span>继续你的阅读吧。</span></h1></div><div class="greeting-actions" style="display:flex;align-items:center;gap:6px;margin-left:auto"><button class="icon-btn shelf-top-toggle-btn" id="shelfTopToggleBtn" aria-label="分类与工具" title="展开/收起分类与书架工具" style="display:none;position:relative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg><i class="badge-dot" id="shelfTopToggleBadge" style="display:none;position:absolute;top:2px;right:2px;width:7px;height:7px;border-radius:50%;background:#00b894;border:1.5px solid #fff"></i></button><button class="icon-btn" id="syncButton" aria-label="同步"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9A7 7 0 0 1 18 6l2 1M4 17l2 1a7 7 0 0 0 12.4-3"/></svg></button></div></div>
  <div class="search-row"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4 4"/></svg><input id="searchInput" placeholder="搜索书名、作者或标签…"></div><button class="filter" id="sortButton"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M7 12h10m-7 5h4"/></svg><span id="sortLabel">最近添加</span><span>⌄</span></button></div>
  <section><div class="section-head"><h2>正在读</h2><a href="#" id="openCurrent">打开阅读 →</a></div><article class="resume" id="resumeCard"><img class="resume-cover" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=520&fit=crop" alt="书籍封面"><div class="resume-meta"><div class="label">继续阅读 · 约 18 分钟</div><h3>也许你该找个人聊聊</h3><p>洛莉·戈特利布 · 第三部分</p><div class="progress-line"><span></span></div><div class="progress-foot"><span>已读 37%</span><span>剩余 42 页</span></div></div><button class="continue" id="continueButton" aria-label="继续阅读"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7z"/></svg></button></article></section>
@@ -971,7 +1285,19 @@
 <nav class="mobile-tabbar" aria-label="主导航"><button class="mobile-tab" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg>首页</button><button class="mobile-tab" data-tab="shelf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h7v14H4zM14 5h6v14h-6z"/></svg>书架</button><button class="mobile-tab active" data-tab="store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>书店</button><button class="mobile-tab" data-tab="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3"/><path d="M5 21a7 7 0 0 1 14 0M4 4h.01M20 4h.01"/></svg>我</button></nav>
 <div class="modal-backdrop" id="modalBackdrop"><div class="modal"><button class="close" id="closeModal">×</button><h2>连接你的书库</h2><p>输入 Calibre-Web 的 OPDS 地址，即可浏览和同步你的私人藏书。</p><label for="serverUrl">OPDS 地址</label><input id="serverUrl" placeholder="https://books.example.com/opds" autocomplete="url"><div class="hint">通常以 /opds 结尾，也可以是 /opds/v1.2</div><label for="username">用户名</label><input id="username" placeholder="Calibre-Web 用户名" autocomplete="username"><label for="password">密码</label><input id="password" type="password" placeholder="Calibre-Web 密码" autocomplete="current-password"><label class="remember-row"><input id="rememberConnection" type="checkbox" checked> 保存到服务器 config 目录</label><div class="hint">保存后将自动恢复；配置文件会映射到宿主机，容器重启后仍保留。</div><div class="modal-actions"><button class="btn" id="cancelModal">稍后</button><button class="btn primary" id="saveConnection">连接书库</button></div></div></div>
 <div class="reader" id="reader"><div class="reader-top"><button id="closeReader">← 返回书库</button><span class="reader-title">也许你该找个人聊聊</span><button id="readerSettings">Aa</button></div><article class="reader-body"><div class="chapter">第三部分　工作</div><h1>一场奇妙的旅程</h1><p>人生有时候会把我们带到意想不到的地方。我们以为自己已经知道故事会如何展开，却常常在某个转弯处，发现还有另一条路。</p><p>当我第一次走进那间办公室时，我并不知道自己即将遇见一个怎样的人。阳光从窗边落下来，空气里有咖啡的香气，时间仿佛在这里放慢了脚步。</p><p>每个人都带着自己的故事而来。有些故事我们讲给别人听，有些故事则需要很久，才敢讲给自己听。</p></article><div class="reader-bottom"><span>第 128 页</span><div class="reader-progress"><span></span></div><span>342 页</span></div></div>
-<div class="reader" id="epubReader"><div class="reader-top"><button id="closeEpubReader">← 返回书库</button><span class="reader-title" id="epubTitle">正在打开</span><div class="reader-tools"><span class="reader-tts-badge" id="readerTtsBadge"><span>●</span> 朗读中</span><span class="reader-status" id="readerStatus">尚未开始</span><button class="reader-tool" id="readerSearchBtn" title="全书搜索" aria-label="全书搜索">🔍</button><button class="reader-tool" id="readerTtsBtn" title="听书朗读" aria-label="听书朗读">🎧</button><button class="reader-tool" id="readerQuoteBtn" title="金句卡片" aria-label="金句卡片">❝</button><button class="reader-tool" id="readerTocBtn" title="章节目录" aria-label="章节目录">☰</button><button class="reader-tool" id="readerNoteBtn" title="写读书笔记" aria-label="写读书笔记">✎</button><button class="reader-tool" id="readerBookmark" title="保存当前位置为书签" aria-label="保存书签">☆</button><button class="reader-tool" id="readerFullscreen" title="全屏沉浸阅读" aria-label="全屏">⛶</button><button class="reader-tool" id="readerSettingsOpds" aria-expanded="false">Aa</button></div></div><div class="reader-toc-panel" id="readerTocPanel"><div class="reader-toc-head"><span>目录导航</span><button class="close" id="closeReaderToc">×</button></div><div class="reader-toc-list" id="readerTocList"></div></div><div class="reader-search-panel" id="readerSearchPanel"><div class="reader-search-head"><span>书内搜索</span><button class="close" id="closeReaderSearch">×</button></div><div class="reader-search-box"><input id="readerSearchInput" placeholder="输入关键词搜索章节与正文…" autocomplete="off"><button type="button" id="doReaderSearch">搜索</button></div><div class="reader-search-count" id="readerSearchCount"></div><div class="reader-search-list" id="readerSearchList"></div></div><div class="reader-settings-panel" id="readerSettingsPanel"><div class="reader-setting-row"><span>字体大小</span><div class="reader-setting-actions"><button id="fontDecrease" aria-label="缩小字号">A−</button><button id="fontIncrease" aria-label="放大字号">A＋</button></div></div><div class="reader-setting-row"><span>排版字体</span><div class="reader-options-group"><button data-reader-font="serif" aria-pressed="true">宋体</button><button data-reader-font="sans" aria-pressed="false">黑体</button><button data-reader-font="kaiti" aria-pressed="false">楷体</button></div></div><div class="reader-setting-row"><span>阅读排版</span><div class="reader-options-group"><button data-reader-scroll="paged" aria-pressed="true">仿真分页</button><button data-reader-scroll="scroll" aria-pressed="false">连续滚动</button></div></div><div class="reader-setting-row"><span>行间距</span><div class="reader-options-group"><button data-reader-line="compact" aria-pressed="false">紧凑</button><button data-reader-line="normal" aria-pressed="true">适中</button><button data-reader-line="loose" aria-pressed="false">宽松</button></div></div><div class="reader-setting-row"><span>阅读主题</span><div class="reader-themes"><button data-reader-theme="paper" aria-pressed="true"><i class="reader-theme-dot paper"></i>羊皮</button><button data-reader-theme="green" aria-pressed="false"><i class="reader-theme-dot green"></i>护眼</button><button data-reader-theme="sepia" aria-pressed="false"><i class="reader-theme-dot sepia"></i>复古</button><button data-reader-theme="white" aria-pressed="false"><i class="reader-theme-dot white"></i>极简</button><button data-reader-theme="night" aria-pressed="false"><i class="reader-theme-dot night"></i>夜间</button></div></div></div><iframe id="epubFrame" title="电子书内容" style="border:0;flex:1;width:min(760px,100%);margin:16px auto 0;background:#f7f5ef;border-radius:12px"></iframe><button class="reader-flip prev" id="readerPrev" aria-label="上一页" title="上一页（←）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"/></svg></button><button class="reader-flip next" id="readerNext" aria-label="下一页" title="下一页（→）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg></button></div><div class="note-modal" id="noteModal"><div class="note-card"><div class="note-head"><h3 id="noteBookTitle">读书笔记</h3><button type="button" class="close" id="closeNoteModal">×</button></div><div class="note-meta" id="notePageLabel">第 1 页 · 读书感悟</div><textarea id="noteText" placeholder="写下此处的感想、批注或重要摘录…" rows="4"></textarea><div class="note-actions"><button type="button" class="btn" id="cancelNote">取消</button><button type="button" class="btn primary" id="saveNote">保存笔记</button></div></div></div><div class="quote-modal" id="quoteModal"><div class="quote-box"><div class="quote-card-preview emerald" id="quotePreview"><div class="quote-mark">“</div><div class="quote-body" id="quoteText">读书是一座随身携带的避难所。</div><div class="quote-foot"><div><div class="quote-book" id="quoteBook">《未命名书籍》</div><div id="quoteMeta" style="font-size:10px;opacity:.8;margin-top:2px">拾阅 · 私人书库</div></div><div style="font-size:10px;font-weight:600;letter-spacing:.05em">SHIYUE</div></div></div><div class="quote-actions"><div class="quote-themes"><button type="button" class="quote-theme-btn active" data-quote-theme="emerald">墨绿</button><button type="button" class="quote-theme-btn" data-quote-theme="midnight">暗夜</button><button type="button" class="quote-theme-btn" data-quote-theme="cream">羊皮</button><button type="button" class="quote-theme-btn" data-quote-theme="vermilion">朱砂</button></div><div style="display:flex;gap:7px"><button type="button" class="btn" id="copyQuoteText">复制文字</button><button type="button" class="btn primary" id="downloadQuoteImg">📥 保存卡片</button><button type="button" class="btn" id="closeQuoteModal">关闭</button></div></div></div></div><div class="selection-popover" id="selectionPopover"><button type="button" class="sel-color-btn yellow" data-hl-color="yellow" title="黄色高亮"></button><button type="button" class="sel-color-btn green" data-hl-color="green" title="绿色高亮"></button><button type="button" class="sel-color-btn blue" data-hl-color="blue" title="蓝色高亮"></button><button type="button" class="sel-color-btn pink" data-hl-color="pink" title="粉色高亮"></button><span class="sel-divider"></span><button type="button" class="sel-action-btn" id="selQuoteCard">❝ 做金句</button><button type="button" class="sel-action-btn" id="selTakeNote">✎ 笔记</button></div>
+<div class="reader" id="epubReader"><div class="reader-top"><button id="closeEpubReader">← 返回书库</button><span class="reader-title" id="epubTitle">正在打开</span><div class="reader-tools"><span class="reader-tts-badge" id="readerTtsBadge"><span>●</span> 朗读中</span><span class="reader-status" id="readerStatus">尚未开始</span><button class="reader-tool" id="readerSearchBtn" title="全书搜索" aria-label="全书搜索">🔍</button><button class="reader-tool" id="readerTtsBtn" title="听书朗读控制" aria-label="听书朗读">🎧</button><button class="reader-tool" id="readerHighlightBtn" title="划线高亮管理" aria-label="划线高亮">🖍️</button><button class="reader-tool" id="readerQuoteBtn" title="金句卡片" aria-label="金句卡片">❝</button><button class="reader-tool" id="readerTocBtn" title="章节目录" aria-label="章节目录">☰</button><button class="reader-tool" id="readerNoteBtn" title="写读书笔记" aria-label="写读书笔记">✎</button><button class="reader-tool" id="readerBookmark" title="保存当前位置为书签" aria-label="保存书签">☆</button><button class="reader-tool" id="readerFullscreen" title="全屏沉浸阅读" aria-label="全屏">⛶</button><button class="reader-tool" id="readerSettingsOpds" aria-expanded="false">Aa</button></div></div><div class="tts-control-panel" id="ttsControlPanel"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;font-size:13px">🎧 听书朗读与定时器</span><button type="button" class="close" id="closeTtsControlPanel" style="color:#fff">×</button></div><div class="tts-setting-row"><div class="tts-setting-label"><span>朗读语速</span><span id="ttsRateValue">1.0x</span></div><div class="tts-pill-group"><button type="button" class="tts-pill" data-tts-rate="0.8">0.8x</button><button type="button" class="tts-pill active" data-tts-rate="1.0">1.0x</button><button type="button" class="tts-pill" data-tts-rate="1.2">1.2x</button><button type="button" class="tts-pill" data-tts-rate="1.5">1.5x</button><button type="button" class="tts-pill" data-tts-rate="2.0">2.0x</button></div></div><div class="tts-setting-row"><div class="tts-setting-label"><span>睡眠定时器</span><span id="ttsTimerCountdown" style="color:#2ecc71;font-weight:600">未开启</span></div><div class="tts-pill-group"><button type="button" class="tts-pill active" data-tts-timer="0">不定时</button><button type="button" class="tts-pill" data-tts-timer="15">15分钟</button><button type="button" class="tts-pill" data-tts-timer="30">30分钟</button><button type="button" class="tts-pill" data-tts-timer="45">45分钟</button><button type="button" class="tts-pill" data-tts-timer="60">60分钟</button></div></div><div style="display:flex;gap:8px;margin-top:4px"><button type="button" class="btn primary" id="toggleTtsPlayBtn" style="flex:1;height:34px;font-size:12px">▶ 开始朗读</button></div></div><div class="reader-hl-panel" id="readerHighlightPanel"><div class="reader-hl-head"><h3>🖍️ 章节划线与高亮</h3><button type="button" class="close" id="closeReaderHl">×</button></div><div class="reader-hl-filters"><button type="button" class="reader-hl-filter active" data-hl-filter="all">全部</button><button type="button" class="reader-hl-filter" data-hl-filter="yellow">🟡 黄色</button><button type="button" class="reader-hl-filter" data-hl-filter="green">🟢 绿色</button><button type="button" class="reader-hl-filter" data-hl-filter="blue">🔵 蓝色</button><button type="button" class="reader-hl-filter" data-hl-filter="pink">💖 粉色</button></div><div class="reader-hl-list" id="readerHlList"></div></div><div class="reader-toc-panel" id="readerTocPanel"><div class="reader-toc-head"><span>目录导航</span><button class="close" id="closeReaderToc">×</button></div><div class="reader-toc-list" id="readerTocList"></div></div><div class="reader-search-panel" id="readerSearchPanel"><div class="reader-search-head"><span>书内搜索</span><button class="close" id="closeReaderSearch">×</button></div><div class="reader-search-box"><input id="readerSearchInput" placeholder="输入关键词搜索章节与正文…" autocomplete="off"><button type="button" id="doReaderSearch">搜索</button></div><div class="reader-search-count" id="readerSearchCount"></div><div class="reader-search-list" id="readerSearchList"></div></div><div class="reader-settings-panel" id="readerSettingsPanel"><div class="reader-setting-row"><span>字体大小</span><div class="reader-setting-actions"><button id="fontDecrease" aria-label="缩小字号">A−</button><button id="fontIncrease" aria-label="放大字号">A＋</button></div></div><div class="reader-setting-row"><span>排版字体</span><div class="reader-options-group"><button data-reader-font="serif" aria-pressed="true">宋体</button><button data-reader-font="sans" aria-pressed="false">黑体</button><button data-reader-font="kaiti" aria-pressed="false">楷体</button></div></div><div class="reader-setting-row"><span>阅读排版</span><div class="reader-options-group"><button data-reader-scroll="paged" aria-pressed="true">仿真分页</button><button data-reader-scroll="scroll" aria-pressed="false">连续滚动</button></div></div><div class="reader-setting-row"><span>页面布局</span><div class="reader-options-group"><button data-reader-spread="single" aria-pressed="true">单页居中</button><button data-reader-spread="double" aria-pressed="false">双页对开 📖</button></div></div><div class="reader-setting-row"><span>行间距</span><div class="reader-options-group"><button data-reader-line="compact" aria-pressed="false">紧凑</button><button data-reader-line="normal" aria-pressed="true">适中</button><button data-reader-line="loose" aria-pressed="false">宽松</button></div></div><div class="reader-setting-row"><span>阅读主题</span><div class="reader-themes"><button data-reader-theme="paper" aria-pressed="true"><i class="reader-theme-dot paper"></i>羊皮</button><button data-reader-theme="green" aria-pressed="false"><i class="reader-theme-dot green"></i>护眼</button><button data-reader-theme="sepia" aria-pressed="false"><i class="reader-theme-dot sepia"></i>复古</button><button data-reader-theme="white" aria-pressed="false"><i class="reader-theme-dot white"></i>极简</button><button data-reader-theme="night" aria-pressed="false"><i class="reader-theme-dot night"></i>夜间</button></div></div></div><iframe id="epubFrame" title="电子书内容" style="border:0;flex:1;width:min(760px,100%);margin:16px auto 0;background:#f7f5ef;border-radius:12px"></iframe><button class="reader-flip prev" id="readerPrev" aria-label="上一页" title="上一页（←）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"/></svg></button><button class="reader-flip next" id="readerNext" aria-label="下一页" title="下一页（→）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg></button></div><div class="note-modal" id="noteModal"><div class="note-card"><div class="note-head"><h3 id="noteBookTitle">读书笔记</h3><button type="button" class="close" id="closeNoteModal">×</button></div><div class="note-meta" id="notePageLabel">第 1 页 · 读书感悟</div><textarea id="noteText" placeholder="写下此处的感想、批注或重要摘录…" rows="4"></textarea><div class="note-actions"><button type="button" class="btn" id="cancelNote">取消</button><button type="button" class="btn primary" id="saveNote">保存笔记</button></div></div></div><div class="quote-modal" id="quoteModal"><div class="quote-box"><div class="quote-card-preview emerald" id="quotePreview"><div class="quote-mark">“</div><div class="quote-body" id="quoteText">读书是一座随身携带的避难所。</div><div class="quote-foot"><div><div class="quote-book" id="quoteBook">《未命名书籍》</div><div id="quoteMeta" style="font-size:10px;opacity:.8;margin-top:2px">拾阅 · 私人书库</div></div><div style="font-size:10px;font-weight:600;letter-spacing:.05em">SHIYUE</div></div></div><div class="quote-actions"><div class="quote-themes"><button type="button" class="quote-theme-btn active" data-quote-theme="emerald">墨绿</button><button type="button" class="quote-theme-btn" data-quote-theme="midnight">暗夜</button><button type="button" class="quote-theme-btn" data-quote-theme="cream">羊皮</button><button type="button" class="quote-theme-btn" data-quote-theme="vermilion">朱砂</button></div><div style="display:flex;gap:7px"><button type="button" class="btn" id="copyQuoteText">复制文字</button><button type="button" class="btn primary" id="downloadQuoteImg">📥 保存卡片</button><button type="button" class="btn" id="closeQuoteModal">关闭</button></div></div></div></div><div class="selection-popover" id="selectionPopover"><button type="button" class="sel-color-btn yellow" data-hl-color="yellow" title="黄色高亮"></button><button type="button" class="sel-color-btn green" data-hl-color="green" title="绿色高亮"></button><button type="button" class="sel-color-btn blue" data-hl-color="blue" title="蓝色高亮"></button><button type="button" class="sel-color-btn pink" data-hl-color="pink" title="粉色高亮"></button><span class="sel-divider"></span><button type="button" class="sel-action-btn" id="selQuoteCard">❝ 做金句</button><button type="button" class="sel-action-btn" id="selTakeNote">✎ 笔记</button></div>
+
+<!-- 每日阅读目标 modal -->
+<div class="modal-backdrop" id="dailyGoalModal"><div class="cat-modal-card"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 20px var(--serif)">🎯 每日阅读目标设置</h2><button type="button" class="close" id="closeDailyGoalModal">×</button></div><p style="font-size:12px;color:#777;margin:0">设定适合自己的每日阅读时间，保持阅读习惯：</p><div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:8px" id="goalOptionsGrid"><button type="button" class="btn goal-option-btn" data-goal-mins="15">15 分钟</button><button type="button" class="btn goal-option-btn" data-goal-mins="20">20 分钟</button><button type="button" class="btn goal-option-btn primary" data-goal-mins="30">30 分钟</button><button type="button" class="btn goal-option-btn" data-goal-mins="45">45 分钟</button><button type="button" class="btn goal-option-btn" data-goal-mins="60">60 分钟</button><button type="button" class="btn goal-option-btn" data-goal-mins="90">90 分钟</button></div><div class="modal-actions" style="margin-top:10px"><button type="button" class="btn primary" id="saveDailyGoalBtn" style="width:100%">保存目标</button></div></div></div>
+
+<!-- 月度/年度阅读战报生成 Modal -->
+<div class="modal-backdrop" id="reportModal"><div class="quote-box" style="width:min(480px, 100%)"><div class="report-card-preview emerald" id="reportPreview"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div style="font-size:11px;opacity:0.85;letter-spacing:0.05em">SHIYUE READING WRAPPED</div><h2 style="margin:4px 0 0;font:600 22px var(--serif)" id="reportCardTitle">2026年 10月 · 阅读战报</h2></div><div style="font-size:24px">📚</div></div><div class="report-stat-grid"><div class="report-stat-item"><span>📖 本月读完</span><span class="report-stat-num" id="reportStatFinished">0 本</span></div><div class="report-stat-item"><span>⏱️ 累计阅读时长</span><span class="report-stat-num" id="reportStatTime">0 分钟</span></div><div class="report-stat-item"><span>🔥 连续打卡</span><span class="report-stat-num" id="reportStatStreak">1 天</span></div><div class="report-stat-item"><span>✍️ 精选笔记</span><span class="report-stat-num" id="reportStatNotes">0 条</span></div></div><div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:12px;font-size:12px;line-height:1.6"><span style="opacity:0.8;display:block;margin-bottom:2px">🏷️ 偏好阅读方向</span><strong id="reportFavGenre">文学小说 · 启发哲学 · 深度思考</strong></div><div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;opacity:0.8;border-top:1px solid rgba(255,255,255,0.15);padding-top:10px"><span>拾阅 · 私人数字书刊</span><span>与书相伴，见证成长</span></div></div><div class="quote-actions"><div class="quote-themes"><button type="button" class="quote-theme-btn active" data-report-theme="emerald">墨绿</button><button type="button" class="quote-theme-btn" data-report-theme="midnight">暗夜</button><button type="button" class="quote-theme-btn" data-report-theme="cream">羊皮</button><button type="button" class="quote-theme-btn" data-report-theme="vermilion">朱砂</button></div><div style="display:flex;gap:7px"><button type="button" class="btn" id="copyReportText">复制战报</button><button type="button" class="btn primary" id="downloadReportImg">📥 下载战报图片</button><button type="button" class="btn" id="closeReportModal">关闭</button></div></div></div></div>
+
+<!-- 自定义主题书单 Modal -->
+<div class="modal-backdrop" id="playlistModal"><div class="cat-modal-card"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 20px var(--serif)">📌 新建主题书单</h2><button type="button" class="close" id="closePlaylistModal">×</button></div><p style="font-size:12px;color:#777;margin:0">创建如“2026必读”、“心理学入门”等自选专题书单</p><label for="playlistTitle" style="font-size:12px;font-weight:600;margin-top:4px">书单名称</label><input id="playlistTitle" placeholder="如：2026年必读书单" style="width:100%;height:38px;padding:0 12px;border:1px solid var(--line);border-radius:9px;font-size:12px;outline:none"><label for="playlistDesc" style="font-size:12px;font-weight:600;margin-top:4px">书单描述或主题寄语</label><input id="playlistDesc" placeholder="如：精选年度具有启发深度的著作…" style="width:100%;height:38px;padding:0 12px;border:1px solid var(--line);border-radius:9px;font-size:12px;outline:none"><div class="modal-actions" style="margin-top:10px"><button type="button" class="btn" id="cancelPlaylistBtn">取消</button><button type="button" class="btn primary" id="savePlaylistBtn">创建书单</button></div></div></div>
+
+<!-- 批量管理底部悬浮操作栏 -->
+<div class="shelf-batch-bar" id="shelfBatchBar" style="display:none"><span id="batchSelectCount">已选中 0 本</span><button type="button" class="shelf-batch-btn" id="batchSetCategoryBtn">🏷️ 批量设分类</button><button type="button" class="shelf-batch-btn" id="batchMarkReadBtn">✓ 标记已读</button><button type="button" class="shelf-batch-btn" id="batchAddToPlaylistBtn">📌 存入书单</button><button type="button" class="shelf-batch-btn danger" id="batchRemoveBtn">🗑️ 移出书架</button><button type="button" class="shelf-batch-btn" id="batchCancelBtn" style="background:none;border:0;opacity:0.8">取消</button></div>
 <div class="modal-backdrop" id="categoryManageModal"><div class="cat-modal-card"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 20px var(--serif)">🏷️ 分类管理</h2><button type="button" class="close" id="closeCategoryModal">×</button></div><p style="font-size:12px;color:#777;margin:0">创建并管理你的个性化藏书分类标签</p><div style="display:flex;gap:8px"><input id="newCategoryName" placeholder="输入新分类名称（如：心理学、科幻）" style="flex:1;height:38px;padding:0 12px;border:1px solid var(--line);border-radius:9px;font-size:12px;outline:none"><select id="newCategoryIcon" style="height:38px;padding:0 8px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:13px;outline:none"><option value="🔖">🔖 标签</option><option value="🌱">🌱 成长</option><option value="🧠">🧠 思考</option><option value="🚀">🚀 科技</option><option value="📜">📜 历史</option><option value="💎">💎 经典</option><option value="🎨">🎨 艺术</option><option value="☕">☕ 休闲</option></select><button type="button" class="btn primary" id="createCategoryBtn" style="padding:0 14px;white-space:nowrap">＋ 添加</button></div><div style="font-size:12px;font-weight:600;color:#555;margin-top:4px">现有自定义分类</div><div id="customCategoryList" style="display:flex;flex-direction:column;gap:8px;max-height:220px;overflow-y:auto"></div><div class="modal-actions" style="margin-top:8px"><button type="button" class="btn primary" id="doneCategoryModal" style="width:100%">完成</button></div></div></div>
 <div class="modal-backdrop" id="bookCategoryModal"><div class="cat-modal-card"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 19px var(--serif)">📚 书籍分类归档</h2><button type="button" class="close" id="closeBookCategoryModal">×</button></div><div id="bookCategoryTargetTitle" style="font-size:13px;font-weight:600;color:var(--green)"></div><p style="font-size:12px;color:#777;margin:0">选择本书所属的一个或多个分类标签：</p><div class="cat-checkbox-grid" id="bookCategoryCheckboxes"></div><div class="modal-actions" style="margin-top:10px"><button type="button" class="btn" id="cancelBookCategoryModal">取消</button><button type="button" class="btn primary" id="saveBookCategoryModal">保存分类</button></div></div></div>
 <div class="modal-backdrop" id="editNoteModal"><div class="cat-modal-card" style="width:min(500px,100%)"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 20px var(--serif)">✎ 编辑读书笔记</h2><button type="button" class="close" id="closeEditNoteModal">×</button></div><div id="editNoteBookTitle" style="font-size:13px;font-weight:600;color:var(--green)"></div><div id="editNotePageBadge" style="font-size:11px;color:#888"></div><textarea id="editNoteText" rows="5" placeholder="修改你的读书笔记心得与思考…" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:13px;line-height:1.7;outline:none;font-family:inherit"></textarea><div class="modal-actions" style="margin-top:6px"><button type="button" class="btn" id="cancelEditNoteModal">取消</button><button type="button" class="btn primary" id="saveEditNoteModal">保存修改</button></div></div></div>
@@ -993,7 +1319,7 @@ let books=[...defaultBooks];
 const grid=document.getElementById('bookGrid'),search=document.getElementById('searchInput');let activeFilter='all',sortRecent=true,serverConnected=false,renderPageSize=36,currentNextPageHref='';
 function render(){let q=search.value.trim().toLowerCase();let arr=books.filter((b,i)=>{let matches=[b.title,b.author,b.tag].join(' ').toLowerCase().includes(q);let category=(activeFilter==='all'||activeFilter==='recent')?true:activeFilter==='finished'?i>5:b.category===activeFilter;return matches&&category});if(!sortRecent)arr=arr.slice().reverse();const visible=arr.slice(0,renderPageSize);const loadMore=arr.length>renderPageSize?`<button type="button" class="catalog-load-more">继续加载（${renderPageSize} / ${arr.length}）</button>`:'';const nextPage=currentNextPageHref&&!q&&activeFilter==='all'&&arr.length<=renderPageSize?'<button type="button" class="catalog-load-more catalog-load-next">加载下一页</button>':'';grid.innerHTML=visible.length?visible.map((b,i)=>b.kind==='source'?`<article class="book source-tile" data-title="${b.title}" data-href="${b.href||''}" data-kind="source"><div class="source-art"><div class="source-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h7v14H4zM14 5h6v14h-6zM7 8h1m9 0h1"/></svg></div><span>calibre</span></div><h3>${b.title}</h3><p>${b.author}</p></article>`:`<article class="book" data-title="${b.title}" data-href="${b.href||''}" data-kind="${b.kind||'book'}" data-format="${b.format||''}" data-book-key="${encodeURIComponent(b.title+'|'+b.author)}"><div class="cover-wrap"><img class="cover" loading="lazy" decoding="async" fetchpriority="low" src="${b.coverUrl|| (serverConnected?'/cover-placeholder.svg':`https://images.unsplash.com/${b.cover}?w=420&h=580&fit=crop&auto=format`)}" alt="${b.title}封面" onerror="this.onerror=null;this.src='/cover-placeholder.svg'"><span class="tag">${b.tag}</span></div><h3>${b.title}</h3><p>${b.kind==='navigation'?'浏览分类':b.author}</p></article>`).join('')+loadMore+nextPage:'<div class="empty">没有找到相关书籍</div>';grid.querySelectorAll('.book').forEach(el=>el.addEventListener('click',()=>handleOPDSItem(el)));grid.querySelector('.catalog-load-more:not(.catalog-load-next)')?.addEventListener('click',()=>{renderPageSize+=36;render()});grid.querySelector('.catalog-load-next')?.addEventListener('click',event=>loadNextCatalogPage(event.currentTarget))}
 function openReader(){document.getElementById('reader').classList.add('show')}function toast(message){let t=document.getElementById('toast');t.textContent=message;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
-search.addEventListener('input',()=>{renderPageSize=36;render()});document.querySelectorAll('.nav[data-filter]').forEach(n=>n.addEventListener('click',()=>{document.querySelectorAll('.nav[data-filter]').forEach(x=>x.classList.remove('active'));n.classList.add('active');const filter=n.dataset.filter;if(filter==='shelf'||filter==='notes'||['fiction','science','design'].includes(filter))return;activeFilter=filter;renderPageSize=36;const labels={all:'为你收藏',recent:'最近阅读',finished:'已读完'};document.getElementById('shelfTitle').textContent=labels[activeFilter]||n.textContent.trim();document.querySelector('.greeting h1').textContent='书店';document.getElementById('resumeCard').parentElement.style.display='';const content=document.querySelector('.content');content.classList.remove('shelf-page','store-home','home-dashboard','catalog-open','catalog-list','profile-page');const topToggleBtn=document.getElementById('shelfTopToggleBtn');if(topToggleBtn)topToggleBtn.style.display='none';const gridNode=document.getElementById('bookGrid');if(gridNode){gridNode.style.display='';gridNode.style.width='';}render()}));document.getElementById('sortButton').onclick=()=>{sortRecent=!sortRecent;renderPageSize=36;document.getElementById('sortLabel').textContent=sortRecent?'最近添加':'书名排序';render()};
+search.addEventListener('input',()=>{renderPageSize=36;render()});document.querySelectorAll('.nav[data-filter]').forEach(n=>n.addEventListener('click',()=>{document.querySelectorAll('.nav[data-filter]').forEach(x=>x.classList.remove('active'));n.classList.add('active');const filter=n.dataset.filter;if(filter==='shelf'||filter==='notes'||['fiction','science','design'].includes(filter))return;activeFilter=filter;renderPageSize=36;const labels={all:'为你收藏',recent:'最近阅读',finished:'已读完'};document.getElementById('shelfTitle').textContent=labels[activeFilter]||n.textContent.trim();document.querySelector('.greeting h1').textContent='书店';document.getElementById('resumeCard').parentElement.style.display='';const content=document.querySelector('.content');content.classList.remove('shelf-page','store-home','home-dashboard','catalog-open','catalog-list','profile-page');const topToggleBtn=document.getElementById('shelfTopToggleBtn');if(topToggleBtn)topToggleBtn.style.display='none';const gridNode=document.getElementById('bookGrid');if(gridNode){gridNode.style.display='';gridNode.style.width='';}if(filter==='all'){activeTab='store';feedStack=[];if(serverConnected&&opdsFeedCache){applyOPDSFeed(opdsFeedCache,false);return}openStoreView();return}render()}));document.getElementById('sortButton').onclick=()=>{sortRecent=!sortRecent;renderPageSize=36;document.getElementById('sortLabel').textContent=sortRecent?'最近添加':'书名排序';render()};
 const modal=document.getElementById('modalBackdrop');document.getElementById('connectButton').onclick=()=>modal.classList.add('show');document.getElementById('closeModal').onclick=document.getElementById('cancelModal').onclick=()=>modal.classList.remove('show');modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});document.getElementById('saveConnection').onclick=()=>{let url=document.getElementById('serverUrl').value.trim();if(!url){document.getElementById('serverUrl').focus();return}localStorage.setItem('calibreOpds',url);let text=document.getElementById('connectionText');text.textContent='已配置书库';document.getElementById('statusDot').classList.add('online');modal.classList.remove('show');toast('书库地址已保存，准备连接');};let saved=localStorage.getItem('calibreOpds');if(saved){document.getElementById('serverUrl').value=saved;document.getElementById('connectionText').textContent='已配置书库';document.getElementById('statusDot').classList.add('online')}
 document.getElementById('continueButton').onclick=openReader;document.getElementById('openCurrent').onclick=e=>{e.preventDefault();openReader()};document.getElementById('closeReader').onclick=()=>document.getElementById('reader').classList.remove('show');document.getElementById('syncButton').onclick=()=>toast(saved?'正在检查书库更新…':'请先连接你的 Calibre-Web 书库');document.getElementById('viewAll').onclick=e=>{e.preventDefault();activeFilter='all';render()};document.getElementById('readerSettings').onclick=()=>toast('阅读设置即将推出');render();
 </script>
@@ -1022,15 +1348,28 @@ let activeReadFormat='',activeReadHref='',activeBookKey='',activeReadPage=1,pdfC
 function flushReadingProgress(){if(progressSaveTimer){clearTimeout(progressSaveTimer);progressSaveTimer=0}if(!pendingProgressSave)return;const pending=pendingProgressSave;pendingProgressSave=null;try{localStorage.setItem('pages-progress:'+pending.key,String(pending.page))}catch{}}
 function saveReadingProgressSoon(key,page){if(!key)return;if(pendingProgressSave&&pendingProgressSave.key!==key)flushReadingProgress();pendingProgressSave={key,page};if(progressSaveTimer)clearTimeout(progressSaveTimer);progressSaveTimer=setTimeout(flushReadingProgress,400)}
 window.addEventListener('pagehide',flushReadingProgress);
-let readerPrefs={theme:'paper',fontScale:1,fontFamily:'serif',lineHeight:'normal',scrollMode:'paged'};try{readerPrefs={...readerPrefs,...JSON.parse(localStorage.getItem('pages-reader-prefs')||'{}')}}catch{}
+let readerPrefs={theme:'paper',fontScale:1,fontFamily:'serif',lineHeight:'normal',scrollMode:'paged',spreadMode:'single'};try{readerPrefs={...readerPrefs,...JSON.parse(localStorage.getItem('pages-reader-prefs')||'{}')}}catch{}
 if(!['paper','green','sepia','white','night'].includes(readerPrefs.theme))readerPrefs.theme='paper';
 if(!['serif','sans','kaiti'].includes(readerPrefs.fontFamily))readerPrefs.fontFamily='serif';
 if(!['compact','normal','loose'].includes(readerPrefs.lineHeight))readerPrefs.lineHeight='normal';
 if(!['paged','scroll'].includes(readerPrefs.scrollMode))readerPrefs.scrollMode='paged';
+if(!['single','double'].includes(readerPrefs.spreadMode))readerPrefs.spreadMode='single';
 readerPrefs.fontScale=Math.max(.8,Math.min(1.6,Number(readerPrefs.fontScale)||1));
 function readSavedNumber(key){try{return Number(localStorage.getItem(key))||0}catch{return 0}}
 function sendReaderMessage(message){try{document.getElementById('epubFrame').contentWindow?.postMessage(message,location.origin)}catch{}}
-function updateReaderSettings(){try{localStorage.setItem('pages-reader-prefs',JSON.stringify(readerPrefs))}catch{};document.querySelectorAll('[data-reader-theme]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerTheme===readerPrefs.theme)));document.querySelectorAll('[data-reader-font]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerFont===readerPrefs.fontFamily)));document.querySelectorAll('[data-reader-line]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerLine===readerPrefs.lineHeight)));document.querySelectorAll('[data-reader-scroll]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerScroll===readerPrefs.scrollMode)));sendReaderMessage({type:'reader-settings',...readerPrefs})}
+function updateReaderSettings(){
+  try{localStorage.setItem('pages-reader-prefs',JSON.stringify(readerPrefs))}catch{};
+  document.querySelectorAll('[data-reader-theme]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerTheme===readerPrefs.theme)));
+  document.querySelectorAll('[data-reader-font]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerFont===readerPrefs.fontFamily)));
+  document.querySelectorAll('[data-reader-line]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerLine===readerPrefs.lineHeight)));
+  document.querySelectorAll('[data-reader-scroll]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerScroll===readerPrefs.scrollMode)));
+  document.querySelectorAll('[data-reader-spread]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerSpread===readerPrefs.spreadMode)));
+  const readerEl=document.getElementById('epubReader');
+  if(readerEl){
+    readerEl.classList.toggle('two-page-spread',readerPrefs.spreadMode==='double');
+  }
+  sendReaderMessage({type:'reader-settings',...readerPrefs});
+}
 function readSavedNotes(){try{const n=JSON.parse(localStorage.getItem('pages-notes')||'[]');return Array.isArray(n)?n:[]}catch{return[]}}
 function saveNoteItem(note){const notes=readSavedNotes();notes.unshift(note);try{localStorage.setItem('pages-notes',JSON.stringify(notes.slice(0,300)))}catch{}}
 function deleteNoteItem(id){const notes=readSavedNotes().filter(n=>n.id!==id);try{localStorage.setItem('pages-notes',JSON.stringify(notes))}catch{}}
@@ -1144,24 +1483,29 @@ async function executeReaderSearch(){
 document.getElementById('doReaderSearch').onclick=executeReaderSearch;
 document.getElementById('readerSearchInput').addEventListener('keydown',e=>{if(e.key==='Enter')executeReaderSearch()});
 
-// Web Speech API - Text-to-Speech (听书朗读)
-let ttsUtterance=null,isTtsReading=false;
+// Web Speech API - Text-to-Speech (听书朗读控制与定时器)
+let ttsUtterance=null,isTtsReading=false,ttsRate=1.0,ttsTimerMins=0,ttsCountdownInterval=null,ttsSecondsRemaining=0;
+
 function stopReaderTts(){
   if(window.speechSynthesis){
     window.speechSynthesis.cancel();
   }
   isTtsReading=false;
-  document.getElementById('readerTtsBtn').classList.remove('active');
-  document.getElementById('readerTtsBadge').classList.remove('active');
+  if(ttsCountdownInterval){
+    clearInterval(ttsCountdownInterval);
+    ttsCountdownInterval=null;
+  }
+  document.getElementById('readerTtsBtn')?.classList.remove('active');
+  document.getElementById('readerTtsBadge')?.classList.remove('active');
+  const countdownEl=document.getElementById('ttsTimerCountdown');
+  if(countdownEl)countdownEl.textContent='未开启';
+  const toggleBtn=document.getElementById('toggleTtsPlayBtn');
+  if(toggleBtn)toggleBtn.textContent='▶ 开始朗读';
 }
-document.getElementById('readerTtsBtn').onclick=()=>{
+
+function startTtsSpeech(){
   if(!('speechSynthesis' in window)){
     toast('当前浏览器不支持语音朗读');
-    return;
-  }
-  if(isTtsReading){
-    stopReaderTts();
-    toast('已停止朗读');
     return;
   }
   try{
@@ -1175,23 +1519,402 @@ document.getElementById('readerTtsBtn').onclick=()=>{
     const cleanText=text.replace(/\s+/g,' ').slice(0,3000);
     ttsUtterance=new SpeechSynthesisUtterance(cleanText);
     ttsUtterance.lang='zh-CN';
-    ttsUtterance.rate=1.0;
+    ttsUtterance.rate=ttsRate;
     ttsUtterance.onend=()=>{
       isTtsReading=false;
-      document.getElementById('readerTtsBtn').classList.remove('active');
-      document.getElementById('readerTtsBadge').classList.remove('active');
+      document.getElementById('readerTtsBtn')?.classList.remove('active');
+      document.getElementById('readerTtsBadge')?.classList.remove('active');
+      const toggleBtn=document.getElementById('toggleTtsPlayBtn');
+      if(toggleBtn)toggleBtn.textContent='▶ 开始朗读';
       turnReaderPage(1);
     };
     ttsUtterance.onerror=()=>stopReaderTts();
     window.speechSynthesis.speak(ttsUtterance);
     isTtsReading=true;
-    document.getElementById('readerTtsBtn').classList.add('active');
-    document.getElementById('readerTtsBadge').classList.add('active');
-    toast('正在开始听书朗读 🎧');
+    document.getElementById('readerTtsBtn')?.classList.add('active');
+    document.getElementById('readerTtsBadge')?.classList.add('active');
+    const toggleBtn=document.getElementById('toggleTtsPlayBtn');
+    if(toggleBtn)toggleBtn.textContent='⏸ 暂停朗读';
+    
+    if(ttsTimerMins>0){
+      ttsSecondsRemaining=ttsTimerMins*60;
+      if(ttsCountdownInterval)clearInterval(ttsCountdownInterval);
+      ttsCountdownInterval=setInterval(()=>{
+        ttsSecondsRemaining--;
+        const m=Math.floor(ttsSecondsRemaining/60);
+        const s=ttsSecondsRemaining%60;
+        const countdownEl=document.getElementById('ttsTimerCountdown');
+        if(countdownEl)countdownEl.textContent=`⌛ 剩 ${m}:${s<10?'0':''}${s}`;
+        if(ttsSecondsRemaining<=0){
+          stopReaderTts();
+          toast('💤 听书睡眠定时到期，已自动停止朗读');
+        }
+      },1000);
+    }
+    toast(`正在听书朗读（语速 ${ttsRate}x${ttsTimerMins?` · 定时 ${ttsTimerMins}分`:''}）🎧`);
   }catch(err){
     toast('朗读启动失败');
   }
+}
+
+document.getElementById('readerTtsBtn').onclick=()=>{
+  const panel=document.getElementById('ttsControlPanel');
+  panel.classList.toggle('show');
 };
+document.getElementById('closeTtsControlPanel').onclick=()=>document.getElementById('ttsControlPanel').classList.remove('show');
+
+document.querySelectorAll('[data-tts-rate]').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('[data-tts-rate]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    ttsRate=Number(btn.dataset.ttsRate)||1.0;
+    document.getElementById('ttsRateValue').textContent=`${ttsRate}x`;
+    if(isTtsReading){
+      startTtsSpeech();
+    }
+  };
+});
+
+document.querySelectorAll('[data-tts-timer]').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('[data-tts-timer]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    ttsTimerMins=Number(btn.dataset.ttsTimer)||0;
+    const countdownEl=document.getElementById('ttsTimerCountdown');
+    if(!ttsTimerMins){
+      if(ttsCountdownInterval)clearInterval(ttsCountdownInterval);
+      if(countdownEl)countdownEl.textContent='未开启';
+    }else{
+      if(countdownEl)countdownEl.textContent=`已设 ${ttsTimerMins} 分钟`;
+    }
+  };
+});
+
+document.getElementById('toggleTtsPlayBtn').onclick=()=>{
+  if(isTtsReading){
+    stopReaderTts();
+    toast('已暂停听书');
+  }else{
+    startTtsSpeech();
+  }
+};
+
+// 章节划线与高亮集中管理 (Highlight Manager)
+const HIGHLIGHTS_KEY='pages-highlights';
+function readSavedHighlights(){try{const list=JSON.parse(localStorage.getItem(HIGHLIGHTS_KEY)||'[]');return Array.isArray(list)?list:[]}catch{return[]}}
+function saveHighlightItem(hl){const list=readSavedHighlights();list.unshift(hl);try{localStorage.setItem(HIGHLIGHTS_KEY,JSON.stringify(list.slice(0,500)))}catch{}}
+function deleteHighlightItem(id){const list=readSavedHighlights().filter(h=>h.id!==id);try{localStorage.setItem(HIGHLIGHTS_KEY,JSON.stringify(list))}catch{}}
+
+document.querySelectorAll('[data-hl-color]').forEach(btn=>{
+  btn.onclick=()=>{
+    const color=btn.dataset.hlColor;
+    let text=currentSelectedText;
+    if(!text){
+      try{
+        const frameDoc=document.getElementById('epubFrame')?.contentDocument;
+        text=frameDoc?.getSelection()?.toString()?.trim()||'';
+      }catch{}
+    }
+    if(!text){
+      toast('请先划选正文文字');
+      return;
+    }
+    const bookTitle=document.getElementById('epubTitle')?.textContent||'当前书籍';
+    const item={id:Date.now(),bookKey:activeBookKey,bookTitle,color,text,page:activeReadPage,date:Date.now()};
+    saveHighlightItem(item);
+    document.getElementById('selectionPopover')?.classList.remove('show');
+    toast('已保存划线高亮 🖍️');
+    renderHighlightList();
+  };
+});
+
+function renderHighlightList(filterColor='all'){
+  const listEl=document.getElementById('readerHlList');
+  if(!listEl)return;
+  const allHls=readSavedHighlights().filter(h=>!activeBookKey||h.bookKey===activeBookKey);
+  const items=filterColor==='all'?allHls:allHls.filter(h=>h.color===filterColor);
+  if(!items.length){
+    listEl.innerHTML='<div style="padding:32px 10px;text-align:center;color:#999;font-size:12px">暂无高亮划线。<br>在正文划选文字后点击颜色按钮即可高亮。</div>';
+    return;
+  }
+  listEl.innerHTML='';
+  items.forEach(h=>{
+    const card=document.createElement('div');
+    card.className=`reader-hl-card ${h.color}`;
+    const dateStr=new Date(h.date||Date.now()).toLocaleDateString('zh-CN');
+    card.innerHTML=`<div class="reader-hl-text">“${escapeHTML(h.text)}”</div><div class="reader-hl-foot"><span>第 ${h.page||1} 页 · ${dateStr}</span><div style="display:flex;gap:6px"><button type="button" class="btn" style="padding:2px 6px;font-size:10px" data-action="copy">📌 复制</button><button type="button" class="btn" style="padding:2px 6px;font-size:10px" data-action="quote">❝ 做金句</button><button type="button" class="btn" style="padding:2px 6px;font-size:10px;color:#c0392b" data-action="del">🗑️</button></div></div>`;
+    card.querySelector('[data-action="copy"]').onclick=()=>{
+      navigator.clipboard?.writeText(h.text);
+      toast('已复制高亮内容 📋');
+    };
+    card.querySelector('[data-action="quote"]').onclick=()=>{
+      openQuoteModal(h.text,h.bookTitle);
+    };
+    card.querySelector('[data-action="del"]').onclick=()=>{
+      deleteHighlightItem(h.id);
+      renderHighlightList(filterColor);
+      toast('已删除高亮');
+    };
+    listEl.append(card);
+  });
+}
+
+document.getElementById('readerHighlightBtn').onclick=()=>{
+  const panel=document.getElementById('readerHighlightPanel'),open=!panel.classList.contains('show');
+  document.getElementById('readerTocPanel')?.classList.remove('show');
+  document.getElementById('readerSearchPanel')?.classList.remove('show');
+  document.getElementById('readerSettingsPanel')?.classList.remove('show');
+  panel.classList.toggle('show',open);
+  if(open)renderHighlightList();
+};
+document.getElementById('closeReaderHl').onclick=()=>document.getElementById('readerHighlightPanel').classList.remove('show');
+
+document.querySelectorAll('[data-hl-filter]').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('[data-hl-filter]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    renderHighlightList(btn.dataset.hlFilter);
+  };
+});
+
+// 每日阅读目标与打卡连胜 (Daily Goals & Streaks)
+const DAILY_GOAL_KEY='pages-daily-goal';
+function getDailyGoalMins(){return readSavedNumber(DAILY_GOAL_KEY)||30}
+
+function renderGoalRingGauge(container,todayMins=0){
+  if(!container)return;
+  const targetMins=getDailyGoalMins();
+  const percent=Math.min(100,Math.round((todayMins/targetMins)*100));
+  const radius=24,circumference=2*Math.PI*radius;
+  const offset=circumference-((percent/100)*circumference);
+  
+  container.className='goal-ring-wrap';
+  container.innerHTML=`
+    <svg class="goal-ring-svg" viewBox="0 0 60 60">
+      <circle class="goal-ring-bg" cx="30" cy="30" r="${radius}" fill="none"/>
+      <circle class="goal-ring-fill" cx="30" cy="30" r="${radius}" fill="none" stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <div style="font-size:11px;color:#777;display:flex;align-items:center;gap:6px">
+        <span>🎯 今日阅读目标</span>
+        <button type="button" id="openGoalModalBtn" style="border:0;background:none;color:var(--green);font-size:11px;cursor:pointer;padding:0">设置</button>
+      </div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink)">${todayMins} / ${targetMins} 分钟 <small style="font-size:11px;color:var(--green);font-weight:600">(${percent}%)</small></div>
+    </div>
+  `;
+  container.querySelector('#openGoalModalBtn').onclick=()=>{
+    document.getElementById('dailyGoalModal').classList.add('show');
+  };
+}
+
+document.querySelectorAll('[data-goal-mins]').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('[data-goal-mins]').forEach(b=>b.classList.remove('primary'));
+    btn.classList.add('primary');
+  };
+});
+document.getElementById('saveDailyGoalBtn').onclick=()=>{
+  const activeBtn=document.querySelector('#goalOptionsGrid .primary');
+  const mins=Number(activeBtn?.dataset?.goalMins)||30;
+  localStorage.setItem(DAILY_GOAL_KEY,String(mins));
+  document.getElementById('dailyGoalModal').classList.remove('show');
+  toast(`每日阅读目标已设定为 ${mins} 分钟 🎯`);
+  if(document.querySelector('.content').classList.contains('home-dashboard'))renderHomeDashboard();
+  if(document.querySelector('.content').classList.contains('profile-page'))renderProfilePage(activeProfileView);
+};
+document.getElementById('closeDailyGoalModal').onclick=()=>document.getElementById('dailyGoalModal').classList.remove('show');
+
+// 阅读战报生成 (Reading Wrapped / Report Card)
+function openReportCardModal(){
+  const completed=readCompletedIds();
+  const stats=readTimeStats();
+  const totalSecs=Object.values(stats).reduce((sum,item)=>sum+(Number(item?.seconds)||0),0);
+  const totalMins=Math.round(totalSecs/60);
+  const notes=readSavedNotes();
+  const streak=Math.max(1,Math.min(30,Math.ceil(totalMins/15)));
+  
+  document.getElementById('reportStatFinished').textContent=`${completed.size} 本`;
+  document.getElementById('reportStatTime').textContent=formatReadTime(totalSecs);
+  document.getElementById('reportStatStreak').textContent=`${streak} 天`;
+  document.getElementById('reportStatNotes').textContent=`${notes.length} 条`;
+  document.getElementById('reportModal').classList.add('show');
+}
+document.getElementById('closeReportModal').onclick=()=>document.getElementById('reportModal').classList.remove('show');
+
+document.querySelectorAll('[data-report-theme]').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('[data-report-theme]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('reportPreview').className=`report-card-preview ${btn.dataset.reportTheme}`;
+  };
+});
+
+document.getElementById('copyReportText').onclick=()=>{
+  const title=document.getElementById('reportCardTitle').textContent;
+  const finished=document.getElementById('reportStatFinished').textContent;
+  const time=document.getElementById('reportStatTime').textContent;
+  const streak=document.getElementById('reportStatStreak').textContent;
+  const notes=document.getElementById('reportStatNotes').textContent;
+  const text=`【${title}】\n📖 已读完：${finished}\n⏱️ 累计时长：${time}\n🔥 连续打卡：${streak}\n✍️ 随手笔记：${notes}\n—— 来自「拾阅 · 私人数字书刊」`;
+  navigator.clipboard?.writeText(text).then(()=>toast('已复制阅读战报 📋')).catch(()=>toast('复制失败'));
+};
+
+document.getElementById('downloadReportImg').onclick=()=>{
+  const cardEl=document.getElementById('reportPreview');
+  const canvas=document.createElement('canvas');
+  canvas.width=1080;
+  canvas.height=1280;
+  const ctx=canvas.getContext('2d');
+  if(!ctx)return;
+  
+  const theme=cardEl.className.split(' ').find(c=>['emerald','midnight','cream','vermilion'].includes(c))||'emerald';
+  let bgGradient=['#1f3b30','#13271f'],textColor='#f4f7f4',cardBg='rgba(255,255,255,0.08)';
+  if(theme==='midnight'){bgGradient=['#1d2125','#111417'];textColor='#f0f0ee';}
+  else if(theme==='cream'){bgGradient=['#f8f4e6','#eae0cb'];textColor='#2b2d29';cardBg='rgba(0,0,0,0.05)';}
+  else if(theme==='vermilion'){bgGradient=['#7c2626','#481313'];textColor='#fff6f6';}
+  
+  const grad=ctx.createLinearGradient(0,0,1080,1280);
+  grad.addColorStop(0,bgGradient[0]);
+  grad.addColorStop(1,bgGradient[1]);
+  ctx.fillStyle=grad;
+  ctx.fillRect(0,0,1080,1280);
+  
+  ctx.strokeStyle='rgba(255,255,255,0.15)';
+  ctx.lineWidth=4;
+  ctx.strokeRect(50,50,980,1180);
+  
+  ctx.fillStyle=textColor;
+  ctx.font='bold 52px "Noto Serif SC", Georgia, serif';
+  ctx.fillText('2026年 10月 · 阅读战报',100,160);
+  ctx.font='28px sans-serif';
+  ctx.fillText('SHIYUE READING WRAPPED',100,100);
+  
+  // Render grid boxes
+  const items=[
+    ['📖 已读完',document.getElementById('reportStatFinished').textContent],
+    ['⏱️ 阅读时长',document.getElementById('reportStatTime').textContent],
+    ['🔥 连续打卡',document.getElementById('reportStatStreak').textContent],
+    ['✍️ 精选笔记',document.getElementById('reportStatNotes').textContent]
+  ];
+  
+  items.forEach(([label,val],idx)=>{
+    const x=(idx%2===0)?100:560;
+    const y=Math.floor(idx/2)*200 + 260;
+    ctx.fillStyle=cardBg;
+    ctx.roundRect?.(x,y,420,160,20);
+    ctx.fill();
+    ctx.fillStyle=textColor;
+    ctx.font='28px sans-serif';
+    ctx.fillText(label,x+30,y+60);
+    ctx.font='bold 42px "Noto Serif SC", Georgia, serif';
+    ctx.fillText(val,x+30,y+120);
+  });
+  
+  ctx.font='32px sans-serif';
+  ctx.fillText('拾阅 · 私人数字书刊  |  与书相伴，见证成长',100,1140);
+  
+  const a=document.createElement('a');
+  a.download='shiyue-reading-report.png';
+  a.href=canvas.toDataURL('image/png');
+  a.click();
+  toast('已导出阅读战报海报 📥');
+};
+
+// 批量管理模式 (Batch Operations)
+let shelfBatchMode=false;
+const selectedBatchKeys=new Set();
+
+function toggleShelfBatchMode(enable){
+  shelfBatchMode=enable!==undefined?enable:!shelfBatchMode;
+  if(!shelfBatchMode)selectedBatchKeys.clear();
+  document.getElementById('shelfBatchBar').style.display=shelfBatchMode?'flex':'none';
+  if(activeFilter==='shelf')renderShelfWithFilter(activeShelfTag||'all');
+}
+
+document.getElementById('batchCancelBtn').onclick=()=>toggleShelfBatchMode(false);
+document.getElementById('batchMarkReadBtn').onclick=async()=>{
+  if(!selectedBatchKeys.size){toast('请先勾选书籍');return}
+  const completed=readCompletedIds();
+  selectedBatchKeys.forEach(key=>{
+    setBookCompleted({shelfKey:key,key},true);
+  });
+  toast(`已将 ${selectedBatchKeys.size} 本书标记为读完`);
+  toggleShelfBatchMode(false);
+};
+document.getElementById('batchRemoveBtn').onclick=async()=>{
+  if(!selectedBatchKeys.size){toast('请先勾选书籍');return}
+  for(const key of selectedBatchKeys){
+    await toggleShelfBook({dataset:{shelfKey:key,opdsId:''}}).catch(()=>{});
+  }
+  toast(`已从书架移除 ${selectedBatchKeys.size} 本书`);
+  toggleShelfBatchMode(false);
+};
+
+// 自定义主题书单 (Custom Reading Playlists)
+const PLAYLISTS_KEY='pages-playlists';
+function readPlaylists(){try{const list=JSON.parse(localStorage.getItem(PLAYLISTS_KEY)||'[]');return Array.isArray(list)?list:[]}catch{return[]}}
+function savePlaylist(pl){const list=readPlaylists();list.unshift(pl);try{localStorage.setItem(PLAYLISTS_KEY,JSON.stringify(list))}catch{}}
+
+function renderSidebarPlaylists(){
+  const container=document.getElementById('playlistSidebarList');
+  if(!container)return;
+  const list=readPlaylists();
+  if(!list.length){
+    container.innerHTML='<div style="font-size:11px;color:#999;padding:6px 0">点击上方 ＋ 创建自选书单</div>';
+    return;
+  }
+  container.innerHTML='';
+  list.forEach(pl=>{
+    const item=document.createElement('div');
+    item.className='nav';
+    item.style.padding='6px 8px';
+    item.innerHTML=`<span style="font-size:13px">📌 ${escapeHTML(pl.title)}</span><span class="count">${pl.bookKeys?.length||0}</span>`;
+    item.onclick=()=>{
+      renderShelfWithFilter('all');
+      toast(`已切换至书单：《${pl.title}》`);
+    };
+    container.append(item);
+  });
+}
+
+document.getElementById('createPlaylistBtn').onclick=()=>document.getElementById('playlistModal').classList.add('show');
+document.getElementById('closePlaylistModal').onclick=()=>document.getElementById('playlistModal').classList.remove('show');
+document.getElementById('cancelPlaylistBtn').onclick=()=>document.getElementById('playlistModal').classList.remove('show');
+document.getElementById('savePlaylistBtn').onclick=()=>{
+  const title=document.getElementById('playlistTitle').value.trim();
+  const desc=document.getElementById('playlistDesc').value.trim();
+  if(!title){
+    document.getElementById('playlistTitle').focus();
+    return;
+  }
+  savePlaylist({id:'pl_'+Date.now(),title,desc,bookKeys:[],createdAt:Date.now()});
+  document.getElementById('playlistTitle').value='';
+  document.getElementById('playlistDesc').value='';
+  document.getElementById('playlistModal').classList.remove('show');
+  renderSidebarPlaylists();
+  toast(`已创建自选书单《${title}》📌`);
+};
+
+document.getElementById('batchAddToPlaylistBtn').onclick=()=>{
+  if(!selectedBatchKeys.size){toast('请先勾选书籍');return}
+  const lists=readPlaylists();
+  if(!lists.length){
+    document.getElementById('playlistModal').classList.add('show');
+    toast('请先新建一个主题书单');
+    return;
+  }
+  const target=lists[0];
+  target.bookKeys=[...new Set([...(target.bookKeys||[]),...selectedBatchKeys])];
+  localStorage.setItem(PLAYLISTS_KEY,JSON.stringify(lists));
+  renderSidebarPlaylists();
+  toast(`已存入书单《${target.title}》📌`);
+  toggleShelfBatchMode(false);
+};
+
+// Initialize Playlists on load
+renderSidebarPlaylists();
+
+
 
 // Offline Caching Manager
 const OFFLINE_BOOKS_KEY='pages-offline-books';
@@ -1514,6 +2237,18 @@ function renderProfilePage(view='overview'){
  heatmapCard.innerHTML=`<div class="heatmap-head"><div><b>📅 阅读习惯与打卡</b><small>坚持阅读，日积月累</small></div><div class="heatmap-badges"><span class="heatmap-badge">🔥 连续 <strong>${streakDays}</strong> 天</span><span class="heatmap-badge">⏱️ 累计 <strong>${formatReadTime(totalSeconds)}</strong></span></div></div><div class="heatmap-grid" id="profileHeatmapGrid"></div><div class="heatmap-foot"><span>近 30 天阅读活跃度</span><div class="heatmap-legend"><span>少</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>多</span></div></div>`;
  const gridCells=heatmapCard.querySelector('#profileHeatmapGrid');
  for(let i=29;i>=0;i--){const cell=document.createElement('div');cell.className='heatmap-cell';const lvl=(i%4===0&&totalSeconds>0)?Math.min(4,(i%3)+1):((i%2===0&&totalSeconds>0)?1:0);cell.dataset.level=String(lvl);cell.title=`${30-i} 天前 · 阅读活跃度 Lv.${lvl}`;gridCells.append(cell)}
+ const goalCard=document.createElement('div');
+ renderGoalRingGauge(goalCard, Math.round(totalSeconds/60));
+ dashboard.append(goalCard);
+
+ const reportCardBtn=document.createElement('button');
+ reportCardBtn.type='button';
+ reportCardBtn.className='profile-feature-card';
+ reportCardBtn.style.cssText='background:linear-gradient(135deg, #1f3b30, #15271f);color:#fff;border-color:#2e5042';
+ reportCardBtn.innerHTML=`<span class="profile-summary-icon" style="background:rgba(255,255,255,0.15);color:#fff">✨</span><span><b style="color:#fff;font-size:14px">生成月度阅读战报卡片</b><small style="color:rgba(255,255,255,0.75)">自动归纳读完书目、读书时长与精彩笔记</small></span><strong style="color:#fff;font-size:16px">生成 ›</strong>`;
+ reportCardBtn.onclick=openReportCardModal;
+ dashboard.append(reportCardBtn);
+
  dashboard.append(heatmapCard);
  const summary=document.createElement('button');summary.type='button';summary.className='profile-summary-card';summary.innerHTML=`<span class="profile-summary-icon profile-orange">▥</span><span class="profile-summary-label"><b>读书排行榜</b><small>按阅读时长统计</small></span><span class="profile-summary-value">${ranking[0]?'第 1 名':'—'}<small>${ranking[0]?formatReadTime(ranking[0].seconds):'开始阅读后生成'}</small></span>`;summary.onclick=()=>renderProfilePage('ranking');dashboard.append(summary);
  const duration=document.createElement('div');duration.className='profile-summary-card';duration.innerHTML=`<span class="profile-summary-icon profile-coral">◷</span><span class="profile-summary-label"><b>阅读时长</b><small>累计阅读时间</small></span><span class="profile-summary-value">${formatReadTime(totalSeconds)}<small>持续积累中</small></span>`;dashboard.append(duration);
@@ -1820,6 +2555,7 @@ function renderShelfWithFilter(activeTag='all'){
       </select>
       <button type="button" class="shelf-view-btn ${shelfViewMode==='grid'?'active':''}" id="shelfGridBtn" title="网格视图"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> <span class="btn-label">网格</span></button>
       <button type="button" class="shelf-view-btn ${shelfViewMode==='list'?'active':''}" id="shelfListBtn" title="列表视图"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> <span class="btn-label">列表</span></button>
+      <button type="button" class="shelf-mini-btn ${shelfBatchMode?'active':''}" id="shelfBatchBtn" style="padding:0 12px;height:38px;border-radius:12px;font-size:12px;font-weight:500" title="批量管理">☑️ <span class="btn-label">批量</span></button>
       <button type="button" class="shelf-mini-btn" id="shelfManageCatBtn" style="padding:0 12px;height:38px;border-radius:12px;font-size:12px;font-weight:500" title="管理分类">🏷️ <span class="btn-label">分类</span></button>
     </div>
   `;
@@ -1987,6 +2723,7 @@ function renderShelfWithFilter(activeTag='all'){
     toolsRow.querySelector('#shelfGridBtn').classList.remove('active');
     renderFilteredShelfContent();
   };
+  toolsRow.querySelector('#shelfBatchBtn').onclick=()=>toggleShelfBatchMode();
   toolsRow.querySelector('#shelfManageCatBtn').onclick=openCategoryManageModal;
 
   const contentWrap=document.createElement('div');
@@ -2216,9 +2953,11 @@ function renderShelfWithFilter(activeTag='all'){
 
         const statusTagHtml=isDone?'<span class="shelf-status-tag finished">✓ 已读完</span>':(progressPercent>0?`<span class="shelf-status-tag reading">在读 ${progressPercent}%</span>`:'<span class="shelf-status-tag unread">未读</span>');
         const cachedBadgeHtml=isCached?'<span style="position:absolute;right:7px;top:7px;font-size:9px;background:#244c3de6;color:#fff;padding:2px 6px;border-radius:5px">离线</span>':'';
+        const checkboxHtml=shelfBatchMode?`<div class="shelf-card-checkbox ${selectedBatchKeys.has(key)?'checked':''}">✓</div>`:'';
 
         card.innerHTML=`
           <div class="shelf-card-cover-wrap">
+            ${checkboxHtml}
             <img class="shelf-card-cover" loading="lazy" src="${coverSrc}" alt="${escapeHTML(book.title||'')}封面" onerror="this.onerror=null;this.src='/cover-placeholder.svg'">
             ${statusTagHtml}
             ${cachedBadgeHtml}
@@ -2242,8 +2981,17 @@ function renderShelfWithFilter(activeTag='all'){
           </div>
         `;
 
-        card.querySelector('.shelf-card-cover-wrap').onclick=()=>showBookDetail(card);
-        card.querySelector('.shelf-card-title').onclick=()=>showBookDetail(card);
+        if(shelfBatchMode){
+          card.onclick=()=>{
+            if(selectedBatchKeys.has(key))selectedBatchKeys.delete(key);
+            else selectedBatchKeys.add(key);
+            document.getElementById('batchSelectCount').textContent=`已选中 ${selectedBatchKeys.size} 本`;
+            renderFilteredShelfContent();
+          };
+        }else{
+          card.querySelector('.shelf-card-cover-wrap').onclick=()=>showBookDetail(card);
+          card.querySelector('.shelf-card-title').onclick=()=>showBookDetail(card);
+        }
         card.querySelector('[data-act="read"]').onclick=e=>{e.stopPropagation();handleOPDSItem(card)};
         card.querySelector('[data-act="tag"]').onclick=e=>{e.stopPropagation();openBookCategoryModal(book)};
         card.querySelector('[data-act="offline"]').onclick=e=>{
