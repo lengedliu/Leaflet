@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  shiyue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shiyue-reader:latest
+    container_name: shiyue-reader
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    volumes:
+      # 映射配置目录，持久化保存 Calibre-Web 连接信息与书库缓存
+      - ./config:/app/config
+    restart: unless-stopped
