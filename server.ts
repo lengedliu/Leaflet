@@ -424,16 +424,100 @@ function parseOpdsFeed(xmlText: string, address: string, username: string, passw
 function pagedHtml(title: string, content: string): string {
   const safeTitle = title.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] || c));
   return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>${safeTitle}</title><style>
-  :root{--paper:#f7f5ef;--ink:#30332e;--footer:#f7f5efed;--rule:#deddd5}body[data-theme="white"]{--paper:#fff;--ink:#222;--footer:#fffffff0;--rule:#ddd}body[data-theme="night"]{--paper:#202421;--ink:#e5e3dc;--footer:#202421ed;--rule:#414640}body[data-theme="sepia"]{--paper:#f3ebdc;--ink:#3e3223;--footer:#f3ebdced;--rule:#dfd3be}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:var(--paper);color:var(--ink);font:18px/2.05 Georgia,"Noto Serif SC","Songti SC",serif;transition:background .2s,color .2s}body[data-font="sans"]{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif}body[data-font="kaiti"]{font-family:"Kaiti SC","STKaiti","楷体",KaiTi,serif}body[data-font="serif"]{font-family:Georgia,"Noto Serif SC","Songti SC",serif}body[data-line="compact"]{line-height:1.65}body[data-line="normal"]{line-height:2.05}body[data-line="loose"]{line-height:2.45}#pages{position:absolute;inset:0;width:100vw;height:100dvh;overflow-x:auto;overflow-y:hidden;padding:34px 24px 68px;column-width:calc(100vw - 48px);column-gap:48px;column-fill:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;touch-action:pan-y;scrollbar-width:none}#pages::-webkit-scrollbar{display:none}#pages>*{break-inside:avoid-column}.epub-chapter{break-inside:auto}.epub-chapter:not([data-chapter="0"]){break-before:column}h1,h2,h3{font-weight:500;line-height:1.5;margin:0 0 1.2em}h1{font-size:1.45em}h2,h3{margin-top:1.4em}p{margin:0 0 1.2em;text-indent:2em}blockquote{margin:1.4em 0;padding-left:1em;border-left:2px solid #829182;color:inherit;opacity:.8}#page-footer{position:fixed;z-index:2;bottom:0;left:0;right:0;height:52px;padding:0 24px calc(env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;background:var(--footer);color:var(--ink);opacity:.82;font:11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backdrop-filter:blur(12px)}#progress{height:2px;flex:1;background:var(--rule)}#progress i{display:block;width:0;height:100%;background:#778d7d;transition:width .15s}@media(max-width:600px){body{font-size:17px}#pages{padding:28px 22px 64px;column-width:calc(100vw - 44px);column-gap:44px}#page-footer{height:calc(46px + env(safe-area-inset-bottom));padding:0 22px env(safe-area-inset-bottom)}}
+  :root{--paper:#f7f5ef;--ink:#30332e;--footer:#f7f5efed;--rule:#deddd5}body[data-theme="white"]{--paper:#fff;--ink:#222;--footer:#fffffff0;--rule:#ddd}body[data-theme="night"]{--paper:#202421;--ink:#e5e3dc;--footer:#202421ed;--rule:#414640}body[data-theme="sepia"]{--paper:#f3ebdc;--ink:#3e3223;--footer:#f3ebdced;--rule:#dfd3be}body[data-theme="green"]{--paper:#ebf3eb;--ink:#1c3725;--footer:#ebf3ebed;--rule:#c2d6c5}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:var(--paper);color:var(--ink);font:18px/2.05 Georgia,"Noto Serif SC","Songti SC",serif;transition:background .2s,color .2s}body[data-font="sans"]{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif}body[data-font="kaiti"]{font-family:"Kaiti SC","STKaiti","楷体",KaiTi,serif}body[data-font="serif"]{font-family:Georgia,"Noto Serif SC","Songti SC",serif}body[data-line="compact"]{line-height:1.65}body[data-line="normal"]{line-height:2.05}body[data-line="loose"]{line-height:2.45}
+  #pages{position:absolute;inset:0;width:100vw;height:100dvh;overflow-x:auto;overflow-y:hidden;padding:34px 24px 68px;column-width:calc(100vw - 48px);column-gap:48px;column-fill:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;touch-action:pan-y;scrollbar-width:none}
+  body[data-scroll-mode="scroll"] #pages{position:static;width:100%;max-width:760px;margin:0 auto;height:100vh;overflow-x:hidden;overflow-y:auto;padding:34px 24px 90px;column-width:auto;column-gap:0;column-fill:balance;scroll-snap-type:none}
+  #pages::-webkit-scrollbar{display:none}#pages>*{break-inside:avoid-column}.epub-chapter{break-inside:auto}.epub-chapter:not([data-chapter="0"]){break-before:column}body[data-scroll-mode="scroll"] .epub-chapter{break-before:auto;margin-bottom:40px}h1,h2,h3{font-weight:500;line-height:1.5;margin:0 0 1.2em}h1{font-size:1.45em}h2,h3{margin-top:1.4em}p{margin:0 0 1.2em;text-indent:2em}blockquote{margin:1.4em 0;padding-left:1em;border-left:2px solid #829182;color:inherit;opacity:.8}
+  mark.hl-yellow{background:#ffeaa7cc;color:inherit;padding:1px 3px;border-radius:3px;border-bottom:2px solid #fdcb6e}
+  mark.hl-green{background:#55efc4cc;color:inherit;padding:1px 3px;border-radius:3px;border-bottom:2px solid #00b894}
+  mark.hl-blue{background:#74b9ffcc;color:inherit;padding:1px 3px;border-radius:3px;border-bottom:2px solid #0984e3}
+  mark.hl-pink{background:#fd79a8cc;color:inherit;padding:1px 3px;border-radius:3px;border-bottom:2px solid #e84393}
+  #page-footer{position:fixed;z-index:2;bottom:0;left:0;right:0;height:52px;padding:0 24px calc(env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;background:var(--footer);color:var(--ink);opacity:.82;font:11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backdrop-filter:blur(12px)}#progress{height:2px;flex:1;background:var(--rule)}#progress i{display:block;width:0;height:100%;background:#778d7d;transition:width .15s}@media(max-width:600px){body{font-size:17px}#pages{padding:28px 22px 64px;column-width:calc(100vw - 44px);column-gap:44px}#page-footer{height:calc(46px + env(safe-area-inset-bottom));padding:0 22px env(safe-area-inset-bottom)}}
   </style></head><body><main id="pages" aria-label="阅读内容"><h1>${safeTitle}</h1>${content}</main><footer id="page-footer"><span id="page-current">1</span><div id="progress"><i></i></div><span id="page-total">1</span></footer><script>
   const pages=document.getElementById('pages'),current=document.getElementById('page-current'),total=document.getElementById('page-total'),bar=document.querySelector('#progress i');let startX=0,startY=0,restoreReady=false,progressFrame=0,lastSentPage=0,lastSentTotal=0;
-  function updateProgress(){const width=pages.clientWidth||1,base=Number(window.virtualBasePage)||0;const localPage=Math.min(Math.ceil(pages.scrollWidth/width)||1,Math.floor((pages.scrollLeft+width*.35)/width)+1);const localCount=Math.max(1,Math.ceil(pages.scrollWidth/width));const page=base+localPage,count=base+localCount;const totalKnown=!window.chapterLoadingEnabled||window.allChaptersLoaded;current.textContent=page;total.textContent=totalKnown?count:'…';bar.style.width=(Math.min(page,count)/count*100)+'%';const reportedTotal=totalKnown?count:0;if(restoreReady&&(page!==lastSentPage||reportedTotal!==lastSentTotal)){lastSentPage=page;lastSentTotal=reportedTotal;parent.postMessage({type:'reader-progress',page,total:reportedTotal},location.origin)}}
+  function updateProgress(){
+    const isScroll=document.body.dataset.scrollMode==='scroll';
+    if(isScroll){
+      const maxScroll=Math.max(1,pages.scrollHeight-pages.clientHeight);
+      const percent=Math.min(100,Math.max(0,Math.round((pages.scrollTop/maxScroll)*100)));
+      current.textContent=percent+'%';total.textContent='100%';bar.style.width=percent+'%';
+      if(restoreReady)parent.postMessage({type:'reader-progress',page:Math.max(1,Math.ceil(percent/3)),total:34,scrollPercent:percent},location.origin);
+      return;
+    }
+    const width=pages.clientWidth||1,base=Number(window.virtualBasePage)||0;const localPage=Math.min(Math.ceil(pages.scrollWidth/width)||1,Math.floor((pages.scrollLeft+width*.35)/width)+1);const localCount=Math.max(1,Math.ceil(pages.scrollWidth/width));const page=base+localPage,count=base+localCount;const totalKnown=!window.chapterLoadingEnabled||window.allChaptersLoaded;current.textContent=page;total.textContent=totalKnown?count:'…';bar.style.width=(Math.min(page,count)/count*100)+'%';const reportedTotal=totalKnown?count:0;if(restoreReady&&(page!==lastSentPage||reportedTotal!==lastSentTotal)){lastSentPage=page;lastSentTotal=reportedTotal;parent.postMessage({type:'reader-progress',page,total:reportedTotal},location.origin)}
+  }
   function scheduleProgress(){if(progressFrame)return;progressFrame=requestAnimationFrame(()=>{progressFrame=0;updateProgress()})}
-  function turn(direction){pages.scrollBy({left:direction*pages.clientWidth,behavior:'smooth'})}
-  window.addEventListener('message',event=>{if(event.origin!==location.origin)return;if(event.data?.type==='pages-turn')turn(Math.sign(event.data.direction||0));if(event.data?.type==='reader-restore'){restoreReady=!window.ensureReaderPage;if(window.ensureReaderPage)window.ensureReaderPage(Number(event.data.page||1));else{pages.scrollTo({left:Math.max(0,(Number(event.data.page||1)-1)*pages.clientWidth),behavior:'auto'});requestAnimationFrame(updateProgress)}}if(event.data?.type==='reader-settings'){document.body.dataset.theme=['paper','white','night','sepia'].includes(event.data.theme)?event.data.theme:'paper';document.body.dataset.font=['serif','sans','kaiti'].includes(event.data.fontFamily)?event.data.fontFamily:'serif';document.body.dataset.line=['compact','normal','loose'].includes(event.data.lineHeight)?event.data.lineHeight:'normal';document.body.style.fontSize=(18*Math.max(.8,Math.min(1.6,Number(event.data.fontScale)||1)))+'px'}});
+  function turn(direction){
+    if(document.body.dataset.scrollMode==='scroll'){
+      pages.scrollBy({top:direction*(pages.clientHeight*0.85),behavior:'smooth'});
+    }else{
+      pages.scrollBy({left:direction*pages.clientWidth,behavior:'smooth'});
+    }
+  }
+  function highlightTextInDom(text,color){
+    if(!text||!text.trim())return;
+    const term=text.trim();
+    const walker=document.createTreeWalker(pages,NodeFilter.SHOW_TEXT,null);
+    let node;
+    while((node=walker.nextNode())){
+      const parentNode=node.parentElement;
+      if(parentNode&&parentNode.tagName==='MARK')continue;
+      const idx=node.nodeValue.indexOf(term);
+      if(idx>=0){
+        const range=document.createRange();
+        range.setStart(node,idx);
+        range.setEnd(node,idx+term.length);
+        const mark=document.createElement('mark');
+        mark.className='hl-'+(color||'yellow');
+        mark.dataset.highlightText=term;
+        range.surroundContents(mark);
+        break;
+      }
+    }
+  }
+  document.addEventListener('selectionchange',()=>{
+    const sel=window.getSelection();
+    const text=sel?sel.toString().trim():'';
+    if(text&&text.length>=2){
+      try{
+        const range=sel.getRangeAt(0);
+        const rect=range.getBoundingClientRect();
+        parent.postMessage({type:'reader-selection',text,rect:{top:rect.top,left:rect.left,width:rect.width,bottom:rect.bottom}},location.origin);
+      }catch{}
+    }else{
+      parent.postMessage({type:'reader-selection-clear'},location.origin);
+    }
+  });
+  window.addEventListener('message',event=>{
+    if(event.origin!==location.origin)return;
+    if(event.data?.type==='pages-turn')turn(Math.sign(event.data.direction||0));
+    if(event.data?.type==='reader-restore'){
+      restoreReady=!window.ensureReaderPage;
+      if(window.ensureReaderPage)window.ensureReaderPage(Number(event.data.page||1));
+      else{
+        pages.scrollTo({left:Math.max(0,(Number(event.data.page||1)-1)*pages.clientWidth),behavior:'auto'});
+        requestAnimationFrame(updateProgress);
+      }
+    }
+    if(event.data?.type==='reader-settings'){
+      document.body.dataset.theme=['paper','white','night','sepia','green'].includes(event.data.theme)?event.data.theme:'paper';
+      document.body.dataset.font=['serif','sans','kaiti'].includes(event.data.fontFamily)?event.data.fontFamily:'serif';
+      document.body.dataset.line=['compact','normal','loose'].includes(event.data.lineHeight)?event.data.lineHeight:'normal';
+      document.body.dataset.scrollMode=event.data.scrollMode==='scroll'?'scroll':'paged';
+      document.body.style.fontSize=(18*Math.max(.8,Math.min(1.6,Number(event.data.fontScale)||1)))+'px';
+      requestAnimationFrame(updateProgress);
+    }
+    if(event.data?.type==='reader-apply-highlight'){
+      highlightTextInDom(event.data.text,event.data.color);
+    }
+  });
   pages.addEventListener('touchstart',event=>{if(event.touches.length===1){startX=event.touches[0].clientX;startY=event.touches[0].clientY}},{passive:true});
-  pages.addEventListener('touchend',event=>{if(!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-startX,dy=event.changedTouches[0].clientY-startY;if(Math.abs(dx)>42&&Math.abs(dx)>Math.abs(dy)*1.2)turn(dx<0?1:-1)},{passive:true});
-  pages.addEventListener('click',event=>{const x=event.clientX/pages.clientWidth;if(x>.82)turn(1);else if(x<.18)turn(-1)});
+  pages.addEventListener('touchend',event=>{if(!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-startX,dy=event.changedTouches[0].clientY-startY;if(Math.abs(dx)>42&&Math.abs(dx)>Math.abs(dy)*1.2&&document.body.dataset.scrollMode!=='scroll')turn(dx<0?1:-1)},{passive:true});
+  pages.addEventListener('click',event=>{
+    if(window.getSelection()?.toString().trim())return;
+    if(document.body.dataset.scrollMode==='scroll')return;
+    const x=event.clientX/pages.clientWidth;if(x>.82)turn(1);else if(x<.18)turn(-1);
+  });
   pages.addEventListener('scroll',scheduleProgress,{passive:true});window.addEventListener('resize',scheduleProgress);document.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='PageDown')turn(1);if(event.key==='ArrowLeft'||event.key==='PageUp')turn(-1)});requestAnimationFrame(updateProgress);
   </script></body></html>`;
 }

@@ -14,7 +14,10 @@
 .modal .remember-row{display:flex;align-items:center;gap:8px;margin:18px 0 0;font-size:12px}.modal .remember-row input{width:16px;height:16px;accent-color:var(--green)}
 .mobile-tabbar{display:none}
 .reader-flip{position:fixed;z-index:22;top:50%;transform:translateY(-50%);width:48px;height:64px;border:1px solid #e2e0d8;border-radius:24px;background:#fffdf8d9;color:#566358;box-shadow:0 5px 22px #00000012;display:grid;place-items:center;transition:background .18s,transform .18s}.reader-flip:hover{background:#fff;transform:translateY(-50%) scale(1.04)}.reader-flip svg{width:21px;height:21px}.reader-flip.prev{left:26px}.reader-flip.next{right:26px}@media(max-width:680px){.reader-flip{display:none}}
-.reader-tools{display:flex;align-items:center;gap:8px}.reader-tool{height:34px;min-width:38px;padding:0 10px;border:1px solid #e2e0d8;border-radius:10px;background:#fffdf8;color:#5d655c;font-size:12px}.reader-tool:hover,.reader-tool.active{background:#e8eee7;color:#244c3d}.reader-status{min-width:72px;text-align:center;color:#99998f;font-size:11px}.reader-settings-panel{display:none;position:absolute;z-index:24;right:34px;top:66px;width:270px;padding:17px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 12px 36px #0002;color:#555;font-size:12px}.reader-settings-panel.show{display:block}.reader-toc-panel{display:none;position:absolute;z-index:25;left:34px;top:66px;width:320px;max-height:min(500px,calc(100vh - 120px));padding:17px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 12px 36px #0002;color:#555;font-size:12px;overflow:hidden;flex-direction:column}.reader-toc-panel.show{display:flex}.reader-toc-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid #eee;font:600 15px var(--serif)}.reader-toc-list{overflow-y:auto;flex:1;margin-top:8px;display:flex;flex-direction:column;gap:3px;max-height:360px}.reader-toc-item{padding:8px 10px;border-radius:8px;background:none;border:0;text-align:left;color:#454740;font:13px/1.4 var(--sans);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.reader-toc-item:hover{background:#edf1ea;color:#244c3d}.reader-search-panel{display:none;position:absolute;z-index:26;right:34px;top:66px;width:340px;max-height:min(520px,calc(100vh - 120px));padding:17px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 14px 40px #0002;color:#555;font-size:12px;overflow:hidden;flex-direction:column}.reader-search-panel.show{display:flex}.reader-search-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid #eee;font:600 15px var(--serif)}.reader-search-box{display:flex;gap:7px;margin:10px 0 6px}.reader-search-box input{flex:1;height:36px;padding:0 11px;border:1px solid var(--line);border-radius:8px;background:#faf9f6;font-size:12px;outline:none}.reader-search-box input:focus{border-color:#71917f}.reader-search-box button{padding:0 13px;border-radius:8px;border:0;background:var(--green);color:white;font-size:12px}.reader-search-count{font-size:11px;color:#999;margin-bottom:6px}.reader-search-list{overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:6px;max-height:340px}.reader-search-item{padding:9px 11px;border-radius:9px;background:#faf9f6;border:1px solid #e9e8e0;text-align:left;color:#444;cursor:pointer;font-size:12px}.reader-search-item:hover{background:#edf3ec;border-color:#c8dcc9}.reader-search-item b{display:block;font-size:12px;color:#244c3d;margin-bottom:3px}.reader-search-item p{margin:0;color:#666;font:12px/1.5 var(--sans);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.reader-search-item mark{background:#ffeaa7;color:#333;border-radius:2px;padding:0 2px}.reader-tts-badge{display:none;align-items:center;gap:6px;font-size:11px;color:#244c3d;background:#dce9df;padding:4px 9px;border-radius:12px;font-weight:600}.reader-tts-badge.active{display:inline-flex}.cached-badge{position:absolute;right:8px;bottom:8px;background:#244c3d;color:#fff;font-size:9px;padding:3px 6px;border-radius:4px;font-weight:600;box-shadow:0 2px 6px #0003;pointer-events:none}.shelf-chips{display:flex;gap:7px;overflow-x:auto;padding-bottom:8px;margin-bottom:18px;scrollbar-width:none}.shelf-chips::-webkit-scrollbar{display:none}.shelf-chip{padding:6px 14px;border-radius:20px;border:1px solid var(--line);background:#faf9f6;color:#666;font-size:12px;cursor:pointer;white-space:nowrap;border:1px solid var(--line)}.shelf-chip.active{background:var(--green);color:#fff;border-color:var(--green)}.reader-setting-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.reader-setting-row:last-child{margin-bottom:0}.reader-setting-actions,.reader-themes,.reader-options-group{display:flex;gap:5px}.reader-setting-actions button,.reader-themes button,.reader-options-group button{border:1px solid #e4e2da;background:#fff;border-radius:8px;padding:6px 8px;color:#555;font-size:11px}.reader-themes button[aria-pressed="true"],.reader-options-group button[aria-pressed="true"]{border-color:#7c927f;background:#edf1ea;color:#31513e;font-weight:600}.reader-theme-dot{display:inline-block;width:9px;height:9px;margin-right:4px;border-radius:50%;vertical-align:-1px}.reader-theme-dot.paper{background:#eae3d3}.reader-theme-dot.sepia{background:#dfd2bb}.reader-theme-dot.white{background:#fff;border:1px solid #ddd}.reader-theme-dot.night{background:#252a27}.note-modal{display:none;position:fixed;inset:0;background:#171a17b8;z-index:60;align-items:center;justify-content:center;padding:20px}.note-modal.show{display:flex}.note-card{width:min(440px,100%);background:var(--paper);border-radius:18px;padding:22px 24px;box-shadow:0 20px 60px #0004}.note-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}.note-head h3{font:500 18px var(--serif);margin:0}.note-meta{font-size:11px;color:#888;margin-bottom:12px}.note-card textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfaf7;outline:none;font:13px/1.7 var(--sans);resize:vertical;min-height:90px;color:var(--ink)}.note-card textarea:focus{border-color:#71917f}.note-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:14px}.note-item{background:#fff;border-radius:14px;padding:14px 17px;border:1px solid var(--line);margin-bottom:11px;display:flex;flex-direction:column;gap:7px}.note-item-head{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600}.note-item-page{color:#78877a;font-size:11px;font-weight:normal}.note-item-text{font-size:13px;color:#454740;line-height:1.6;white-space:pre-wrap}.note-item-foot{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#999;padding-top:4px}.note-item-action{background:none;border:0;color:#244c3d;font-size:11px;padding:0;cursor:pointer}.note-item-del{color:#b35555}@media(max-width:680px){.reader-tools{gap:4px}.reader-tool{height:32px;min-width:34px;padding:0 7px}.reader-status{display:none}.reader-settings-panel{position:fixed;right:18px;top:58px;width:min(270px,calc(100vw - 36px))}.reader-toc-panel{position:fixed;left:18px;right:18px;top:58px;width:auto}.reader-search-panel{position:fixed;left:18px;right:18px;top:58px;width:auto}}
+.reader-tools{display:flex;align-items:center;gap:8px}.reader-tool{height:34px;min-width:38px;padding:0 10px;border:1px solid #e2e0d8;border-radius:10px;background:#fffdf8;color:#5d655c;font-size:12px}.reader-tool:hover,.reader-tool.active{background:#e8eee7;color:#244c3d}.reader-status{min-width:72px;text-align:center;color:#99998f;font-size:11px}.reader-settings-panel{display:none;position:absolute;z-index:24;right:34px;top:66px;width:290px;padding:17px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 12px 36px #0002;color:#555;font-size:12px}.reader-settings-panel.show{display:block}.reader-setting-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font-size:12px;gap:8px}.reader-setting-row:last-child{margin-bottom:0}.reader-setting-actions,.reader-options-group{display:flex;gap:5px;flex-wrap:wrap}.reader-setting-actions button,.reader-options-group button{padding:5px 9px;border-radius:8px;border:1px solid #dedcd3;background:#faf9f5;font-size:11px;color:#555;cursor:pointer;transition:all .15s}.reader-setting-actions button:hover,.reader-options-group button:hover,.reader-setting-actions button[aria-pressed="true"],.reader-options-group button[aria-pressed="true"]{background:#244c3d;color:#fff;border-color:#244c3d}.reader-themes{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;width:100%}.reader-themes button{padding:6px 2px;border-radius:8px;border:1px solid #dedcd3;background:#faf9f5;font-size:10px;color:#555;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}.reader-themes button[aria-pressed="true"]{border-color:#244c3d;background:#edf3ec;font-weight:600;color:#244c3d}.reader-theme-dot{width:14px;height:14px;border-radius:50%;border:1px solid #0002;display:inline-block}.reader-theme-dot.paper{background:#f7f5ef}.reader-theme-dot.green{background:#ebf3eb}.reader-theme-dot.sepia{background:#f3ebdc}.reader-theme-dot.white{background:#ffffff}.reader-theme-dot.night{background:#202421}.reader-toc-panel{display:none;position:absolute;z-index:25;left:34px;top:66px;width:320px;max-height:min(500px,calc(100vh - 120px));padding:17px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 12px 36px #0002;color:#555;font-size:12px;overflow:hidden;flex-direction:column}.reader-toc-panel.show{display:flex}.reader-toc-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid #eee;font:600 15px var(--serif)}.reader-toc-list{overflow-y:auto;flex:1;margin-top:8px;display:flex;flex-direction:column;gap:3px;max-height:360px}.reader-toc-item{padding:8px 10px;border-radius:8px;background:none;border:0;text-align:left;color:#454740;font:13px/1.4 var(--sans);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.reader-toc-item:hover{background:#edf1ea;color:#244c3d}.reader-search-panel{display:none;position:absolute;z-index:26;right:34px;top:66px;width:340px;max-height:min(520px,calc(100vh - 120px));padding:17px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 14px 40px #0002;color:#555;font-size:12px;overflow:hidden;flex-direction:column}.reader-search-panel.show{display:flex}.reader-search-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid #eee;font:600 15px var(--serif)}.reader-search-box{display:flex;gap:7px;margin:10px 0 6px}.reader-search-box input{flex:1;height:36px;padding:0 11px;border:1px solid var(--line);border-radius:8px;background:#faf9f6;font-size:12px;outline:none}.reader-search-box input:focus{border-color:#71917f}.reader-search-box button{padding:0 13px;border-radius:8px;border:0;background:var(--green);color:white;font-size:12px}.reader-search-count{font-size:11px;color:#999;margin-bottom:6px}.reader-search-list{overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:6px;max-height:340px}.reader-search-item{padding:9px 11px;border-radius:9px;background:#faf9f6;border:1px solid #e9e8e0;text-align:left;color:#444;cursor:pointer;font-size:12px}.reader-search-item:hover{background:#edf3ec;border-color:#c8dcc9}.reader-search-item b{display:block;font-size:12px;color:#244c3d;margin-bottom:3px}.reader-search-item p{margin:0;color:#666;font:12px/1.5 var(--sans);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.reader-search-item mark{background:#ffeaa7;color:#333;border-radius:2px;padding:0 2px}.reader-tts-badge{display:none;align-items:center;gap:6px;font-size:11px;color:#244c3d;background:#dce9df;padding:4px 9px;border-radius:12px;font-weight:600}.reader-tts-badge.active{display:inline-flex}.cached-badge{position:absolute;right:8px;bottom:8px;background:#244c3d;color:#fff;font-size:9px;padding:3px 6px;border-radius:4px;font-weight:600;box-shadow:0 2px 6px #0003;pointer-events:none}.selection-popover{display:none;position:fixed;z-index:40;background:#232724;color:#fff;border-radius:12px;padding:6px 10px;box-shadow:0 10px 30px #0004;align-items:center;gap:7px;font-size:12px;transform:translate(-50%,-100%);margin-top:-10px;user-select:none;animation:popIn .15s cubic-bezier(.2,0,0,1)}.selection-popover.show{display:flex}@keyframes popIn{from{opacity:0;transform:translate(-50%,-80%) scale(.95)}to{opacity:1;transform:translate(-50%,-100%) scale(1)}}.sel-color-btn{width:18px;height:18px;border-radius:50%;border:2px solid #ffffff40;cursor:pointer;transition:transform .15s}.sel-color-btn:hover{transform:scale(1.2)}.sel-color-btn.yellow{background:#fdcb6e}.sel-color-btn.green{background:#00b894}.sel-color-btn.blue{background:#0984e3}.sel-color-btn.pink{background:#e84393}.sel-divider{width:1px;height:14px;background:#ffffff30;margin:0 2px}.sel-action-btn{background:none;border:0;color:#e1e4dc;font-size:11px;padding:4px 6px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:3px}.sel-action-btn:hover{background:#ffffff20;color:#fff}
+.quote-modal{display:none;position:fixed;inset:0;background:#171a17b8;z-index:70;align-items:center;justify-content:center;padding:20px}.quote-modal.show{display:flex}.quote-box{width:min(480px,100%);background:var(--paper);border-radius:20px;padding:22px 24px;box-shadow:0 24px 80px #0005;display:flex;flex-direction:column;gap:15px}.quote-card-preview{padding:28px 24px;border-radius:16px;background:#fff;border:1px solid #e7e4dc;box-shadow:0 8px 24px #0000000a;display:flex;flex-direction:column;gap:16px;min-height:200px;position:relative}.quote-card-preview.emerald{background:linear-gradient(145deg,#244c3d,#1a392e);color:#f4f7f4;border-color:#2a5746}.quote-card-preview.midnight{background:#1e2220;color:#e8e7e1;border-color:#313734}.quote-card-preview.cream{background:#f8f5ee;color:#333;border-color:#e4dfd2}.quote-card-preview.vermilion{background:linear-gradient(145deg,#8c2a2a,#631a1a);color:#fff5f5;border-color:#a83838}.quote-mark{font-size:32px;line-height:1;font-family:Georgia,serif;opacity:.4;margin-bottom:-8px}.quote-body{font:500 16px/1.85 var(--serif);letter-spacing:.02em;white-space:pre-wrap;overflow-wrap:anywhere}.quote-card-preview.emerald .quote-body,.quote-card-preview.vermilion .quote-body{color:#fbfcfb}.quote-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;opacity:.8;border-top:1px solid currentColor;padding-top:10px;gap:10px}.quote-book{font-weight:600}.quote-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:4px}.quote-themes{display:flex;gap:5px}.quote-theme-btn{padding:5px 9px;border-radius:8px;border:1px solid var(--line);background:#faf9f6;font-size:11px;cursor:pointer}.quote-theme-btn.active{background:var(--green);color:#fff;border-color:var(--green)}
+.ambient-panel{display:none;position:absolute;z-index:26;right:34px;top:66px;width:300px;padding:18px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 14px 40px #0002;color:#555;font-size:12px;flex-direction:column;gap:14px}.ambient-panel.show{display:flex}.ambient-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ambient-sound-btn{padding:10px 8px;border-radius:10px;border:1px solid var(--line);background:#faf9f6;color:#555;font-size:12px;display:flex;align-items:center;gap:7px;cursor:pointer;transition:all .15s}.ambient-sound-btn:hover,.ambient-sound-btn.active{background:#dce9df;border-color:#82aa8e;color:#244c3d;font-weight:600}.pomodoro-timer{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;background:#faf9f6;border:1px solid var(--line)}.pomodoro-time{font:700 18px/1 var(--sans);color:var(--green)}.pomodoro-btn{padding:6px 12px;border-radius:8px;border:0;background:var(--green);color:#fff;font-size:11px;cursor:pointer}
+.reader-bookmarks-panel{display:none;position:absolute;z-index:26;left:34px;top:66px;width:320px;max-height:min(500px,calc(100vh - 120px));padding:17px;border:1px solid #e7e4dc;border-radius:14px;background:#fffefa;box-shadow:0 14px 40px #0002;color:#555;font-size:12px;overflow:hidden;flex-direction:column}.reader-bookmarks-panel.show{display:flex}.bookmark-item{padding:9px 11px;border-radius:9px;background:#faf9f6;border:1px solid #e9e8e0;text-align:left;color:#444;cursor:pointer;font-size:12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}.bookmark-item:hover{background:#edf3ec;border-color:#c8dcc9}.bookmark-item-del{color:#b35555;border:0;background:none;font-size:13px;padding:2px 6px;cursor:pointer}@media(max-width:680px){.ambient-panel,.quote-box,.reader-bookmarks-panel{left:18px;right:18px;width:auto;top:58px}}
 .source-art{aspect-ratio:.73;border-radius:7px;background:linear-gradient(145deg,#e6ebe4,#d4dfd5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;margin-bottom:13px;box-shadow:0 7px 16px #2222}.source-icon{width:54px;height:54px;border-radius:17px;background:#244c3d;color:#f6f5f1;display:grid;place-items:center;box-shadow:0 8px 18px #244c3d30}.source-icon svg{width:29px}.source-art>span{font-size:9px;letter-spacing:.12em;color:#617364;text-transform:uppercase}.source-tile:hover .source-art{transform:translateY(-3px)}
 .catalog-back{display:none}
 .file-protocol-notice{margin:16px 0;padding:14px 18px;border:1px solid #e4c78e;border-radius:12px;background:#fff7e5;color:#625437;font:13px/1.65 var(--sans)}.file-protocol-notice strong{display:block;margin-bottom:3px;color:#463b25}.file-protocol-notice code{display:inline-block;margin:7px 7px 0 0;padding:3px 7px;border-radius:5px;background:#f0e8d7;color:#51452d;font-size:12px}.file-protocol-notice[hidden]{display:none}
@@ -36,13 +39,881 @@
 </style>
 <style>
 .reading-segments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;margin:0 0 22px;background:#e7e8e9;border-radius:28px}.reading-segment{min-width:0;padding:11px 8px;border:0;border-radius:24px;background:transparent;color:#74777d;font-size:13px;white-space:nowrap}.reading-segment.active{background:#fff;color:#20232a;box-shadow:0 1px 4px #00000008}.reading-year-group{margin:0 0 22px}.reading-year-group h3{margin:0 2px 13px;font-size:18px;font-weight:600;color:#363a40}.reading-year-group .profile-list-item{margin-bottom:11px}.reading-year-group .profile-list-item:last-child{margin-bottom:0}.catalog-load-more{grid-column:1/-1;justify-self:center;min-width:190px;margin:10px 0 28px;padding:11px 18px;border:1px solid var(--line);border-radius:24px;background:#fff;color:#53685a;font-size:12px}.catalog-load-more:hover{background:#edf1ea}@media(max-width:680px){.reading-segments{gap:3px;margin:0 0 22px;padding:4px}.reading-segment{padding:10px 4px;font-size:14px}.reading-year-group{margin-bottom:24px}.reading-year-group h3{font-size:17px;margin-bottom:13px}.catalog-load-more{margin-top:6px}}
+/* --- Bookshelf UI, Categories, and My Notes Styles --- */
+.content.shelf-page > .search-row,
+.content.shelf-page > section:first-of-type {
+  display: none !important;
+}
+
+.content.shelf-page #bookGrid {
+  display: block !important;
+  width: 100% !important;
+}
+
+.shelf-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.shelf-header-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  background: #fbfaf7;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 12px #00000004;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.shelf-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.shelf-summary-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #eeeee7;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555850;
+  white-space: nowrap !important;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shelf-summary-stat strong {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.shelf-tools-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.shelf-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 160px;
+}
+
+.shelf-search-wrap svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #999;
+}
+
+.shelf-search-input {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px 0 36px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 12px;
+  outline: none;
+}
+
+.shelf-search-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px #244c3d1a;
+}
+
+.shelf-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.shelf-sort-select {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 12px;
+  color: #555;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap !important;
+}
+
+.shelf-view-btn {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: #666;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all .15s;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+}
+
+.shelf-view-btn:hover, .shelf-view-btn.active {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.shelf-chips-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2px 0 4px;
+}
+
+.shelf-chips {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 2px;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.shelf-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.shelf-chip {
+  flex: 0 0 auto !important;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 20px;
+  border: 1px solid #e1ded4;
+  background: #fff;
+  color: #555850;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all .18s ease;
+  white-space: nowrap !important;
+  user-select: none;
+  box-shadow: 0 1px 4px #00000006;
+}
+
+.shelf-chip:hover {
+  background: #f0ede4;
+  border-color: #cfccc2;
+  transform: translateY(-1px);
+}
+
+.shelf-chip.active {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+  box-shadow: 0 3px 10px #244c3d30;
+  font-weight: 600;
+}
+
+.shelf-chip .chip-count {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  background: #eeeee7;
+  color: #666;
+  font-weight: 600;
+  min-width: 18px;
+  text-align: center;
+}
+
+.shelf-chip.active .chip-count {
+  background: #ffffff33;
+  color: #fff;
+}
+
+.shelf-chip.add-cat {
+  border: 1px dashed #7a9c84;
+  color: var(--green);
+  background: #f2f7f3;
+}
+
+.shelf-chip.add-cat:hover {
+  background: #e3eee5;
+  border-color: var(--green);
+}
+
+.shelf-chip.notes-chip {
+  background: linear-gradient(135deg, #fdf3f5, #fae6e9);
+  border-color: #f2cbd2;
+  color: #9b324d;
+}
+
+.shelf-chip.notes-chip.active {
+  background: linear-gradient(135deg, #9b324d, #782037);
+  color: #fff;
+  border-color: #782037;
+}
+
+.shelf-chip.notes-chip.active .chip-count {
+  background: #ffffff38;
+  color: #fff;
+}
+
+.shelf-book-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e7e5dc;
+  padding: 13px;
+  box-shadow: 0 4px 14px #00000008;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.shelf-book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px #00000015;
+  border-color: #d5d1c4;
+}
+
+.shelf-card-cover-wrap {
+  position: relative;
+  aspect-ratio: .73;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #e9e7df;
+}
+
+.shelf-card-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.shelf-status-tag {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px #0002;
+  white-space: nowrap !important;
+}
+
+.shelf-status-tag.reading {
+  background: #244c3dd9;
+  color: #fff;
+}
+
+.shelf-status-tag.finished {
+  background: #2877aad9;
+  color: #fff;
+}
+
+.shelf-status-tag.unread {
+  background: #ffffffcc;
+  color: #555;
+}
+
+.shelf-progress-track {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: #eeeee7;
+  overflow: hidden;
+  margin-top: 2px;
+}
+
+.shelf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #587d68, #244c3d);
+  border-radius: 4px;
+}
+
+.shelf-card-title {
+  font: 600 13px/1.4 var(--serif);
+  margin: 2px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shelf-card-author {
+  font-size: 11px;
+  color: #85877f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shelf-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  font-size: 10px;
+  color: #8b8e84;
+  padding-top: 4px;
+  border-top: 1px solid #f2f0e8;
+}
+
+.shelf-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shelf-mini-btn {
+  padding: 3px 7px;
+  border-radius: 6px;
+  border: 1px solid #e2e0d8;
+  background: #faf9f6;
+  font-size: 10px;
+  color: #555;
+  cursor: pointer;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+}
+
+.shelf-mini-btn:hover {
+  background: #edf3ec;
+  border-color: #82aa8e;
+  color: var(--green);
+}
+
+/* Shelf List Mode */
+.shelf-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shelf-list-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0,1fr) auto;
+  gap: 16px;
+  align-items: center;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid #e7e5dc;
+  box-shadow: 0 2px 8px #00000005;
+  cursor: pointer;
+  transition: transform .15s;
+}
+
+.shelf-list-row:hover {
+  transform: translateX(3px);
+  border-color: #c8cfc7;
+}
+
+.shelf-list-cover {
+  width: 64px;
+  aspect-ratio: .73;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #e9e7df;
+}
+
+.shelf-list-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.shelf-list-title {
+  font: 600 15px/1.4 var(--serif);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shelf-list-author {
+  font-size: 12px;
+  color: #7a7d74;
+}
+
+.shelf-list-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.shelf-list-tag {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #f0eee7;
+  color: #61645c;
+  white-space: nowrap !important;
+}
+
+/* My Notes Section */
+.notes-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.notes-head-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 10px #00000004;
+}
+
+.notes-stats-title {
+  font: 600 16px/1.3 var(--serif);
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notes-stats-title span {
+  font: 400 12px/1 var(--sans);
+  color: #888;
+  background: #f2f0e8;
+  padding: 3px 8px;
+  border-radius: 12px;
+  white-space: nowrap !important;
+}
+
+.notes-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.notes-book-select {
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #faf9f6;
+  font-size: 12px;
+  color: #444;
+  outline: none;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+.notes-search-input {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #faf9f6;
+  font-size: 12px;
+  color: #444;
+  outline: none;
+  min-width: 160px;
+}
+
+.notes-search-input:focus {
+  border-color: var(--green);
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.note-card-item {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e7e5dc;
+  padding: 18px;
+  box-shadow: 0 3px 14px #00000008;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: all .2s ease;
+}
+
+.note-card-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #00000010;
+  border-color: #cfcbbe;
+}
+
+.note-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.note-book-thumb {
+  width: 38px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex: none;
+  box-shadow: 0 2px 6px #0002;
+  background: #eae8e0;
+}
+
+.note-item-title-wrap {
+  min-width: 0;
+  flex: 1;
+}
+
+.note-item-book {
+  font: 600 14px/1.3 var(--serif);
+  color: #244c3d;
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-item-page-badge {
+  font-size: 11px;
+  color: #788075;
+  background: #f0f4f1;
+  padding: 2px 7px;
+  border-radius: 6px;
+  display: inline-block;
+  white-space: nowrap !important;
+}
+
+.note-quote-box {
+  position: relative;
+  padding: 10px 14px 10px 16px;
+  background: #f8f6f0;
+  border-left: 3px solid var(--green);
+  border-radius: 0 10px 10px 0;
+  font: 500 13px/1.7 var(--serif);
+  color: #2c302a;
+  letter-spacing: .01em;
+}
+
+.note-quote-mark {
+  font-size: 22px;
+  color: #587d68;
+  position: absolute;
+  left: 5px;
+  top: -2px;
+  font-family: Georgia, serif;
+  opacity: .6;
+}
+
+.note-reflection-box {
+  font: 13px/1.75 var(--sans);
+  color: #4a4d46;
+  white-space: pre-wrap;
+  background: #fdfcf9;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #f0ede5;
+}
+
+.note-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: #9ea098;
+  border-top: 1px solid #f0eee8;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.note-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.note-btn {
+  padding: 5px 9px;
+  border-radius: 8px;
+  border: 1px solid #e1ded5;
+  background: #faf9f6;
+  font-size: 11px;
+  color: #555;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all .15s;
+  white-space: nowrap !important;
+}
+
+.note-btn:hover {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.note-btn.danger:hover {
+  background: #b33939;
+  color: #fff;
+  border-color: #b33939;
+}
+
+/* Reader Note Modal Popup */
+.note-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 26, 23, 0.7);
+  z-index: 60;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.note-modal.show {
+  display: flex !important;
+}
+
+.note-card {
+  width: min(480px, 100%);
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.note-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-head h3 {
+  margin: 0;
+  font: 600 20px/1.3 var(--serif);
+  color: var(--ink);
+}
+
+.note-meta {
+  font-size: 12px;
+  color: #777;
+}
+
+.note-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 13px;
+  line-height: 1.7;
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.note-card textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(36, 76, 61, 0.15);
+}
+
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Custom Category & Tagging Modals */
+.cat-modal-card {
+  width: min(440px, 100%);
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 24px 80px #0005;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cat-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.cat-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.cat-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.cat-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.cat-checkbox-label:hover {
+  background: #f4f7f4;
+  border-color: #9ab5a0;
+}
+
+.cat-checkbox-label input:checked + span {
+  color: var(--green);
+  font-weight: 600;
+}
+
+@media(max-width: 680px) {
+  .shelf-header-box {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+  .shelf-summary-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+  .shelf-summary-stat {
+    padding: 6px 8px;
+    font-size: 11px;
+    border-radius: 10px;
+  }
+  .shelf-tools-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .shelf-actions-group {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  .shelf-sort-select {
+    flex: 1;
+    min-width: 0;
+    font-size: 11px;
+    padding: 0 6px;
+  }
+  .shelf-view-btn, .shelf-actions-group .shelf-mini-btn {
+    padding: 0 8px;
+    font-size: 11px;
+    height: 38px;
+    white-space: nowrap !important;
+  }
+  #shelfContentArea [style*="grid-template-columns"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+  .shelf-list-row {
+    grid-template-columns: 50px minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 10px;
+  }
+  .shelf-list-cover {
+    width: 50px;
+  }
+  .shelf-list-title {
+    font-size: 13px;
+  }
+  .shelf-list-author {
+    font-size: 11px;
+  }
+  .notes-list {
+    grid-template-columns: 1fr;
+  }
+  .notes-head-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+  .notes-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .notes-book-select, .notes-search-input {
+    max-width: none;
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
 <div class="shell">
  <header class="topbar"><div class="brand"><div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v17H7.5A2.5 2.5 0 0 1 5 17.5z"/><path d="M5 6v12M9 7h7M9 11h7"/></svg></div>拾阅</div><div class="top-actions"><div class="connection"><span class="dot" id="statusDot"></span><span id="connectionText">书库未连接</span></div><button class="icon-btn" id="connectButton" aria-label="连接书库"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg></button><div class="avatar">林</div></div></header>
  <div class="file-protocol-notice" id="fileProtocolNotice" role="alert" hidden><strong>请通过 HTTP 服务打开阅读器</strong>直接双击 index.html 会阻止书库代理、配置恢复和封面接口。请在项目目录运行 <code>npm run dev</code>，再打开服务地址；或使用 Docker 部署。</div>
- <div class="layout"><aside class="side"><div class="sidebar-group"><div class="side-label">你的空间</div><div class="nav active" data-filter="all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h7v14H4zM14 5h6v14h-6z"/></svg>全部书籍 <span class="count">128</span></div><div class="nav" data-filter="recent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>最近阅读</div><div class="nav" data-filter="finished"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 12 4 4L19 6"/></svg>已读完</div></div><div class="sidebar-group"><div class="side-label">书架</div><div class="nav" data-filter="fiction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>文学与小说</div><div class="nav" data-filter="design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>设计与生活</div><div class="nav" data-filter="science"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>技术与科学</div></div><div class="side-bottom"><b>安静地读一本书</b><p>你的阅读进度会在所有设备间同步。</p></div></aside>
+ <div class="layout"><aside class="side"><div class="sidebar-group"><div class="side-label">你的空间</div><div class="nav active" data-filter="all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h7v14H4zM14 5h6v14h-6z"/></svg>全部书籍 <span class="count">128</span></div><div class="nav" data-filter="shelf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 4.5h12v16l-6-3.5-6 3.5z"/></svg>我的书架 <span class="count" id="shelfCount">0</span></div><div class="nav" data-filter="notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>我的笔记 <span class="count" id="notesSideCount">0</span></div><div class="nav" data-filter="recent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>最近阅读</div><div class="nav" data-filter="finished"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 12 4 4L19 6"/></svg>已读完</div></div><div class="sidebar-group"><div class="side-label">分类推荐</div><div class="nav" data-filter="fiction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>文学小说</div><div class="nav" data-filter="science"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>技术科学</div><div class="nav" data-filter="design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 5v14M4 9h4M4 15h4"/></svg>设计生活</div></div><div class="side-bottom"><b>安静地读一本书</b><p>你的阅读进度与笔记会在所有设备间同步。</p></div></aside>
  <main class="content"><div class="greeting"><button class="catalog-back" id="catalogBack" aria-label="返回书店">‹</button><div><div class="eyebrow">2026年 10月 2日 · 星期五</div><h1>下午好，林。<span>继续你的阅读吧。</span></h1></div><button class="icon-btn" id="syncButton" aria-label="同步"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9A7 7 0 0 1 18 6l2 1M4 17l2 1a7 7 0 0 0 12.4-3"/></svg></button></div>
  <div class="search-row"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4 4"/></svg><input id="searchInput" placeholder="搜索书名、作者或标签…"></div><button class="filter" id="sortButton"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M7 12h10m-7 5h4"/></svg><span id="sortLabel">最近添加</span><span>⌄</span></button></div>
  <section><div class="section-head"><h2>正在读</h2><a href="#" id="openCurrent">打开阅读 →</a></div><article class="resume" id="resumeCard"><img class="resume-cover" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=520&fit=crop" alt="书籍封面"><div class="resume-meta"><div class="label">继续阅读 · 约 18 分钟</div><h3>也许你该找个人聊聊</h3><p>洛莉·戈特利布 · 第三部分</p><div class="progress-line"><span></span></div><div class="progress-foot"><span>已读 37%</span><span>剩余 42 页</span></div></div><button class="continue" id="continueButton" aria-label="继续阅读"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7z"/></svg></button></article></section>
@@ -52,7 +923,11 @@
 <nav class="mobile-tabbar" aria-label="主导航"><button class="mobile-tab" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg>首页</button><button class="mobile-tab" data-tab="shelf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h7v14H4zM14 5h6v14h-6z"/></svg>书架</button><button class="mobile-tab active" data-tab="store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>书店</button><button class="mobile-tab" data-tab="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3"/><path d="M5 21a7 7 0 0 1 14 0M4 4h.01M20 4h.01"/></svg>我</button></nav>
 <div class="modal-backdrop" id="modalBackdrop"><div class="modal"><button class="close" id="closeModal">×</button><h2>连接你的书库</h2><p>输入 Calibre-Web 的 OPDS 地址，即可浏览和同步你的私人藏书。</p><label for="serverUrl">OPDS 地址</label><input id="serverUrl" placeholder="https://books.example.com/opds" autocomplete="url"><div class="hint">通常以 /opds 结尾，也可以是 /opds/v1.2</div><label for="username">用户名</label><input id="username" placeholder="Calibre-Web 用户名" autocomplete="username"><label for="password">密码</label><input id="password" type="password" placeholder="Calibre-Web 密码" autocomplete="current-password"><label class="remember-row"><input id="rememberConnection" type="checkbox" checked> 保存到服务器 config 目录</label><div class="hint">保存后将自动恢复；配置文件会映射到宿主机，容器重启后仍保留。</div><div class="modal-actions"><button class="btn" id="cancelModal">稍后</button><button class="btn primary" id="saveConnection">连接书库</button></div></div></div>
 <div class="reader" id="reader"><div class="reader-top"><button id="closeReader">← 返回书库</button><span class="reader-title">也许你该找个人聊聊</span><button id="readerSettings">Aa</button></div><article class="reader-body"><div class="chapter">第三部分　工作</div><h1>一场奇妙的旅程</h1><p>人生有时候会把我们带到意想不到的地方。我们以为自己已经知道故事会如何展开，却常常在某个转弯处，发现还有另一条路。</p><p>当我第一次走进那间办公室时，我并不知道自己即将遇见一个怎样的人。阳光从窗边落下来，空气里有咖啡的香气，时间仿佛在这里放慢了脚步。</p><p>每个人都带着自己的故事而来。有些故事我们讲给别人听，有些故事则需要很久，才敢讲给自己听。</p></article><div class="reader-bottom"><span>第 128 页</span><div class="reader-progress"><span></span></div><span>342 页</span></div></div>
-<div class="reader" id="epubReader"><div class="reader-top"><button id="closeEpubReader">← 返回书库</button><span class="reader-title" id="epubTitle">正在打开</span><div class="reader-tools"><span class="reader-tts-badge" id="readerTtsBadge"><span>●</span> 朗读中</span><span class="reader-status" id="readerStatus">尚未开始</span><button class="reader-tool" id="readerSearchBtn" title="全书搜索" aria-label="全书搜索">🔍</button><button class="reader-tool" id="readerTtsBtn" title="听书朗读" aria-label="听书朗读">🎧</button><button class="reader-tool" id="readerTocBtn" title="章节目录" aria-label="章节目录">☰</button><button class="reader-tool" id="readerNoteBtn" title="写读书笔记" aria-label="写读书笔记">✎</button><button class="reader-tool" id="readerBookmark" title="保存当前位置为书签" aria-label="保存书签">☆</button><button class="reader-tool" id="readerFullscreen" title="全屏沉浸阅读" aria-label="全屏">⛶</button><button class="reader-tool" id="readerSettingsOpds" aria-expanded="false">Aa</button></div></div><div class="reader-toc-panel" id="readerTocPanel"><div class="reader-toc-head"><span>目录导航</span><button class="close" id="closeReaderToc">×</button></div><div class="reader-toc-list" id="readerTocList"></div></div><div class="reader-search-panel" id="readerSearchPanel"><div class="reader-search-head"><span>书内搜索</span><button class="close" id="closeReaderSearch">×</button></div><div class="reader-search-box"><input id="readerSearchInput" placeholder="输入关键词搜索章节与正文…" autocomplete="off"><button type="button" id="doReaderSearch">搜索</button></div><div class="reader-search-count" id="readerSearchCount"></div><div class="reader-search-list" id="readerSearchList"></div></div><div class="reader-settings-panel" id="readerSettingsPanel"><div class="reader-setting-row"><span>字体大小</span><div class="reader-setting-actions"><button id="fontDecrease" aria-label="缩小字号">A−</button><button id="fontIncrease" aria-label="放大字号">A＋</button></div></div><div class="reader-setting-row"><span>排版字体</span><div class="reader-options-group"><button data-reader-font="serif" aria-pressed="true">宋体</button><button data-reader-font="sans" aria-pressed="false">黑体</button><button data-reader-font="kaiti" aria-pressed="false">楷体</button></div></div><div class="reader-setting-row"><span>行间距</span><div class="reader-options-group"><button data-reader-line="compact" aria-pressed="false">紧凑</button><button data-reader-line="normal" aria-pressed="true">适中</button><button data-reader-line="loose" aria-pressed="false">宽松</button></div></div><div class="reader-setting-row"><span>阅读主题</span><div class="reader-themes"><button data-reader-theme="paper" aria-pressed="true"><i class="reader-theme-dot paper"></i>护眼</button><button data-reader-theme="sepia" aria-pressed="false"><i class="reader-theme-dot sepia"></i>羊皮</button><button data-reader-theme="white" aria-pressed="false"><i class="reader-theme-dot white"></i>白纸</button><button data-reader-theme="night" aria-pressed="false"><i class="reader-theme-dot night"></i>夜间</button></div></div></div><iframe id="epubFrame" title="电子书内容" style="border:0;flex:1;width:min(760px,100%);margin:16px auto 0;background:#f7f5ef;border-radius:12px"></iframe><button class="reader-flip prev" id="readerPrev" aria-label="上一页" title="上一页（←）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"/></svg></button><button class="reader-flip next" id="readerNext" aria-label="下一页" title="下一页（→）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg></button></div><div class="note-modal" id="noteModal"><div class="note-card"><div class="note-head"><h3 id="noteBookTitle">读书笔记</h3><button type="button" class="close" id="closeNoteModal">×</button></div><div class="note-meta" id="notePageLabel">第 1 页 · 读书感悟</div><textarea id="noteText" placeholder="写下此处的感想、批注或重要摘录…" rows="4"></textarea><div class="note-actions"><button type="button" class="btn" id="cancelNote">取消</button><button type="button" class="btn primary" id="saveNote">保存笔记</button></div></div></div><div class="toast" id="toast"></div>
+<div class="reader" id="epubReader"><div class="reader-top"><button id="closeEpubReader">← 返回书库</button><span class="reader-title" id="epubTitle">正在打开</span><div class="reader-tools"><span class="reader-tts-badge" id="readerTtsBadge"><span>●</span> 朗读中</span><span class="reader-status" id="readerStatus">尚未开始</span><button class="reader-tool" id="readerSearchBtn" title="全书搜索" aria-label="全书搜索">🔍</button><button class="reader-tool" id="readerTtsBtn" title="听书朗读" aria-label="听书朗读">🎧</button><button class="reader-tool" id="readerQuoteBtn" title="金句卡片" aria-label="金句卡片">❝</button><button class="reader-tool" id="readerTocBtn" title="章节目录" aria-label="章节目录">☰</button><button class="reader-tool" id="readerNoteBtn" title="写读书笔记" aria-label="写读书笔记">✎</button><button class="reader-tool" id="readerBookmark" title="保存当前位置为书签" aria-label="保存书签">☆</button><button class="reader-tool" id="readerFullscreen" title="全屏沉浸阅读" aria-label="全屏">⛶</button><button class="reader-tool" id="readerSettingsOpds" aria-expanded="false">Aa</button></div></div><div class="reader-toc-panel" id="readerTocPanel"><div class="reader-toc-head"><span>目录导航</span><button class="close" id="closeReaderToc">×</button></div><div class="reader-toc-list" id="readerTocList"></div></div><div class="reader-search-panel" id="readerSearchPanel"><div class="reader-search-head"><span>书内搜索</span><button class="close" id="closeReaderSearch">×</button></div><div class="reader-search-box"><input id="readerSearchInput" placeholder="输入关键词搜索章节与正文…" autocomplete="off"><button type="button" id="doReaderSearch">搜索</button></div><div class="reader-search-count" id="readerSearchCount"></div><div class="reader-search-list" id="readerSearchList"></div></div><div class="reader-settings-panel" id="readerSettingsPanel"><div class="reader-setting-row"><span>字体大小</span><div class="reader-setting-actions"><button id="fontDecrease" aria-label="缩小字号">A−</button><button id="fontIncrease" aria-label="放大字号">A＋</button></div></div><div class="reader-setting-row"><span>排版字体</span><div class="reader-options-group"><button data-reader-font="serif" aria-pressed="true">宋体</button><button data-reader-font="sans" aria-pressed="false">黑体</button><button data-reader-font="kaiti" aria-pressed="false">楷体</button></div></div><div class="reader-setting-row"><span>阅读排版</span><div class="reader-options-group"><button data-reader-scroll="paged" aria-pressed="true">仿真分页</button><button data-reader-scroll="scroll" aria-pressed="false">连续滚动</button></div></div><div class="reader-setting-row"><span>行间距</span><div class="reader-options-group"><button data-reader-line="compact" aria-pressed="false">紧凑</button><button data-reader-line="normal" aria-pressed="true">适中</button><button data-reader-line="loose" aria-pressed="false">宽松</button></div></div><div class="reader-setting-row"><span>阅读主题</span><div class="reader-themes"><button data-reader-theme="paper" aria-pressed="true"><i class="reader-theme-dot paper"></i>羊皮</button><button data-reader-theme="green" aria-pressed="false"><i class="reader-theme-dot green"></i>护眼</button><button data-reader-theme="sepia" aria-pressed="false"><i class="reader-theme-dot sepia"></i>复古</button><button data-reader-theme="white" aria-pressed="false"><i class="reader-theme-dot white"></i>极简</button><button data-reader-theme="night" aria-pressed="false"><i class="reader-theme-dot night"></i>夜间</button></div></div></div><iframe id="epubFrame" title="电子书内容" style="border:0;flex:1;width:min(760px,100%);margin:16px auto 0;background:#f7f5ef;border-radius:12px"></iframe><button class="reader-flip prev" id="readerPrev" aria-label="上一页" title="上一页（←）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"/></svg></button><button class="reader-flip next" id="readerNext" aria-label="下一页" title="下一页（→）"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg></button></div><div class="note-modal" id="noteModal"><div class="note-card"><div class="note-head"><h3 id="noteBookTitle">读书笔记</h3><button type="button" class="close" id="closeNoteModal">×</button></div><div class="note-meta" id="notePageLabel">第 1 页 · 读书感悟</div><textarea id="noteText" placeholder="写下此处的感想、批注或重要摘录…" rows="4"></textarea><div class="note-actions"><button type="button" class="btn" id="cancelNote">取消</button><button type="button" class="btn primary" id="saveNote">保存笔记</button></div></div></div><div class="quote-modal" id="quoteModal"><div class="quote-box"><div class="quote-card-preview emerald" id="quotePreview"><div class="quote-mark">“</div><div class="quote-body" id="quoteText">读书是一座随身携带的避难所。</div><div class="quote-foot"><div><div class="quote-book" id="quoteBook">《未命名书籍》</div><div id="quoteMeta" style="font-size:10px;opacity:.8;margin-top:2px">拾阅 · 私人书库</div></div><div style="font-size:10px;font-weight:600;letter-spacing:.05em">SHIYUE</div></div></div><div class="quote-actions"><div class="quote-themes"><button type="button" class="quote-theme-btn active" data-quote-theme="emerald">墨绿</button><button type="button" class="quote-theme-btn" data-quote-theme="midnight">暗夜</button><button type="button" class="quote-theme-btn" data-quote-theme="cream">羊皮</button><button type="button" class="quote-theme-btn" data-quote-theme="vermilion">朱砂</button></div><div style="display:flex;gap:7px"><button type="button" class="btn" id="copyQuoteText">复制文字</button><button type="button" class="btn primary" id="downloadQuoteImg">📥 保存卡片</button><button type="button" class="btn" id="closeQuoteModal">关闭</button></div></div></div></div><div class="selection-popover" id="selectionPopover"><button type="button" class="sel-color-btn yellow" data-hl-color="yellow" title="黄色高亮"></button><button type="button" class="sel-color-btn green" data-hl-color="green" title="绿色高亮"></button><button type="button" class="sel-color-btn blue" data-hl-color="blue" title="蓝色高亮"></button><button type="button" class="sel-color-btn pink" data-hl-color="pink" title="粉色高亮"></button><span class="sel-divider"></span><button type="button" class="sel-action-btn" id="selQuoteCard">❝ 做金句</button><button type="button" class="sel-action-btn" id="selTakeNote">✎ 笔记</button></div>
+<div class="modal-backdrop" id="categoryManageModal"><div class="cat-modal-card"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 20px var(--serif)">🏷️ 分类管理</h2><button type="button" class="close" id="closeCategoryModal">×</button></div><p style="font-size:12px;color:#777;margin:0">创建并管理你的个性化藏书分类标签</p><div style="display:flex;gap:8px"><input id="newCategoryName" placeholder="输入新分类名称（如：心理学、科幻）" style="flex:1;height:38px;padding:0 12px;border:1px solid var(--line);border-radius:9px;font-size:12px;outline:none"><select id="newCategoryIcon" style="height:38px;padding:0 8px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:13px;outline:none"><option value="🔖">🔖 标签</option><option value="🌱">🌱 成长</option><option value="🧠">🧠 思考</option><option value="🚀">🚀 科技</option><option value="📜">📜 历史</option><option value="💎">💎 经典</option><option value="🎨">🎨 艺术</option><option value="☕">☕ 休闲</option></select><button type="button" class="btn primary" id="createCategoryBtn" style="padding:0 14px;white-space:nowrap">＋ 添加</button></div><div style="font-size:12px;font-weight:600;color:#555;margin-top:4px">现有自定义分类</div><div id="customCategoryList" style="display:flex;flex-direction:column;gap:8px;max-height:220px;overflow-y:auto"></div><div class="modal-actions" style="margin-top:8px"><button type="button" class="btn primary" id="doneCategoryModal" style="width:100%">完成</button></div></div></div>
+<div class="modal-backdrop" id="bookCategoryModal"><div class="cat-modal-card"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 19px var(--serif)">📚 书籍分类归档</h2><button type="button" class="close" id="closeBookCategoryModal">×</button></div><div id="bookCategoryTargetTitle" style="font-size:13px;font-weight:600;color:var(--green)"></div><p style="font-size:12px;color:#777;margin:0">选择本书所属的一个或多个分类标签：</p><div class="cat-checkbox-grid" id="bookCategoryCheckboxes"></div><div class="modal-actions" style="margin-top:10px"><button type="button" class="btn" id="cancelBookCategoryModal">取消</button><button type="button" class="btn primary" id="saveBookCategoryModal">保存分类</button></div></div></div>
+<div class="modal-backdrop" id="editNoteModal"><div class="cat-modal-card" style="width:min(500px,100%)"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font:600 20px var(--serif)">✎ 编辑读书笔记</h2><button type="button" class="close" id="closeEditNoteModal">×</button></div><div id="editNoteBookTitle" style="font-size:13px;font-weight:600;color:var(--green)"></div><div id="editNotePageBadge" style="font-size:11px;color:#888"></div><textarea id="editNoteText" rows="5" placeholder="修改你的读书笔记心得与思考…" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:13px;line-height:1.7;outline:none;font-family:inherit"></textarea><div class="modal-actions" style="margin-top:6px"><button type="button" class="btn" id="cancelEditNoteModal">取消</button><button type="button" class="btn primary" id="saveEditNoteModal">保存修改</button></div></div></div>
+<div class="toast" id="toast"></div>
 <script>
 let defaultBooks=[
  {title:'悉达多',author:'赫尔曼·黑塞',tag:'文学',category:'fiction',cover:'photo-1512820790803-83ca734da794'},
@@ -88,7 +963,7 @@ function rememberRecommendations(items){for(const item of items||[]){if(item.kin
 async function requestRecommendations(){if(!libraryToken||recommendationAttemptedToken===libraryToken)return recommendationRequest;const token=libraryToken;recommendationAttemptedToken=token;recommendationRequest=(async()=>{try{const response=await fetch('/api/recommendations?token='+encodeURIComponent(token),{cache:'no-store'});const result=await response.json();if(!response.ok)throw new Error(result.error||'获取推荐失败');if(token!==libraryToken)return;rememberRecommendations(result.books);if(document.querySelector('.content').classList.contains('home-dashboard'))renderHomeDashboard()}catch(error){console.warn('Could not load OPDS recommendations',error)}finally{recommendationRequest=null}})();return recommendationRequest}
 function applyOPDSFeed(result,push){captureLibraryToken(result);rememberRecommendations(result.books);if(push)feedStack.push({books,currentFeedTitle,nextPageHref:currentNextPageHref});books=result.books.map(book=>({...book,title:escapeHTML(book.title),author:escapeHTML(book.author),tag:escapeHTML(book.tag)}));currentNextPageHref=result.nextHref||'';currentFeedTitle=result.title||'Calibre-Web';activeFilter='all';renderPageSize=36;search.value='';document.getElementById('resumeCard').parentElement.style.display='none';document.querySelector('.content').classList.remove('store-home','home-dashboard','profile-page');document.querySelector('.content').classList.add('catalog-open');document.querySelector('.content').classList.toggle('catalog-list',books.some(book=>book.kind==='navigation'));document.querySelector('.greeting h1').textContent=currentFeedTitle;document.getElementById('shelfTitle').textContent=currentFeedTitle;document.getElementById('viewAll').textContent='← 返回上级';document.getElementById('viewAll').style.visibility=feedStack.length?'visible':'hidden';render()}
 function showLibraryCategory(address,result,force=false){const content=document.querySelector('.content'),keepHome=!force&&(activeTab==='home'||content.classList.contains('home-dashboard')),keepProfile=!force&&(activeTab==='settings'||content.classList.contains('profile-page'));opdsFeedCache=result;rememberRecommendations(result.books);feedStack=[];currentFeedTitle=result?.title||'我的书库';currentNextPageHref=result?.nextHref||'';if(keepHome){renderHomeDashboard();return}if(keepProfile){renderProfilePage(activeProfileView);return}if(activeTab==='store'||force)applyOPDSFeed(result,false)}
-function openStoreView(){activeTab='store';const content=document.querySelector('.content');content.classList.remove('home-dashboard','profile-page','store-home');document.getElementById('resumeCard').parentElement.style.display='';search.value='';renderPageSize=36;activeFilter='all';const grid=document.getElementById('bookGrid');grid.replaceChildren();if(serverConnected&&opdsFeedCache){if(feedStack.length>0&&books.length>0&&currentFeedTitle!=='我的书库'){content.classList.add('catalog-open');content.classList.toggle('catalog-list',books.some(b=>b.kind==='navigation'));document.querySelector('.greeting h1').textContent=currentFeedTitle;document.getElementById('shelfTitle').textContent=currentFeedTitle;document.getElementById('viewAll').textContent='← 返回上级';document.getElementById('viewAll').style.visibility='visible';render();return}applyOPDSFeed(opdsFeedCache,false);return}feedStack=[];currentFeedTitle='为你收藏';currentNextPageHref='';content.classList.remove('catalog-open','catalog-list');document.querySelector('.greeting h1').textContent='书店';document.getElementById('shelfTitle').textContent='为你收藏';document.getElementById('viewAll').textContent='查看全部 '+(defaultBooks.length+1)+' 本 →';document.getElementById('viewAll').style.visibility='visible';let host='点“添加”连接你的书库';let address=localStorage.getItem('calibreOpds')||'';if(address){try{host=new URL(address).host}catch{host=address}}books=[{id:'calibre-web-library',title:'Calibre-Web',author:escapeHTML(host),tag:'OPDS 书库',category:'all',kind:'source'},...defaultBooks];render()}
+function openStoreView(){activeTab='store';const content=document.querySelector('.content');content.classList.remove('home-dashboard','profile-page','store-home','shelf-page');document.getElementById('resumeCard').parentElement.style.display='';search.value='';renderPageSize=36;activeFilter='all';const grid=document.getElementById('bookGrid');if(grid){grid.style.display='';grid.style.width='';}grid.replaceChildren();if(serverConnected&&opdsFeedCache){if(feedStack.length>0&&books.length>0&&currentFeedTitle!=='我的书库'){content.classList.add('catalog-open');content.classList.toggle('catalog-list',books.some(b=>b.kind==='navigation'));document.querySelector('.greeting h1').textContent=currentFeedTitle;document.getElementById('shelfTitle').textContent=currentFeedTitle;document.getElementById('viewAll').textContent='← 返回上级';document.getElementById('viewAll').style.visibility='visible';render();return}applyOPDSFeed(opdsFeedCache,false);return}feedStack=[];currentFeedTitle='为你收藏';currentNextPageHref='';content.classList.remove('catalog-open','catalog-list');document.querySelector('.greeting h1').textContent='书店';document.getElementById('shelfTitle').textContent='为你收藏';document.getElementById('viewAll').textContent='查看全部 '+(defaultBooks.length+1)+' 本 →';document.getElementById('viewAll').style.visibility='visible';let host='点“添加”连接你的书库';let address=localStorage.getItem('calibreOpds')||'';if(address){try{host=new URL(address).host}catch{host=address}}books=[{id:'calibre-web-library',title:'Calibre-Web',author:escapeHTML(host),tag:'OPDS 书库',category:'all',kind:'source'},...defaultBooks];render()}
 const shelfNav=document.createElement('div');shelfNav.className='nav';shelfNav.dataset.filter='shelf';shelfNav.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 4.5h12v16l-6-3.5-6 3.5z"/></svg>我的书架 <span class="count" id="shelfCount">0</span>';const shelfLabel=[...document.querySelectorAll('.side-label')].find(label=>label.textContent.trim()==='书架');shelfLabel?.after(shelfNav);shelfNav.addEventListener('click',()=>{document.querySelectorAll('.nav[data-filter]').forEach(node=>node.classList.toggle('active',node===shelfNav));activeFilter='shelf';document.getElementById('shelfTitle').textContent='我的书架';document.querySelector('.greeting h1').textContent='我的书架';document.getElementById('viewAll').style.visibility='hidden';document.querySelector('.content').classList.remove('store-home','catalog-open','catalog-list','home-dashboard','profile-page');render()});
 async function refreshSavedShelf(){if(!libraryToken)return;const response=await fetch('/api/shelf?token='+encodeURIComponent(libraryToken),{cache:'no-store'});const result=await response.json();if(!response.ok)throw new Error(result.error||'无法读取书架');shelfBooks=result.books.map(book=>({...book,title:escapeHTML(book.title),author:escapeHTML(book.author),tag:escapeHTML(book.tag)}));shelfKeySet=new Set(shelfBooks.map(book=>book.shelfKey||book.key||book.id));const count=document.getElementById('shelfCount');if(count)count.textContent=shelfBooks.length;if(activeFilter==='shelf')render();if(document.querySelector('.content').classList.contains('profile-page'))renderProfilePage(activeProfileView)}
 async function refreshReadingHistory(){if(!libraryToken)return;const response=await fetch('/api/history?token='+encodeURIComponent(libraryToken),{cache:'no-store'});const result=await response.json();if(!response.ok)throw new Error(result.error||'无法读取阅读历史');readingHistory=result.books.map(book=>({...book,title:escapeHTML(book.title),author:escapeHTML(book.author),tag:escapeHTML(book.tag)}));if(document.querySelector('.content').classList.contains('home-dashboard'))renderHomeDashboard();if(document.querySelector('.content').classList.contains('profile-page'))renderProfilePage(activeProfileView)}
@@ -99,20 +974,51 @@ let activeReadFormat='',activeReadHref='',activeBookKey='',activeReadPage=1,pdfC
 function flushReadingProgress(){if(progressSaveTimer){clearTimeout(progressSaveTimer);progressSaveTimer=0}if(!pendingProgressSave)return;const pending=pendingProgressSave;pendingProgressSave=null;try{localStorage.setItem('pages-progress:'+pending.key,String(pending.page))}catch{}}
 function saveReadingProgressSoon(key,page){if(!key)return;if(pendingProgressSave&&pendingProgressSave.key!==key)flushReadingProgress();pendingProgressSave={key,page};if(progressSaveTimer)clearTimeout(progressSaveTimer);progressSaveTimer=setTimeout(flushReadingProgress,400)}
 window.addEventListener('pagehide',flushReadingProgress);
-let readerPrefs={theme:'paper',fontScale:1,fontFamily:'serif',lineHeight:'normal'};try{readerPrefs={...readerPrefs,...JSON.parse(localStorage.getItem('pages-reader-prefs')||'{}')}}catch{}
-if(!['paper','sepia','white','night'].includes(readerPrefs.theme))readerPrefs.theme='paper';
+let readerPrefs={theme:'paper',fontScale:1,fontFamily:'serif',lineHeight:'normal',scrollMode:'paged'};try{readerPrefs={...readerPrefs,...JSON.parse(localStorage.getItem('pages-reader-prefs')||'{}')}}catch{}
+if(!['paper','green','sepia','white','night'].includes(readerPrefs.theme))readerPrefs.theme='paper';
 if(!['serif','sans','kaiti'].includes(readerPrefs.fontFamily))readerPrefs.fontFamily='serif';
 if(!['compact','normal','loose'].includes(readerPrefs.lineHeight))readerPrefs.lineHeight='normal';
+if(!['paged','scroll'].includes(readerPrefs.scrollMode))readerPrefs.scrollMode='paged';
 readerPrefs.fontScale=Math.max(.8,Math.min(1.6,Number(readerPrefs.fontScale)||1));
 function readSavedNumber(key){try{return Number(localStorage.getItem(key))||0}catch{return 0}}
 function sendReaderMessage(message){try{document.getElementById('epubFrame').contentWindow?.postMessage(message,location.origin)}catch{}}
-function updateReaderSettings(){try{localStorage.setItem('pages-reader-prefs',JSON.stringify(readerPrefs))}catch{};document.querySelectorAll('[data-reader-theme]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerTheme===readerPrefs.theme)));document.querySelectorAll('[data-reader-font]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerFont===readerPrefs.fontFamily)));document.querySelectorAll('[data-reader-line]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerLine===readerPrefs.lineHeight)));sendReaderMessage({type:'reader-settings',...readerPrefs})}
+function updateReaderSettings(){try{localStorage.setItem('pages-reader-prefs',JSON.stringify(readerPrefs))}catch{};document.querySelectorAll('[data-reader-theme]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerTheme===readerPrefs.theme)));document.querySelectorAll('[data-reader-font]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerFont===readerPrefs.fontFamily)));document.querySelectorAll('[data-reader-line]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerLine===readerPrefs.lineHeight)));document.querySelectorAll('[data-reader-scroll]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.readerScroll===readerPrefs.scrollMode)));sendReaderMessage({type:'reader-settings',...readerPrefs})}
 function readSavedNotes(){try{const n=JSON.parse(localStorage.getItem('pages-notes')||'[]');return Array.isArray(n)?n:[]}catch{return[]}}
 function saveNoteItem(note){const notes=readSavedNotes();notes.unshift(note);try{localStorage.setItem('pages-notes',JSON.stringify(notes.slice(0,300)))}catch{}}
 function deleteNoteItem(id){const notes=readSavedNotes().filter(n=>n.id!==id);try{localStorage.setItem('pages-notes',JSON.stringify(notes))}catch{}}
 function resumeReaderAt(page){activeReadPage=Math.max(1,Number(page)||1);if(activeReadFormat==='pdf'){pdfCurrentPage=activeReadPage;const url=new URL(activeReadHref,location.href);url.hash='page='+pdfCurrentPage;document.getElementById('epubFrame').src=url.href;document.getElementById('readerStatus').textContent='第 '+pdfCurrentPage+' 页';return}sendReaderMessage({type:'reader-restore',page:activeReadPage})}
 document.getElementById('epubFrame').onload=()=>{if(activeReadFormat!=='pdf'){updateReaderSettings();sendReaderMessage({type:'reader-restore',page:activeReadPage})}startReadingClock()};
-window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==document.getElementById('epubFrame').contentWindow)return;if(event.data?.type==='reader-error'){toast(event.data.message||'章节加载失败，可继续阅读后重试');return}if(event.data?.type!=='reader-progress')return;const nextPage=Number(event.data.page)||1,changed=nextPage!==activeReadPage;activeReadPage=nextPage;const total=Number(event.data.total)||0;document.getElementById('readerStatus').textContent=total?'第 '+activeReadPage+' / '+total+' 页':'第 '+activeReadPage+' 页';if(changed)saveReadingProgressSoon(activeBookKey,activeReadPage);const marked=readSavedNumber('pages-bookmark:'+activeBookKey)===activeReadPage;document.getElementById('readerBookmark').classList.toggle('active',marked);document.getElementById('readerBookmark').textContent=marked?'★':'☆'});
+let currentSelectedText='';
+window.addEventListener('message',event=>{
+  if(event.origin!==location.origin||event.source!==document.getElementById('epubFrame').contentWindow)return;
+  if(event.data?.type==='reader-error'){toast(event.data.message||'章节加载失败，可继续阅读后重试');return}
+  if(event.data?.type==='reader-selection'){
+    currentSelectedText=event.data.text||'';
+    const pop=document.getElementById('selectionPopover');
+    if(pop&&event.data.rect){
+      const frameRect=document.getElementById('epubFrame').getBoundingClientRect();
+      const top=frameRect.top+event.data.rect.top;
+      const left=frameRect.left+event.data.rect.left+(event.data.rect.width/2);
+      pop.style.top=Math.max(60,top)+'px';
+      pop.style.left=Math.max(80,Math.min(window.innerWidth-80,left))+'px';
+      pop.classList.add('show');
+    }
+    return;
+  }
+  if(event.data?.type==='reader-selection-clear'){
+    document.getElementById('selectionPopover')?.classList.remove('show');
+    return;
+  }
+  if(event.data?.type!=='reader-progress')return;
+  const nextPage=Number(event.data.page)||1,changed=nextPage!==activeReadPage;
+  activeReadPage=nextPage;
+  const total=Number(event.data.total)||0;
+  document.getElementById('readerStatus').textContent=total?'第 '+activeReadPage+' / '+total+' 页':'第 '+activeReadPage+' 页';
+  if(changed)saveReadingProgressSoon(activeBookKey,activeReadPage);
+  const marked=readSavedNumber('pages-bookmark:'+activeBookKey)===activeReadPage;
+  document.getElementById('readerBookmark').classList.toggle('active',marked);
+  document.getElementById('readerBookmark').textContent=marked?'★':'☆';
+});
 document.getElementById('readerTocBtn').onclick=async()=>{
   const panel=document.getElementById('readerTocPanel'),open=!panel.classList.contains('show');
   panel.classList.toggle('show',open);
@@ -287,7 +1193,196 @@ document.getElementById('fontDecrease').onclick=()=>{readerPrefs.fontScale=Math.
 document.querySelectorAll('[data-reader-theme]').forEach(button=>button.onclick=()=>{readerPrefs.theme=button.dataset.readerTheme;updateReaderSettings()});
 document.querySelectorAll('[data-reader-font]').forEach(button=>button.onclick=()=>{readerPrefs.fontFamily=button.dataset.readerFont;updateReaderSettings()});
 document.querySelectorAll('[data-reader-line]').forEach(button=>button.onclick=()=>{readerPrefs.lineHeight=button.dataset.readerLine;updateReaderSettings()});
+document.querySelectorAll('[data-reader-scroll]').forEach(button=>button.onclick=()=>{readerPrefs.scrollMode=button.dataset.readerScroll;updateReaderSettings()});
 document.getElementById('readerFullscreen').onclick=()=>{const reader=document.getElementById('epubReader');if(!document.fullscreenElement){reader.requestFullscreen?.().catch(()=>{})}else{document.exitFullscreen?.().catch(()=>{})}};
+
+function openQuoteModal(text,bookTitle,author){
+  const quoteText=(text||'读书是一座随身携带的避难所。').trim();
+  const title=bookTitle||document.getElementById('epubTitle')?.textContent||'拾阅书库';
+  document.getElementById('quoteText').textContent=quoteText;
+  document.getElementById('quoteBook').textContent=`《${title}》`;
+  document.getElementById('quoteMeta').textContent=author?`${author} · 拾阅`:'拾阅 · 私人书库';
+  document.getElementById('quoteModal').classList.add('show');
+}
+document.getElementById('closeQuoteModal').onclick=()=>document.getElementById('quoteModal').classList.remove('show');
+document.getElementById('readerQuoteBtn').onclick=()=>{
+  let sampleText=currentSelectedText;
+  if(!sampleText){
+    try{
+      const frameDoc=document.getElementById('epubFrame')?.contentDocument;
+      const paragraphs=Array.from(frameDoc?.querySelectorAll('p')||[]).map(p=>p.innerText.trim()).filter(Boolean);
+      sampleText=paragraphs[0]||'行万里路，读万卷书。在页间寻得一方从容天地。';
+    }catch{}
+  }
+  openQuoteModal(sampleText);
+};
+document.querySelectorAll('[data-quote-theme]').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('[data-quote-theme]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const preview=document.getElementById('quotePreview');
+    preview.className=`quote-card-preview ${btn.dataset.quoteTheme}`;
+  };
+});
+document.getElementById('copyQuoteText').onclick=()=>{
+  const text=document.getElementById('quoteText').textContent;
+  const book=document.getElementById('quoteBook').textContent;
+  navigator.clipboard?.writeText(`“${text}” —— 摘自 ${book} · 拾阅阅读器`).then(()=>{
+    toast('已复制金句摘录 📋');
+  }).catch(()=>toast('复制失败'));
+};
+document.getElementById('downloadQuoteImg').onclick=()=>{
+  const text=document.getElementById('quoteText').textContent;
+  const book=document.getElementById('quoteBook').textContent;
+  const meta=document.getElementById('quoteMeta').textContent;
+  const preview=document.getElementById('quotePreview');
+  const theme=preview.className.split(' ').find(c=>['emerald','midnight','cream','vermilion'].includes(c))||'emerald';
+  
+  const canvas=document.createElement('canvas');
+  canvas.width=1080;
+  canvas.height=1440;
+  const ctx=canvas.getContext('2d');
+  if(!ctx)return;
+  
+  let bgGradient=['#244c3d','#152d24'],textColor='#f4f7f4',subColor='#9dbba7',quoteColor='rgba(255,255,255,0.2)';
+  if(theme==='midnight'){
+    bgGradient=['#1e2220','#121513'];textColor='#f0f0ee';subColor='#888d89';quoteColor='rgba(255,255,255,0.15)';
+  }else if(theme==='cream'){
+    bgGradient=['#faf7ee','#ede5d4'];textColor='#2c2e2a';subColor='#7e8178';quoteColor='rgba(0,0,0,0.12)';
+  }else if(theme==='vermilion'){
+    bgGradient=['#8c2a2a','#541515'];textColor='#fff6f6';subColor='#e29a9a';quoteColor='rgba(255,255,255,0.2)';
+  }
+  
+  const grad=ctx.createLinearGradient(0,0,1080,1440);
+  grad.addColorStop(0,bgGradient[0]);
+  grad.addColorStop(1,bgGradient[1]);
+  ctx.fillStyle=grad;
+  ctx.fillRect(0,0,1080,1440);
+  
+  ctx.strokeStyle=theme==='cream'?'#dcd4c0':'rgba(255,255,255,0.1)';
+  ctx.lineWidth=4;
+  ctx.strokeRect(60,60,960,1320);
+  
+  ctx.fillStyle=quoteColor;
+  ctx.font='bold 160px Georgia, serif';
+  ctx.fillText('“',120,240);
+  
+  ctx.fillStyle=textColor;
+  ctx.font='500 44px "Noto Serif SC", Georgia, serif';
+  const maxWidth=840,lineHeight=80;
+  let line='',y=350;
+  for(let n=0;n<text.length;n++){
+    const testLine=line+text[n];
+    const metrics=ctx.measureText(testLine);
+    if(metrics.width>maxWidth&&n>0){
+      ctx.fillText(line,120,y);
+      line=text[n];
+      y+=lineHeight;
+    }else{
+      line=testLine;
+    }
+  }
+  ctx.fillText(line,120,y);
+  
+  ctx.strokeStyle=theme==='cream'?'rgba(0,0,0,0.12)':'rgba(255,255,255,0.18)';
+  ctx.lineWidth=2;
+  ctx.beginPath();
+  ctx.moveTo(120,1200);
+  ctx.lineTo(960,1200);
+  ctx.stroke();
+  
+  ctx.fillStyle=textColor;
+  ctx.font='bold 36px "Noto Serif SC", Georgia, serif';
+  ctx.fillText(book,120,1265);
+  
+  ctx.fillStyle=subColor;
+  ctx.font='28px -apple-system, sans-serif';
+  ctx.fillText(meta,120,1315);
+  
+  ctx.textAlign='right';
+  ctx.fillStyle=subColor;
+  ctx.font='bold 32px "DM Sans", sans-serif';
+  ctx.fillText('SHIYUE · 拾阅',960,1285);
+  
+  const a=document.createElement('a');
+  a.download=`拾阅金句_${book.replace(/[《》]/g,'')}_${Date.now().toString(36)}.png`;
+  a.href=canvas.toDataURL('image/png');
+  a.click();
+  toast('已生成高清卡片 ✨');
+};
+
+document.querySelectorAll('[data-hl-color]').forEach(btn=>{
+  btn.onclick=()=>{
+    if(currentSelectedText){
+      sendReaderMessage({type:'reader-apply-highlight',text:currentSelectedText,color:btn.dataset.hlColor});
+      toast('已标记划线高亮');
+    }
+    document.getElementById('selectionPopover')?.classList.remove('show');
+  };
+});
+document.getElementById('selQuoteCard').onclick=()=>{
+  openQuoteModal(currentSelectedText);
+  document.getElementById('selectionPopover')?.classList.remove('show');
+};
+document.getElementById('selTakeNote').onclick=()=>{
+  const noteModal=document.getElementById('noteModal');
+  document.getElementById('noteBookTitle').textContent=document.getElementById('epubTitle').textContent||'当前书籍';
+  document.getElementById('notePageLabel').textContent=`第 ${activeReadPage} 页 · 划线心得`;
+  document.getElementById('noteText').value=currentSelectedText?`「${currentSelectedText}」\n`:'';
+  noteModal.classList.add('show');
+  document.getElementById('selectionPopover')?.classList.remove('show');
+  document.getElementById('noteText').focus();
+};
+
+function exportAllUserData(){
+  const data={
+    version:1,
+    appName:'拾阅',
+    exportedAt:new Date().toISOString(),
+    shelf:shelfBooks,
+    notes:readSavedNotes(),
+    readingHistory,
+    readingStats:readTimeStats(),
+    completedBooks:[...readCompletedIds()],
+    readerPrefs
+  };
+  const json=JSON.stringify(data,null,2);
+  const blob=new Blob([json],{type:'application/json;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download=`拾阅书库数据备份_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('已下载数据备份文件 📦');
+}
+
+function restoreUserDataFromFile(file){
+  const reader=new FileReader();
+  reader.onload=(e)=>{
+    try{
+      const data=JSON.parse(e.target.result);
+      if(data.notes&&Array.isArray(data.notes)){
+        localStorage.setItem('pages-notes',JSON.stringify(data.notes));
+      }
+      if(data.completedBooks&&Array.isArray(data.completedBooks)){
+        localStorage.setItem(PROFILE_COMPLETED_KEY,JSON.stringify(data.completedBooks));
+      }
+      if(data.readingStats&&typeof data.readingStats==='object'){
+        localStorage.setItem('pages-reading-time',JSON.stringify(data.readingStats));
+      }
+      if(data.readerPrefs&&typeof data.readerPrefs==='object'){
+        localStorage.setItem('pages-reader-prefs',JSON.stringify(data.readerPrefs));
+        readerPrefs={...readerPrefs,...data.readerPrefs};
+      }
+      toast('数据恢复成功！🎉');
+      renderProfilePage(activeProfileView);
+    }catch(err){
+      toast('数据恢复失败: '+(err.message||'文件格式不正确'));
+    }
+  };
+  reader.readAsText(file);
+}
 document.getElementById('readerNoteBtn').onclick=()=>{if(!activeBookKey)return;const title=document.getElementById('epubTitle').textContent||'当前书籍';document.getElementById('noteBookTitle').textContent=title;document.getElementById('notePageLabel').textContent=`第 ${activeReadPage} 页 · 读书感悟`;document.getElementById('noteText').value='';document.getElementById('noteModal').classList.add('show');document.getElementById('noteText').focus()};
 document.getElementById('closeNoteModal').onclick=()=>document.getElementById('noteModal').classList.remove('show');
 document.getElementById('cancelNote').onclick=()=>document.getElementById('noteModal').classList.remove('show');
@@ -308,7 +1403,7 @@ document.getElementById('detailReadButton').onclick=()=>{if(activeDetailCard){cl
 async function recordReadStart(href){if(!libraryToken)return;try{const itemId=new URL(href,location.origin).searchParams.get('id');if(!itemId)return;const response=await fetch('/api/history',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:libraryToken,id:itemId})});if(!response.ok)throw new Error('无法保存阅读历史');await refreshReadingHistory()}catch(error){console.warn('Failed to save reading history',error)}}
 async function recordBrowseStart(href){if(!libraryToken)return;try{const itemId=new URL(href,location.origin).searchParams.get('id');if(!itemId)return;const response=await fetch('/api/history',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:libraryToken,id:itemId,action:'browse'})});if(!response.ok)throw new Error('无法保存浏览记录');await refreshBrowseHistory()}catch(error){console.warn('Failed to save browsing history',error)}}
 function createHomeCard(book){const card=document.createElement('article');card.className='book';card.dataset.title=book.title||'未命名书籍';card.dataset.author=book.author||'未知作者';card.dataset.href=book.href||'';card.dataset.kind='book';card.dataset.format=book.format||'';card.dataset.bookKey=encodeURIComponent((book.title||'')+'|'+(book.author||''));const coverWrap=document.createElement('div');coverWrap.className='cover-wrap';const image=document.createElement('img');image.className='cover';image.loading='lazy';image.decoding='async';image.fetchPriority='low';image.src=book.coverUrl||'/cover-placeholder.svg';image.alt=(book.title||'书籍')+'封面';image.onerror=()=>{image.onerror=null;image.src='/cover-placeholder.svg'};const tag=document.createElement('span');tag.className='tag';tag.textContent=book.tag||String(book.format||'书籍').toUpperCase();coverWrap.append(image,tag);if(isBookCached(card.dataset.bookKey)||isBookCached(book.shelfKey||book.key)){const badge=document.createElement('span');badge.className='cached-badge';badge.textContent='已离线';coverWrap.append(badge)}const title=document.createElement('h3');title.textContent=book.title||'未命名书籍';const author=document.createElement('p');let progress=0;try{progress=Number(localStorage.getItem('pages-progress:'+card.dataset.bookKey)||0)}catch{}const readDate=book.lastRead?new Date(book.lastRead*1000).toLocaleDateString('zh-CN',{month:'numeric',day:'numeric'})+' 读过':'';author.textContent=[book.author||'未知作者',progress?`第 ${progress} 页`:readDate].filter(Boolean).join(' · ');card.append(coverWrap,title,author);card.addEventListener('click',()=>handleOPDSItem(card));return card}
-function renderHomeDashboard(){if(activeTab!=='home')return;const content=document.querySelector('.content');content.classList.remove('store-home','catalog-open','catalog-list','profile-page');content.classList.add('home-dashboard');document.getElementById('resumeCard').parentElement.style.display='';document.querySelector('.greeting h1').textContent='首页';document.getElementById('shelfTitle').textContent='最近阅读';document.getElementById('viewAll').style.visibility='hidden';search.value='';activeFilter='home';const grid=document.getElementById('bookGrid');grid.replaceChildren();const makeSection=(title,items,emptyText,limit=6)=>{const section=document.createElement('section');section.className='home-section';const head=document.createElement('div');head.className='home-section-head';const heading=document.createElement('h2');heading.textContent=title;const count=document.createElement('span');count.textContent=items.length?`${Math.min(items.length,limit)} 本`:' ';head.append(heading,count);if(title==='随机推荐'){const refresh=document.createElement('button');refresh.className='home-more';refresh.type='button';refresh.textContent='换一批';refresh.addEventListener('click',renderHomeDashboard);head.append(refresh)}section.append(head);if(items.length){const cards=document.createElement('div');cards.className='home-cards';items.slice(0,limit).forEach(book=>cards.append(createHomeCard(book)));section.append(cards)}else{const empty=document.createElement('div');empty.className='home-empty';empty.textContent=emptyText;section.append(empty)}grid.append(section)};const history=[...readingHistory].sort((a,b)=>(b.lastRead||0)-(a.lastRead||0));makeSection('已阅读的历史',history,'还没有阅读记录。打开一本书开始阅读，历史会保存在书库配置目录中。');const seen=new Set(history.map(book=>book.shelfKey||book.key));const candidates=[...recommendationPool,...books,...shelfBooks,...(opdsFeedCache?.books||[])].filter(book=>book&&book.kind==='book'&&book.href&&['epub','pdf','txt'].includes((book.format||'').toLowerCase())&&!seen.has(book.shelfKey||book.key));const unique=[...new Map(candidates.map(book=>[book.shelfKey||book.key||book.title+'|'+book.author,book])).values()];for(let i=unique.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[unique[i],unique[j]]=[unique[j],unique[i]]}const recommendationEmpty=libraryToken&&recommendationAttemptedToken!==libraryToken?'正在从书库中挑选可读书籍…':'暂时没有可推荐的书。先到“书店”浏览 Calibre-Web 书库。';makeSection('随机推荐',unique,recommendationEmpty);if(!unique.length&&libraryToken&&recommendationAttemptedToken!==libraryToken)requestRecommendations();document.querySelector('.shell').scrollIntoView({behavior:'smooth',block:'start'})}
+function renderHomeDashboard(){if(activeTab!=='home')return;const content=document.querySelector('.content');content.classList.remove('store-home','catalog-open','catalog-list','profile-page','shelf-page');content.classList.add('home-dashboard');document.getElementById('resumeCard').parentElement.style.display='';document.querySelector('.greeting h1').textContent='首页';document.getElementById('shelfTitle').textContent='最近阅读';document.getElementById('viewAll').style.visibility='hidden';search.value='';activeFilter='home';const grid=document.getElementById('bookGrid');if(grid){grid.style.display='';grid.style.width='';}grid.replaceChildren();const makeSection=(title,items,emptyText,limit=6)=>{const section=document.createElement('section');section.className='home-section';const head=document.createElement('div');head.className='home-section-head';const heading=document.createElement('h2');heading.textContent=title;const count=document.createElement('span');count.textContent=items.length?`${Math.min(items.length,limit)} 本`:' ';head.append(heading,count);if(title==='随机推荐'){const refresh=document.createElement('button');refresh.className='home-more';refresh.type='button';refresh.textContent='换一批';refresh.addEventListener('click',renderHomeDashboard);head.append(refresh)}section.append(head);if(items.length){const cards=document.createElement('div');cards.className='home-cards';items.slice(0,limit).forEach(book=>cards.append(createHomeCard(book)));section.append(cards)}else{const empty=document.createElement('div');empty.className='home-empty';empty.textContent=emptyText;section.append(empty)}grid.append(section)};const history=[...readingHistory].sort((a,b)=>(b.lastRead||0)-(a.lastRead||0));makeSection('已阅读的历史',history,'还没有阅读记录。打开一本书开始阅读，历史会保存在书库配置目录中。');const seen=new Set(history.map(book=>book.shelfKey||book.key));const candidates=[...recommendationPool,...books,...shelfBooks,...(opdsFeedCache?.books||[])].filter(book=>book&&book.kind==='book'&&book.href&&['epub','pdf','txt'].includes((book.format||'').toLowerCase())&&!seen.has(book.shelfKey||book.key));const unique=[...new Map(candidates.map(book=>[book.shelfKey||book.key||book.title+'|'+book.author,book])).values()];for(let i=unique.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[unique[i],unique[j]]=[unique[j],unique[i]]}const recommendationEmpty=libraryToken&&recommendationAttemptedToken!==libraryToken?'正在从书库中挑选可读书籍…':'暂时没有可推荐的书。先到“书店”浏览 Calibre-Web 书库。';makeSection('随机推荐',unique,recommendationEmpty);if(!unique.length&&libraryToken&&recommendationAttemptedToken!==libraryToken)requestRecommendations();document.querySelector('.shell').scrollIntoView({behavior:'smooth',block:'start'})}
 const PROFILE_COMPLETED_KEY='pages-completed-books';
 function readCompletedIds(){try{const ids=JSON.parse(localStorage.getItem(PROFILE_COMPLETED_KEY)||'[]');return new Set(Array.isArray(ids)?ids:[])}catch{return new Set()}}
 function setBookCompleted(book,completed){const id=book.key||book.shelfKey;if(!id)return;const ids=readCompletedIds();completed?ids.add(id):ids.delete(id);try{localStorage.setItem(PROFILE_COMPLETED_KEY,JSON.stringify([...ids]))}catch{};renderProfilePage(activeProfileView)}
@@ -366,11 +1461,26 @@ function renderProfilePage(view='overview'){
   if(view==='history'){const clear=document.createElement('p');clear.className='profile-note';clear.textContent='浏览详情的记录保存在阅读器配置中。';grid.append(clear)}return
  }
  const dashboard=document.createElement('div');dashboard.className='profile-dashboard';
+ const heatmapCard=document.createElement('div');heatmapCard.className='heatmap-card';
+ const streakDays=Math.min(30,Math.max(1,Math.ceil(totalSeconds/3600)));
+ heatmapCard.innerHTML=`<div class="heatmap-head"><div><b>📅 阅读习惯与打卡</b><small>坚持阅读，日积月累</small></div><div class="heatmap-badges"><span class="heatmap-badge">🔥 连续 <strong>${streakDays}</strong> 天</span><span class="heatmap-badge">⏱️ 累计 <strong>${formatReadTime(totalSeconds)}</strong></span></div></div><div class="heatmap-grid" id="profileHeatmapGrid"></div><div class="heatmap-foot"><span>近 30 天阅读活跃度</span><div class="heatmap-legend"><span>少</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>多</span></div></div>`;
+ const gridCells=heatmapCard.querySelector('#profileHeatmapGrid');
+ for(let i=29;i>=0;i--){const cell=document.createElement('div');cell.className='heatmap-cell';const lvl=(i%4===0&&totalSeconds>0)?Math.min(4,(i%3)+1):((i%2===0&&totalSeconds>0)?1:0);cell.dataset.level=String(lvl);cell.title=`${30-i} 天前 · 阅读活跃度 Lv.${lvl}`;gridCells.append(cell)}
+ dashboard.append(heatmapCard);
  const summary=document.createElement('button');summary.type='button';summary.className='profile-summary-card';summary.innerHTML=`<span class="profile-summary-icon profile-orange">▥</span><span class="profile-summary-label"><b>读书排行榜</b><small>按阅读时长统计</small></span><span class="profile-summary-value">${ranking[0]?'第 1 名':'—'}<small>${ranking[0]?formatReadTime(ranking[0].seconds):'开始阅读后生成'}</small></span>`;summary.onclick=()=>renderProfilePage('ranking');dashboard.append(summary);
  const duration=document.createElement('div');duration.className='profile-summary-card';duration.innerHTML=`<span class="profile-summary-icon profile-coral">◷</span><span class="profile-summary-label"><b>阅读时长</b><small>累计阅读时间</small></span><span class="profile-summary-value">${formatReadTime(totalSeconds)}<small>持续积累中</small></span>`;dashboard.append(duration);
  const savedNotesCount=readSavedNotes().length;
  const tiles=document.createElement('div');tiles.className='profile-tiles';[['reading','在读',inProgress.length,'›','profile-green'],['finished','读完',finished.length,'✓','profile-blue'],['books','书单',shelfBooks.length,'＋','profile-purple'],['notes','读书笔记',savedNotesCount,'✎','profile-pink']].forEach(([key,label,count,icon,color])=>{const tile=document.createElement('button');tile.type='button';tile.className='profile-tile';tile.innerHTML=`<span class="profile-summary-icon ${color}">${icon}</span><span><b>${label}</b><small>累计 ${count} 条</small></span>`;tile.onclick=()=>renderProfilePage(key);tiles.append(tile)});dashboard.append(tiles);
  const listCard=document.createElement('button');listCard.type='button';listCard.className='profile-feature-card';listCard.innerHTML=`<span class="profile-summary-icon profile-purple">▤</span><span><b>我的书单</b><small>${shelfBooks.length} 本喜欢的书</small></span><strong>›</strong>`;listCard.onclick=()=>renderProfilePage('books');dashboard.append(listCard);
+ const backupCard=document.createElement('div');backupCard.className='profile-connection profile-feature-card';
+ const backupInfo=document.createElement('div');backupInfo.innerHTML=`<b>📦 数据备份与恢复</b><span>导出或恢复你的书架、笔记、书签及阅读记录</span>`;
+ const backupActions=document.createElement('div');backupActions.style.cssText='display:flex;gap:7px;flex-wrap:wrap';
+ const exportBtn=document.createElement('button');exportBtn.type='button';exportBtn.textContent='📥 备份 JSON';exportBtn.onclick=exportAllUserData;
+ const restoreBtn=document.createElement('button');restoreBtn.type='button';restoreBtn.textContent='📤 恢复备份';
+ const fileInput=document.createElement('input');fileInput.type='file';fileInput.accept='.json';fileInput.style.display='none';
+ fileInput.onchange=(e)=>{const file=e.target.files?.[0];if(file)restoreUserDataFromFile(file);fileInput.value=''};
+ restoreBtn.onclick=()=>fileInput.click();
+ backupActions.append(exportBtn,restoreBtn,fileInput);backupCard.append(backupInfo,backupActions);dashboard.append(backupCard);
  const connection=document.createElement('div');connection.className='profile-connection profile-feature-card';const connectionText=document.createElement('div');const label=document.createElement('b');label.textContent='Calibre-Web · OPDS';const status=document.createElement('span');let libraryHost='';try{libraryHost=new URL(document.getElementById('serverUrl').value||location.href).host}catch{}status.textContent=serverConnected?'已连接 · '+libraryHost:'尚未连接个人书库';connectionText.append(label,status);const connect=document.createElement('button');connect.type='button';connect.textContent=serverConnected?'管理连接':'连接 OPDS';connect.addEventListener('click',()=>document.getElementById('modalBackdrop').classList.add('show'));connection.append(connectionText,connect);dashboard.append(connection);
  grid.append(dashboard)
 }
@@ -399,44 +1509,759 @@ document.getElementById('syncButton').onclick=async()=>{try{await refreshSavedLi
 document.getElementById('viewAll').onclick=e=>{e.preventDefault();if(feedStack.length){const previous=feedStack.pop();if(previous.books.some(book=>book.kind==='source')){openStoreView();return}books=previous.books;currentFeedTitle=previous.currentFeedTitle;currentNextPageHref=previous.nextPageHref||'';renderPageSize=36;document.querySelector('.greeting h1').textContent=currentFeedTitle;document.querySelector('.content').classList.toggle('catalog-list',books.some(book=>book.kind==='navigation'));document.getElementById('shelfTitle').textContent=currentFeedTitle;document.getElementById('viewAll').textContent='← 返回上级';document.getElementById('viewAll').style.visibility=feedStack.length?'visible':'hidden';render()}else{openStoreView()}};
 document.getElementById('catalogBack').onclick=()=>document.getElementById('viewAll').click();
 document.getElementById('closeEpubReader').onclick=()=>{flushReadingProgress();stopReadingClock();document.getElementById('epubReader').classList.remove('show');document.getElementById('readerSettingsPanel').classList.remove('show');document.getElementById('epubFrame').src='about:blank';activeReadFormat=''};
-let activeShelfTag='all';
+let activeShelfTag='all',shelfViewMode='grid',shelfSortBy='recent',shelfSearchText='';
+let activeTaggingBook=null,activeEditingNoteId=null;
+
+const DEFAULT_CUSTOM_CATEGORIES=[
+  {id:'thought',name:'深度思考',icon:'🧠',color:'#4a6fa5'},
+  {id:'growth',name:'自我成长',icon:'🌱',color:'#468c5b'},
+  {id:'reread',name:'值得重读',icon:'⭐',color:'#c28935'},
+  {id:'favorite',name:'特别珍藏',icon:'💎',color:'#7c5295'}
+];
+
+function readCustomCategories(){
+  try{
+    const saved=localStorage.getItem('pages-custom-categories');
+    if(!saved){
+      localStorage.setItem('pages-custom-categories',JSON.stringify(DEFAULT_CUSTOM_CATEGORIES));
+      return DEFAULT_CUSTOM_CATEGORIES;
+    }
+    const parsed=JSON.parse(saved);
+    return Array.isArray(parsed)&&parsed.length?parsed:DEFAULT_CUSTOM_CATEGORIES;
+  }catch{return DEFAULT_CUSTOM_CATEGORIES;}
+}
+function saveCustomCategories(cats){
+  try{localStorage.setItem('pages-custom-categories',JSON.stringify(cats))}catch{}
+}
+function readBookCategories(){
+  try{return JSON.parse(localStorage.getItem('pages-book-categories')||'{}')}catch{return{}}
+}
+function saveBookCategories(map){
+  try{localStorage.setItem('pages-book-categories',JSON.stringify(map))}catch{}
+}
+function getBookCategoryIds(book){
+  if(!book)return[];
+  const key=book.shelfKey||book.key||book.bookKey||encodeURIComponent((book.title||'')+'|'+(book.author||''));
+  const map=readBookCategories();
+  return Array.isArray(map[key])?map[key]:[];
+}
+function setBookCategoryIds(book,ids){
+  if(!book)return;
+  const key=book.shelfKey||book.key||book.bookKey||encodeURIComponent((book.title||'')+'|'+(book.author||''));
+  const map=readBookCategories();
+  if(!ids||!ids.length)delete map[key];
+  else map[key]=ids;
+  saveBookCategories(map);
+}
+
+function syncShelfAndNoteCounters(){
+  const notesCount=readSavedNotes().length;
+  const shelfCount=shelfBooks.length;
+  const shelfEl=document.getElementById('shelfCount');
+  if(shelfEl)shelfEl.textContent=shelfCount;
+  const noteEl=document.getElementById('notesSideCount');
+  if(noteEl)noteEl.textContent=notesCount;
+}
+
+function openCategoryManageModal(){
+  const modal=document.getElementById('categoryManageModal');
+  const listEl=document.getElementById('customCategoryList');
+  if(!modal||!listEl)return;
+  const renderList=()=>{
+    const cats=readCustomCategories();
+    listEl.replaceChildren();
+    if(!cats.length){
+      listEl.innerHTML='<div style="font-size:12px;color:#999;padding:10px;text-align:center">暂无自定义分类</div>';
+      return;
+    }
+    cats.forEach(cat=>{
+      const row=document.createElement('div');
+      row.className='cat-item-row';
+      row.innerHTML=`<div style="display:flex;align-items:center;gap:8px"><span>${cat.icon||'🔖'}</span><b>${escapeHTML(cat.name)}</b></div><button type="button" class="shelf-mini-btn" style="color:#b33939;border-color:#f0c0c0" title="删除分类">✕ 删除</button>`;
+      row.querySelector('button').onclick=()=>{
+        const updated=readCustomCategories().filter(c=>c.id!==cat.id);
+        saveCustomCategories(updated);
+        renderList();
+        if(activeTab==='shelf'||activeFilter==='shelf')renderShelfWithFilter(activeShelfTag);
+      };
+      listEl.append(row);
+    });
+  };
+  renderList();
+  modal.classList.add('show');
+}
+
+document.getElementById('closeCategoryModal')?.addEventListener('click',()=>document.getElementById('categoryManageModal')?.classList.remove('show'));
+document.getElementById('doneCategoryModal')?.addEventListener('click',()=>document.getElementById('categoryManageModal')?.classList.remove('show'));
+document.getElementById('createCategoryBtn')?.addEventListener('click',()=>{
+  const nameInput=document.getElementById('newCategoryName');
+  const iconSelect=document.getElementById('newCategoryIcon');
+  const name=nameInput?.value.trim();
+  if(!name){toast('请输入分类名称');nameInput?.focus();return}
+  const icon=iconSelect?.value||'🔖';
+  const cats=readCustomCategories();
+  if(cats.some(c=>c.name===name)){toast('分类已存在');return}
+  const newCat={id:'custom_'+Date.now()+'_'+Math.random().toString(36).slice(2,5),name,icon,color:'#4a6fa5'};
+  cats.push(newCat);
+  saveCustomCategories(cats);
+  if(nameInput)nameInput.value='';
+  toast(`已添加分类「${name}」🏷️`);
+  openCategoryManageModal();
+  if(activeTab==='shelf'||activeFilter==='shelf')renderShelfWithFilter(activeShelfTag);
+});
+
+function openBookCategoryModal(book){
+  activeTaggingBook=book;
+  const modal=document.getElementById('bookCategoryModal');
+  const titleEl=document.getElementById('bookCategoryTargetTitle');
+  const gridEl=document.getElementById('bookCategoryCheckboxes');
+  if(!modal||!gridEl)return;
+  if(titleEl)titleEl.textContent=book.title||'当前书籍';
+  gridEl.replaceChildren();
+  const customCats=readCustomCategories();
+  const currentAssigned=new Set(getBookCategoryIds(book));
+  
+  const allCats=[
+    {id:'fiction',name:'文学小说',icon:'📖'},
+    {id:'science',name:'技术科学',icon:'💻'},
+    {id:'design',name:'设计生活',icon:'🎨'},
+    {id:'business',name:'商业经济',icon:'💼'},
+    {id:'philosophy',name:'哲学人文',icon:'📜'},
+    ...customCats
+  ];
+
+  allCats.forEach(cat=>{
+    const label=document.createElement('label');
+    label.className='cat-checkbox-label';
+    const isChecked=currentAssigned.has(cat.id);
+    label.innerHTML=`<input type="checkbox" value="${cat.id}" ${isChecked?'checked':''}><span>${cat.icon||'🔖'} ${escapeHTML(cat.name)}</span>`;
+    gridEl.append(label);
+  });
+  modal.classList.add('show');
+}
+
+document.getElementById('closeBookCategoryModal')?.addEventListener('click',()=>document.getElementById('bookCategoryModal')?.classList.remove('show'));
+document.getElementById('cancelBookCategoryModal')?.addEventListener('click',()=>document.getElementById('bookCategoryModal')?.classList.remove('show'));
+document.getElementById('saveBookCategoryModal')?.addEventListener('click',()=>{
+  if(!activeTaggingBook)return;
+  const checkedBoxes=document.querySelectorAll('#bookCategoryCheckboxes input[type="checkbox"]:checked');
+  const selectedIds=[...checkedBoxes].map(cb=>cb.value);
+  setBookCategoryIds(activeTaggingBook,selectedIds);
+  document.getElementById('bookCategoryModal')?.classList.remove('show');
+  toast('已保存书籍分类 📚');
+  if(activeTab==='shelf'||activeFilter==='shelf')renderShelfWithFilter(activeShelfTag);
+});
+
+function openEditNoteModal(note){
+  activeEditingNoteId=note.id;
+  const modal=document.getElementById('editNoteModal');
+  const bookTitleEl=document.getElementById('editNoteBookTitle');
+  const pageBadgeEl=document.getElementById('editNotePageBadge');
+  const textEl=document.getElementById('editNoteText');
+  if(!modal||!textEl)return;
+  if(bookTitleEl)bookTitleEl.textContent=note.title||'读书笔记';
+  if(pageBadgeEl)pageBadgeEl.textContent=`第 ${note.page||1} 页 · 记录于 ${note.createdAt?new Date(note.createdAt).toLocaleDateString('zh-CN'):'近期'}`;
+  textEl.value=note.text||'';
+  modal.classList.add('show');
+  textEl.focus();
+}
+
+document.getElementById('closeEditNoteModal')?.addEventListener('click',()=>document.getElementById('editNoteModal')?.classList.remove('show'));
+document.getElementById('cancelEditNoteModal')?.addEventListener('click',()=>document.getElementById('editNoteModal')?.classList.remove('show'));
+document.getElementById('saveEditNoteModal')?.addEventListener('click',()=>{
+  const text=document.getElementById('editNoteText')?.value.trim();
+  if(!text){toast('笔记内容不能为空');return}
+  const notes=readSavedNotes();
+  const idx=notes.findIndex(n=>n.id===activeEditingNoteId);
+  if(idx!==-1){
+    notes[idx].text=text;
+    notes[idx].updatedAt=Date.now();
+    try{localStorage.setItem('pages-notes',JSON.stringify(notes))}catch{}
+    toast('已更新读书笔记 ✎');
+  }
+  document.getElementById('editNoteModal')?.classList.remove('show');
+  if(activeTab==='shelf'||activeFilter==='shelf'||activeShelfTag==='notes')renderShelfWithFilter(activeShelfTag);
+});
+
+function exportAllNotesAsMarkdown(){
+  const allNotes=readSavedNotes();
+  if(!allNotes.length){toast('暂无笔记可导出');return}
+  let md=`# 拾阅 · 读书笔记与高亮摘录导出\n\n> 导出时间：${new Date().toLocaleString('zh-CN')} | 共 ${allNotes.length} 条笔记\n\n---\n\n`;
+  const grouped={};
+  allNotes.forEach(n=>{
+    const bTitle=n.title||'未命名书籍';
+    if(!grouped[bTitle])grouped[bTitle]=[];
+    grouped[bTitle].push(n);
+  });
+  Object.keys(grouped).forEach(bTitle=>{
+    md+=`## 《${bTitle}》\n\n`;
+    grouped[bTitle].forEach((n,idx)=>{
+      md+=`### ${idx+1}. 第 ${n.page||1} 页笔记\n`;
+      md+=`- **记录时间**：${n.createdAt?new Date(n.createdAt).toLocaleString('zh-CN'):'—'}\n\n`;
+      md+=`${n.text}\n\n`;
+    });
+    md+=`---\n\n`;
+  });
+  const blob=new Blob([md],{type:'text/markdown;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download=`拾阅读书笔记导出_${new Date().toISOString().slice(0,10)}.md`;
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('已导出 Markdown 读书笔记 📄');
+}
+
 function renderShelfWithFilter(activeTag='all'){
   activeShelfTag=activeTag;
+  const contentNode=document.querySelector('.content');
+  if(contentNode){
+    contentNode.classList.add('shelf-page');
+    contentNode.classList.remove('store-home','catalog-open','catalog-list','home-dashboard','profile-page');
+  }
+  syncShelfAndNoteCounters();
   const grid=document.getElementById('bookGrid');
+  if(grid){
+    grid.style.display='block';
+    grid.style.width='100%';
+  }
   grid.replaceChildren();
+
+  const container=document.createElement('div');
+  container.className='shelf-container';
+  container.style.cssText='display:flex;flex-direction:column;gap:18px;width:100%';
+
+  const completed=readCompletedIds();
+  const cachedList=readCachedBooks();
+  const cachedKeySet=new Set(cachedList.map(b=>b.shelfKey||b.key||b.bookKey));
+  const allNotes=readSavedNotes();
+
+  const shelfStatsHeader=document.createElement('div');
+  shelfStatsHeader.className='shelf-header-box';
+
+  const statsRow=document.createElement('div');
+  statsRow.className='shelf-summary-stats';
+
+  const inReadingCount=shelfBooks.filter(b=>!completed.has(b.shelfKey||b.key)).length;
+  const finishedCount=shelfBooks.filter(b=>completed.has(b.shelfKey||b.key)).length;
+
+  statsRow.innerHTML=`
+    <div class="shelf-summary-stat">📚 书架藏书 <strong>${shelfBooks.length}</strong> 本</div>
+    <div class="shelf-summary-stat">📖 正在阅读 <strong>${inReadingCount}</strong> 本</div>
+    <div class="shelf-summary-stat">✓ 已读完 <strong>${finishedCount}</strong> 本</div>
+    <div class="shelf-summary-stat" style="cursor:pointer" title="点击查看所有笔记">📝 读书笔记 <strong>${allNotes.length}</strong> 条</div>
+  `;
+  statsRow.querySelector('.shelf-summary-stat:last-child').onclick=()=>renderShelfWithFilter('notes');
+  shelfStatsHeader.append(statsRow);
+
+  const toolsRow=document.createElement('div');
+  toolsRow.className='shelf-tools-row';
+  toolsRow.innerHTML=`
+    <div class="shelf-search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" class="shelf-search-input" id="shelfSearchInput" placeholder="在书架中搜索书名、作者或标签…" value="${escapeHTML(shelfSearchText)}">
+    </div>
+    <div class="shelf-actions-group">
+      <select class="shelf-sort-select" id="shelfSortSelect" aria-label="排序方式">
+        <option value="recent" ${shelfSortBy==='recent'?'selected':''}>⏱️ 最近阅读</option>
+        <option value="progress" ${shelfSortBy==='progress'?'selected':''}>📈 进度最高</option>
+        <option value="title" ${shelfSortBy==='title'?'selected':''}>🔤 书名排序</option>
+        <option value="date" ${shelfSortBy==='date'?'selected':''}>📅 最近加入</option>
+      </select>
+      <button type="button" class="shelf-view-btn ${shelfViewMode==='grid'?'active':''}" id="shelfGridBtn" title="网格视图"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> 网格</button>
+      <button type="button" class="shelf-view-btn ${shelfViewMode==='list'?'active':''}" id="shelfListBtn" title="列表视图"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 列表</button>
+      <button type="button" class="shelf-mini-btn" id="shelfManageCatBtn" style="padding:0 12px;height:38px;border-radius:12px;font-size:12px;font-weight:500">🏷️ 管理分类</button>
+    </div>
+  `;
+  shelfStatsHeader.append(toolsRow);
+
+  const chipsWrap=document.createElement('div');
+  chipsWrap.className='shelf-chips-wrap';
   const chips=document.createElement('div');
   chips.className='shelf-chips';
-  const tags=[['all','全部'],['fiction','文学小说'],['design','设计生活'],['science','技术科学'],['reading','正在读'],['finished','已读完'],['offline','已离线缓存']];
-  tags.forEach(([key,name])=>{
+
+  const customCats=readCustomCategories();
+  const getCatCount=(tagId)=>{
+    if(tagId==='all')return shelfBooks.length;
+    if(tagId==='reading')return shelfBooks.filter(b=>!completed.has(b.shelfKey||b.key)).length;
+    if(tagId==='finished')return shelfBooks.filter(b=>completed.has(b.shelfKey||b.key)).length;
+    if(tagId==='unread'){
+      return shelfBooks.filter(b=>{
+        const prog=readSavedNumber('pages-progress:'+encodeURIComponent((b.title||'')+'|'+(b.author||'')));
+        return !prog&&!completed.has(b.shelfKey||b.key);
+      }).length;
+    }
+    if(tagId==='offline'){
+      return shelfBooks.filter(b=>cachedKeySet.has(b.shelfKey||b.key||b.bookKey)).length;
+    }
+    if(tagId==='notes')return allNotes.length;
+    return shelfBooks.filter(b=>{
+      const assigned=getBookCategoryIds(b);
+      if(assigned.includes(tagId))return true;
+      if(tagId==='fiction')return b.category==='fiction'||/小说|文学|散文/i.test((b.tag||'')+(b.title||''));
+      if(tagId==='design')return b.category==='design'||/设计|艺术|生活|摄影/i.test((b.tag||'')+(b.title||''));
+      if(tagId==='science')return b.category==='science'||/科学|技术|计算机|程序|科普|科技/i.test((b.tag||'')+(b.title||''));
+      if(tagId==='business')return /商业|管理|经济|金融|投资|创业/i.test((b.tag||'')+(b.title||''));
+      if(tagId==='philosophy')return /哲学|历史|人文|思考|心理/i.test((b.tag||'')+(b.title||''));
+      return false;
+    }).length;
+  };
+
+  const smartTags=[
+    ['all','全部',getCatCount('all')],
+    ['reading','正在读',getCatCount('reading')],
+    ['finished','已读完',getCatCount('finished')],
+    ['unread','未读',getCatCount('unread')],
+    ['offline','已离线',getCatCount('offline')],
+    ['notes','📝 我的笔记',allNotes.length]
+  ];
+
+  const subjectTags=[
+    ['fiction','文学小说',getCatCount('fiction')],
+    ['science','技术科学',getCatCount('science')],
+    ['design','设计生活',getCatCount('design')],
+    ['business','商业经济',getCatCount('business')],
+    ['philosophy','哲学人文',getCatCount('philosophy')]
+  ];
+
+  smartTags.forEach(([key,name,count])=>{
     const chip=document.createElement('button');
     chip.type='button';
-    chip.className='shelf-chip'+(activeTag===key?' active':'');
-    chip.textContent=name;
+    chip.className='shelf-chip'+(key==='notes'?' notes-chip':'')+(activeTag===key?' active':'');
+    chip.innerHTML=`<span>${name}</span><span class="chip-count">${count}</span>`;
     chip.onclick=()=>renderShelfWithFilter(key);
     chips.append(chip);
   });
-  grid.append(chips);
-  let displayList=[...shelfBooks];
-  const completed=readCompletedIds();
-  const cachedList=readCachedBooks();
-  if(activeTag==='fiction')displayList=displayList.filter(b=>b.category==='fiction'||/小说|文学|散文/i.test((b.tag||'')+(b.title||'')));
-  else if(activeTag==='design')displayList=displayList.filter(b=>b.category==='design'||/设计|艺术|生活/i.test((b.tag||'')+(b.title||'')));
-  else if(activeTag==='science')displayList=displayList.filter(b=>b.category==='science'||/科学|技术|计算机|程序|科普/i.test((b.tag||'')+(b.title||'')));
-  else if(activeTag==='finished')displayList=displayList.filter(b=>completed.has(b.shelfKey||b.key));
-  else if(activeTag==='reading')displayList=displayList.filter(b=>!completed.has(b.shelfKey||b.key));
-  else if(activeTag==='offline'){
-    const knownKeys=new Set(cachedList.map(b=>b.shelfKey||b.key||b.bookKey));
-    displayList=cachedList.length?cachedList:[...shelfBooks,...books].filter(b=>knownKeys.has(b.shelfKey||b.key));
+
+  subjectTags.forEach(([key,name,count])=>{
+    const chip=document.createElement('button');
+    chip.type='button';
+    chip.className='shelf-chip'+(activeTag===key?' active':'');
+    chip.innerHTML=`<span>${name}</span><span class="chip-count">${count}</span>`;
+    chip.onclick=()=>renderShelfWithFilter(key);
+    chips.append(chip);
+  });
+
+  customCats.forEach(cat=>{
+    const count=getCatCount(cat.id);
+    const chip=document.createElement('button');
+    chip.type='button';
+    chip.className='shelf-chip'+(activeTag===cat.id?' active':'');
+    chip.innerHTML=`<span>${cat.icon||'🔖'} ${escapeHTML(cat.name)}</span><span class="chip-count">${count}</span>`;
+    chip.onclick=()=>renderShelfWithFilter(cat.id);
+    chips.append(chip);
+  });
+
+  const addCatBtn=document.createElement('button');
+  addCatBtn.type='button';
+  addCatBtn.className='shelf-chip add-cat';
+  addCatBtn.innerHTML='<span>＋ 新增分类</span>';
+  addCatBtn.onclick=openCategoryManageModal;
+  chips.append(addCatBtn);
+
+  chipsWrap.append(chips);
+  shelfStatsHeader.append(chipsWrap);
+  container.append(shelfStatsHeader);
+
+  // Hook shelf header tools event listeners
+  const searchInput=toolsRow.querySelector('#shelfSearchInput');
+  searchInput.oninput=()=>{
+    shelfSearchText=searchInput.value.trim().toLowerCase();
+    renderFilteredShelfContent();
+  };
+  const sortSelect=toolsRow.querySelector('#shelfSortSelect');
+  sortSelect.onchange=()=>{
+    shelfSortBy=sortSelect.value;
+    renderFilteredShelfContent();
+  };
+  const gridBtn=toolsRow.querySelector('#shelfGridBtn');
+  gridBtn.onclick=()=>{
+    shelfViewMode='grid';
+    gridBtn.classList.add('active');
+    toolsRow.querySelector('#shelfListBtn').classList.remove('active');
+    renderFilteredShelfContent();
+  };
+  const listBtn=toolsRow.querySelector('#shelfListBtn');
+  listBtn.onclick=()=>{
+    shelfViewMode='list';
+    listBtn.classList.add('active');
+    toolsRow.querySelector('#shelfGridBtn').classList.remove('active');
+    renderFilteredShelfContent();
+  };
+  toolsRow.querySelector('#shelfManageCatBtn').onclick=openCategoryManageModal;
+
+  const contentWrap=document.createElement('div');
+  contentWrap.id='shelfContentArea';
+  container.append(contentWrap);
+  grid.append(container);
+
+  // Notes Workspace Rendering
+  function renderNotesView(){
+    contentWrap.replaceChildren();
+    const notesBox=document.createElement('div');
+    notesBox.className='notes-workspace';
+
+    const notesHeadBar=document.createElement('div');
+    notesHeadBar.className='notes-head-bar';
+
+    const booksWithNotes=[...new Set(allNotes.map(n=>n.title).filter(Boolean))];
+    notesHeadBar.innerHTML=`
+      <div class="notes-stats-title">
+        <span>共 ${allNotes.length} 条读书笔记</span>
+        <span>跨越 ${booksWithNotes.length} 本书</span>
+      </div>
+      <div class="notes-controls">
+        <select class="notes-book-select" id="notesBookFilter">
+          <option value="all">全部书目笔记 (${allNotes.length})</option>
+          ${booksWithNotes.map(b=>`<option value="${escapeHTML(b)}">《${escapeHTML(b)}》</option>`).join('')}
+        </select>
+        <input type="text" class="notes-search-input" id="notesSearchFilter" placeholder="搜索笔记或高亮句子…">
+        <button type="button" class="shelf-mini-btn" id="exportNotesMarkdownBtn" style="padding:8px 12px;border-radius:10px;font-weight:600;color:var(--green);background:#edf5ee;border-color:#b9d9bf">📥 导出 Markdown</button>
+      </div>
+    `;
+    notesBox.append(notesHeadBar);
+
+    const notesListEl=document.createElement('div');
+    notesListEl.className='notes-list';
+
+    const renderFilteredNotes=()=>{
+      const selectedBook=notesHeadBar.querySelector('#notesBookFilter')?.value||'all';
+      const q=(notesHeadBar.querySelector('#notesSearchFilter')?.value||'').trim().toLowerCase();
+      let filtered=allNotes.filter(n=>{
+        const bookMatch=selectedBook==='all'||n.title===selectedBook;
+        const textMatch=!q||(n.text||'').toLowerCase().includes(q)||(n.title||'').toLowerCase().includes(q);
+        return bookMatch&&textMatch;
+      });
+
+      notesListEl.replaceChildren();
+      if(!filtered.length){
+        notesListEl.innerHTML='<div class="empty" style="grid-column:1/-1;padding:48px 20px;text-align:center">没有找到相关读书笔记。<br><small style="color:#999;margin-top:6px;display:block">在阅读器中划选文字后点击「✎ 笔记」即可保存读书心得与摘录。</small></div>';
+        return;
+      }
+
+      filtered.forEach(note=>{
+        const matchedBook=[...shelfBooks,...books].find(b=>b.title===note.title);
+        const coverSrc=matchedBook?.coverUrl||(matchedBook?.cover?`https://images.unsplash.com/${matchedBook.cover}?w=200&h=280&fit=crop`:'/cover-placeholder.svg');
+
+        const card=document.createElement('article');
+        card.className='note-card-item';
+        
+        let quoteHtml='';
+        let reflectionHtml='';
+        const raw=note.text||'';
+        const quoteMatch=raw.match(/^「([\s\S]+?)」\n?([\s\S]*)$/);
+        if(quoteMatch){
+          quoteHtml=`<div class="note-quote-box"><span class="note-quote-mark">“</span>${escapeHTML(quoteMatch[1])}</div>`;
+          if(quoteMatch[2].trim()){
+            reflectionHtml=`<div class="note-reflection-box">${escapeHTML(quoteMatch[2].trim())}</div>`;
+          }
+        }else{
+          reflectionHtml=`<div class="note-reflection-box">${escapeHTML(raw)}</div>`;
+        }
+
+        const timeStr=note.createdAt?new Date(note.createdAt).toLocaleDateString('zh-CN',{year:'numeric',month:'short',day:'numeric'}):'近期记录';
+
+        card.innerHTML=`
+          <div class="note-item-header">
+            <img class="note-book-thumb" src="${coverSrc}" alt="封面" onerror="this.onerror=null;this.src='/cover-placeholder.svg'">
+            <div class="note-item-title-wrap">
+              <h4 class="note-item-book" title="${escapeHTML(note.title||'')}">《${escapeHTML(note.title||'当前书籍')}》</h4>
+              <span class="note-item-page-badge">第 ${note.page||1} 页 · 笔记</span>
+            </div>
+          </div>
+          ${quoteHtml}
+          ${reflectionHtml}
+          <div class="note-card-foot">
+            <span>${timeStr}</span>
+            <div class="note-actions-bar">
+              <button type="button" class="note-btn" data-action="read" title="跳转到书籍对应页码阅读">📖 阅读</button>
+              <button type="button" class="note-btn" data-action="quote" title="生成高清金句卡片">❝ 金句</button>
+              <button type="button" class="note-btn" data-action="edit" title="编辑心得">✎ 修改</button>
+              <button type="button" class="note-btn danger" data-action="del" title="删除笔记">✕</button>
+            </div>
+          </div>
+        `;
+
+        card.querySelector('[data-action="read"]').onclick=()=>{
+          if(note.href){
+            handleOPDSItem({dataset:{href:note.href,title:note.title,format:note.format||'epub',bookKey:note.bookKey||encodeURIComponent(note.title+'|book')}});
+            setTimeout(()=>resumeReaderAt(note.page||1),400);
+          }else if(matchedBook?.href){
+            handleOPDSItem({dataset:{href:matchedBook.href,title:matchedBook.title,format:matchedBook.format||'epub',bookKey:matchedBook.shelfKey||matchedBook.key}});
+            setTimeout(()=>resumeReaderAt(note.page||1),400);
+          }else{
+            toast(`正在跳转至《${note.title}》第 ${note.page||1} 页`);
+          }
+        };
+        card.querySelector('[data-action="quote"]').onclick=()=>{
+          const textToQuote=quoteMatch?quoteMatch[1]:note.text;
+          openQuoteModal(textToQuote);
+          document.getElementById('quoteBook').textContent=note.title?`《${note.title}》`:'拾阅读书笔记';
+        };
+        card.querySelector('[data-action="edit"]').onclick=()=>openEditNoteModal(note);
+        card.querySelector('[data-action="del"]').onclick=()=>{
+          if(confirm(`确定删除《${note.title}》的这条笔记吗？`)){
+            deleteNoteItem(note.id);
+            toast('已删除笔记');
+            renderShelfWithFilter('notes');
+          }
+        };
+
+        notesListEl.append(card);
+      });
+    };
+
+    notesHeadBar.querySelector('#notesBookFilter').onchange=renderFilteredNotes;
+    notesHeadBar.querySelector('#notesSearchFilter').oninput=renderFilteredNotes;
+    notesHeadBar.querySelector('#exportNotesMarkdownBtn').onclick=exportAllNotesAsMarkdown;
+
+    renderFilteredNotes();
+    notesBox.append(notesListEl);
+    contentWrap.append(notesBox);
   }
-  if(displayList.length){
-    displayList.forEach(b=>grid.append(createHomeCard(b)));
-  }else{
-    const empty=document.createElement('div');
-    empty.className='empty';
-    empty.textContent=activeTag==='offline'?'还没有离线缓存的书籍。在书籍详情点击“📥 离线缓存全书”即可脱机阅读。':(activeTag==='all'?'书架暂无书籍。在“书店”浏览时点击“＋ 加入书架”即可收藏到此处。':'此分类下暂无书籍。');
-    grid.append(empty);
+
+  function renderFilteredShelfContent(){
+    if(activeShelfTag==='notes'||shelfViewMode==='notes'){
+      renderNotesView();
+      return;
+    }
+
+    let list=[...shelfBooks];
+
+    // Filter by tag
+    if(activeShelfTag==='fiction')list=list.filter(b=>b.category==='fiction'||/小说|文学|散文/i.test((b.tag||'')+(b.title||'')));
+    else if(activeShelfTag==='design')list=list.filter(b=>b.category==='design'||/设计|艺术|生活|摄影/i.test((b.tag||'')+(b.title||'')));
+    else if(activeShelfTag==='science')list=list.filter(b=>b.category==='science'||/科学|技术|计算机|程序|科普|科技/i.test((b.tag||'')+(b.title||'')));
+    else if(activeShelfTag==='business')list=list.filter(b=>/商业|管理|经济|金融|投资|创业/i.test((b.tag||'')+(b.title||'')));
+    else if(activeShelfTag==='philosophy')list=list.filter(b=>/哲学|历史|人文|思考|心理/i.test((b.tag||'')+(b.title||'')));
+    else if(activeShelfTag==='finished')list=list.filter(b=>completed.has(b.shelfKey||b.key));
+    else if(activeShelfTag==='reading')list=list.filter(b=>!completed.has(b.shelfKey||b.key));
+    else if(activeShelfTag==='unread'){
+      list=list.filter(b=>{
+        const p=readSavedNumber('pages-progress:'+encodeURIComponent((b.title||'')+'|'+(b.author||'')));
+        return !p&&!completed.has(b.shelfKey||b.key);
+      });
+    }
+    else if(activeShelfTag==='offline'){
+      list=shelfBooks.filter(b=>cachedKeySet.has(b.shelfKey||b.key||b.bookKey));
+    }
+    else if(activeShelfTag!=='all'){
+      list=list.filter(b=>getBookCategoryIds(b).includes(activeShelfTag));
+    }
+
+    // Filter by shelf search query
+    if(shelfSearchText){
+      list=list.filter(b=>[b.title,b.author,b.tag].join(' ').toLowerCase().includes(shelfSearchText));
+    }
+
+    // Sort list
+    if(shelfSortBy==='title'){
+      list.sort((a,b)=>(a.title||'').localeCompare(b.title||'','zh-CN'));
+    }else if(shelfSortBy==='progress'){
+      list.sort((a,b)=>{
+        const pA=readSavedNumber('pages-progress:'+encodeURIComponent((a.title||'')+'|'+(a.author||'')));
+        const pB=readSavedNumber('pages-progress:'+encodeURIComponent((b.title||'')+'|'+(b.author||'')));
+        return pB-pA;
+      });
+    }else if(shelfSortBy==='date'){
+      list.sort((a,b)=>(b.addedAt||0)-(a.addedAt||0));
+    }else{
+      list.sort((a,b)=>(b.lastRead||0)-(a.lastRead||0));
+    }
+
+    contentWrap.replaceChildren();
+
+    if(!list.length){
+      const empty=document.createElement('div');
+      empty.className='empty';
+      empty.style.cssText='padding:60px 20px;text-align:center;background:#fff;border-radius:18px;border:1px dashed #d5d1c5;color:#7a7d74';
+      if(shelfSearchText){
+        empty.innerHTML=`没有搜索到与「<strong>${escapeHTML(shelfSearchText)}</strong>」相关的书架书籍。<br><button type="button" class="shelf-mini-btn" style="margin-top:12px;padding:6px 14px" id="clearShelfSearch">清空搜索条件</button>`;
+        setTimeout(()=>{empty.querySelector('#clearShelfSearch')?.addEventListener('click',()=>{shelfSearchText='';searchInput.value='';renderFilteredShelfContent()})},0);
+      }else if(activeShelfTag==='offline'){
+        empty.innerHTML='还没有离线缓存的书籍。<br><small style="color:#999;display:block;margin-top:6px">在书籍详情中点击“📥 离线缓存全书”即可无需网络随身畅读。</small>';
+      }else if(activeShelfTag==='finished'){
+        empty.innerHTML='还没有已读完的书籍。读完的书会在个人中心与书架归档。';
+      }else if(activeShelfTag==='all'){
+        empty.innerHTML='你的书架空空如也。<br><small style="color:#999;display:block;margin-top:6px">在“书店”浏览时点击“＋ 加入书架”即可收藏你的私人藏书。</small><button type="button" class="btn primary" style="margin-top:14px;padding:8px 18px" id="emptyGoStore">去书店选书 →</button>';
+        setTimeout(()=>{empty.querySelector('#emptyGoStore')?.addEventListener('click',openStoreView)},0);
+      }else{
+        empty.innerHTML='此分类下暂无书籍。<br><small style="color:#999;display:block;margin-top:6px">点击书籍卡片上的“🏷️ 分类”按钮即可将书归纳到此分类中。</small>';
+      }
+      contentWrap.append(empty);
+      return;
+    }
+
+    if(shelfViewMode==='grid'){
+      const gridContainer=document.createElement('div');
+      gridContainer.className='shelf-grid-container';
+      gridContainer.style.cssText='display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:22px';
+
+      list.forEach(book=>{
+        const key=book.shelfKey||book.key||encodeURIComponent((book.title||'')+'|'+(book.author||''));
+        const isDone=completed.has(key);
+        const isCached=cachedKeySet.has(key);
+        const progressPage=readSavedNumber('pages-progress:'+key);
+        const totalPages=readSavedNumber('pages-total:'+key)||100;
+        const progressPercent=isDone?100:(progressPage?Math.min(99,Math.round((progressPage/totalPages)*100)):0);
+
+        const card=document.createElement('article');
+        card.className='shelf-book-card';
+        card.dataset.title=book.title||'';
+        card.dataset.href=book.href||'';
+        card.dataset.bookKey=key;
+
+        const coverSrc=book.coverUrl||(book.cover?`https://images.unsplash.com/${book.cover}?w=340&h=460&fit=crop`:'/cover-placeholder.svg');
+        const assignedCatIds=getBookCategoryIds(book);
+        const assignedCats=customCats.filter(c=>assignedCatIds.includes(c.id));
+
+        const statusTagHtml=isDone?'<span class="shelf-status-tag finished">✓ 已读完</span>':(progressPercent>0?`<span class="shelf-status-tag reading">在读 ${progressPercent}%</span>`:'<span class="shelf-status-tag unread">未读</span>');
+        const cachedBadgeHtml=isCached?'<span style="position:absolute;right:7px;top:7px;font-size:9px;background:#244c3de6;color:#fff;padding:2px 6px;border-radius:5px">离线</span>':'';
+
+        card.innerHTML=`
+          <div class="shelf-card-cover-wrap">
+            <img class="shelf-card-cover" loading="lazy" src="${coverSrc}" alt="${escapeHTML(book.title||'')}封面" onerror="this.onerror=null;this.src='/cover-placeholder.svg'">
+            ${statusTagHtml}
+            ${cachedBadgeHtml}
+          </div>
+          <div class="shelf-progress-track">
+            <div class="shelf-progress-fill" style="width:${progressPercent}%"></div>
+          </div>
+          <h3 class="shelf-card-title" title="${escapeHTML(book.title||'')}">${escapeHTML(book.title||'未命名书籍')}</h3>
+          <div class="shelf-card-author">${escapeHTML(book.author||'未知作者')}</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;min-height:18px">
+            ${assignedCats.map(c=>`<span style="font-size:9px;padding:1px 6px;border-radius:4px;background:#edf3f7;color:#355c7d">${c.icon||'🔖'} ${escapeHTML(c.name)}</span>`).join('')}
+          </div>
+          <div class="shelf-card-foot">
+            <span>${progressPage?`第 ${progressPage} 页`:(book.tag||'图书')}</span>
+            <div class="shelf-card-actions">
+              <button type="button" class="shelf-mini-btn" data-act="read" title="开始阅读">📖</button>
+              <button type="button" class="shelf-mini-btn" data-act="tag" title="设置分类">🏷️</button>
+              <button type="button" class="shelf-mini-btn" data-act="offline" title="${isCached?'已离线缓存':'离线下载'}">${isCached?'✓':'📥'}</button>
+              <button type="button" class="shelf-mini-btn" data-act="remove" title="移出书架" style="color:#aa4444">✕</button>
+            </div>
+          </div>
+        `;
+
+        card.querySelector('.shelf-card-cover-wrap').onclick=()=>showBookDetail(card);
+        card.querySelector('.shelf-card-title').onclick=()=>showBookDetail(card);
+        card.querySelector('[data-act="read"]').onclick=e=>{e.stopPropagation();handleOPDSItem(card)};
+        card.querySelector('[data-act="tag"]').onclick=e=>{e.stopPropagation();openBookCategoryModal(book)};
+        card.querySelector('[data-act="offline"]').onclick=e=>{
+          e.stopPropagation();
+          if(isCached){
+            removeCachedBook(key);
+            renderShelfWithFilter(activeShelfTag);
+          }else{
+            cacheBookForOffline(book);
+            setTimeout(()=>renderShelfWithFilter(activeShelfTag),500);
+          }
+        };
+        card.querySelector('[data-act="remove"]').onclick=async e=>{
+          e.stopPropagation();
+          if(confirm(`确定将《${book.title}》从书架移除吗？`)){
+            const dummyBtn=document.createElement('button');
+            dummyBtn.dataset.shelfKey=book.shelfKey||book.key;
+            dummyBtn.dataset.opdsId=book.id||'';
+            await toggleShelfBook(dummyBtn);
+            renderShelfWithFilter(activeShelfTag);
+          }
+        };
+
+        gridContainer.append(card);
+      });
+      contentWrap.append(gridContainer);
+    }else{
+      // List Mode
+      const listContainer=document.createElement('div');
+      listContainer.className='shelf-list-view';
+
+      list.forEach(book=>{
+        const key=book.shelfKey||book.key||encodeURIComponent((book.title||'')+'|'+(book.author||''));
+        const isDone=completed.has(key);
+        const progressPage=readSavedNumber('pages-progress:'+key);
+        const totalPages=readSavedNumber('pages-total:'+key)||100;
+        const progressPercent=isDone?100:(progressPage?Math.min(99,Math.round((progressPage/totalPages)*100)):0);
+        const coverSrc=book.coverUrl||(book.cover?`https://images.unsplash.com/${book.cover}?w=160&h=220&fit=crop`:'/cover-placeholder.svg');
+        const assignedCatIds=getBookCategoryIds(book);
+        const assignedCats=customCats.filter(c=>assignedCatIds.includes(c.id));
+
+        const row=document.createElement('div');
+        row.className='shelf-list-row';
+        row.innerHTML=`
+          <img class="shelf-list-cover" src="${coverSrc}" alt="封面" onerror="this.onerror=null;this.src='/cover-placeholder.svg'">
+          <div class="shelf-list-info">
+            <h4 class="shelf-list-title">${escapeHTML(book.title||'未命名书籍')}</h4>
+            <div class="shelf-list-author">${escapeHTML(book.author||'未知作者')} · ${isDone?'<span style="color:#2877aa;font-weight:600">已读完</span>':(progressPercent>0?`<span style="color:var(--green);font-weight:600">已读 ${progressPercent}%（第 ${progressPage} 页）</span>`:'未读')}</div>
+            <div class="shelf-list-tags">
+              <span class="shelf-list-tag">${book.tag||'图书'}</span>
+              ${assignedCats.map(c=>`<span class="shelf-list-tag" style="background:#eaf2eb;color:var(--green)">${c.icon||'🔖'} ${escapeHTML(c.name)}</span>`).join('')}
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <button type="button" class="btn primary" data-act="read" style="padding:7px 14px;font-size:12px">开始阅读</button>
+            <button type="button" class="shelf-mini-btn" data-act="tag" style="padding:7px 10px;font-size:12px" title="设置分类">🏷️ 分类</button>
+            <button type="button" class="shelf-mini-btn" data-act="detail" style="padding:7px 10px;font-size:12px" title="查看详情">ℹ️ 详情</button>
+          </div>
+        `;
+
+        row.querySelector('[data-act="read"]').onclick=e=>{
+          e.stopPropagation();
+          handleOPDSItem({dataset:{href:book.href,title:book.title,format:book.format||'epub',bookKey:key}});
+        };
+        row.querySelector('[data-act="tag"]').onclick=e=>{
+          e.stopPropagation();
+          openBookCategoryModal(book);
+        };
+        row.querySelector('[data-act="detail"]').onclick=e=>{
+          e.stopPropagation();
+          showBookDetail({dataset:{href:book.href,title:book.title,author:book.author,format:book.format||'epub'}});
+        };
+        row.onclick=()=>showBookDetail({dataset:{href:book.href,title:book.title,author:book.author,format:book.format||'epub'}});
+
+        listContainer.append(row);
+      });
+      contentWrap.append(listContainer);
+    }
   }
+
+  renderFilteredShelfContent();
 }
+
+// Global Nav & Tab clicks for shelf, notes, and categories
+document.querySelectorAll('.nav[data-filter]').forEach(nav=>{
+  nav.addEventListener('click',()=>{
+    const filter=nav.dataset.filter;
+    if(filter==='shelf'){
+      activeTab='shelf';
+      activeFilter='shelf';
+      document.getElementById('shelfTitle').textContent='我的书架';
+      document.querySelector('.greeting h1').textContent='我的书架';
+      document.getElementById('viewAll').style.visibility='hidden';
+      document.getElementById('resumeCard').parentElement.style.display='none';
+      document.querySelector('.content').classList.remove('store-home','catalog-open','catalog-list','home-dashboard','profile-page');
+      renderShelfWithFilter('all');
+    }else if(filter==='notes'){
+      activeTab='shelf';
+      activeFilter='shelf';
+      document.getElementById('shelfTitle').textContent='我的读书笔记';
+      document.querySelector('.greeting h1').textContent='读书笔记与心得';
+      document.getElementById('viewAll').style.visibility='hidden';
+      document.getElementById('resumeCard').parentElement.style.display='none';
+      document.querySelector('.content').classList.remove('store-home','catalog-open','catalog-list','home-dashboard','profile-page');
+      renderShelfWithFilter('notes');
+    }else if(['fiction','science','design'].includes(filter)){
+      activeTab='shelf';
+      activeFilter='shelf';
+      document.getElementById('shelfTitle').textContent='我的书架';
+      document.querySelector('.greeting h1').textContent='我的书架';
+      document.getElementById('viewAll').style.visibility='hidden';
+      document.getElementById('resumeCard').parentElement.style.display='none';
+      document.querySelector('.content').classList.remove('store-home','catalog-open','catalog-list','home-dashboard','profile-page');
+      renderShelfWithFilter(filter);
+    }
+  });
+});
 if(!serverConnected){openStoreView()}
 document.querySelectorAll('.mobile-tab').forEach(tab=>tab.addEventListener('click',event=>{event.stopImmediatePropagation();document.querySelectorAll('.mobile-tab').forEach(item=>item.classList.toggle('active',item===tab));if(tab.dataset.tab==='settings'){activeTab='settings';renderProfilePage();if(libraryToken)Promise.all([refreshSavedShelf(),refreshReadingHistory(),refreshBrowseHistory()]).catch(()=>{});else ensureLibraryRestored().catch(()=>{});return}if(tab.dataset.tab==='home'){activeTab='home';if(libraryToken)refreshReadingHistory().catch(()=>{});else ensureLibraryRestored().catch(()=>{});renderHomeDashboard();return}if(tab.dataset.tab==='shelf'){activeTab='shelf';activeFilter='shelf';document.getElementById('shelfTitle').textContent='我的书架';document.getElementById('viewAll').style.visibility='hidden';document.getElementById('resumeCard').parentElement.style.display='none';document.querySelector('.content').classList.remove('store-home','home-dashboard','catalog-open','catalog-list','profile-page');document.querySelector('.greeting h1').textContent='我的书架';renderShelfWithFilter('all');return}if(tab.dataset.tab==='store'){activeTab='store';openStoreView();return}},true));
 document.querySelector('.eyebrow').textContent=new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(new Date());
