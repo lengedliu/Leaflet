@@ -1,0 +1,6 @@
+{
+  "name": "页间 — 私人书库阅读器",
+  "description": "私人书库阅读器 - A private Calibre-Web OPDS e-book reader and bookshelf.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
