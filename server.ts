@@ -424,13 +424,13 @@ function parseOpdsFeed(xmlText: string, address: string, username: string, passw
 function pagedHtml(title: string, content: string): string {
   const safeTitle = title.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] || c));
   return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>${safeTitle}</title><style>
-  :root{--paper:#f7f5ef;--ink:#30332e;--footer:#f7f5efed;--rule:#deddd5}body[data-theme="white"]{--paper:#fff;--ink:#222;--footer:#fffffff0;--rule:#ddd}body[data-theme="night"]{--paper:#202421;--ink:#e5e3dc;--footer:#202421ed;--rule:#414640}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:var(--paper);color:var(--ink);font:18px/2.05 Georgia,"Noto Serif SC",serif;transition:background .2s,color .2s}#pages{position:absolute;inset:0;width:100vw;height:100dvh;overflow-x:auto;overflow-y:hidden;padding:34px 24px 68px;column-width:calc(100vw - 48px);column-gap:48px;column-fill:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;touch-action:pan-y;scrollbar-width:none}#pages::-webkit-scrollbar{display:none}#pages>*{break-inside:avoid-column}.epub-chapter{break-inside:auto}.epub-chapter:not([data-chapter="0"]){break-before:column}h1,h2,h3{font-weight:500;line-height:1.5;margin:0 0 1.2em}h1{font-size:1.45em}h2,h3{margin-top:1.4em}p{margin:0 0 1.2em;text-indent:2em}blockquote{margin:1.4em 0;padding-left:1em;border-left:2px solid #829182;color:inherit;opacity:.8}#page-footer{position:fixed;z-index:2;bottom:0;left:0;right:0;height:52px;padding:0 24px calc(env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;background:var(--footer);color:var(--ink);opacity:.82;font:11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backdrop-filter:blur(12px)}#progress{height:2px;flex:1;background:var(--rule)}#progress i{display:block;width:0;height:100%;background:#778d7d;transition:width .15s}@media(max-width:600px){body{font-size:17px}#pages{padding:28px 22px 64px;column-width:calc(100vw - 44px);column-gap:44px}#page-footer{height:calc(46px + env(safe-area-inset-bottom));padding:0 22px env(safe-area-inset-bottom)}}
+  :root{--paper:#f7f5ef;--ink:#30332e;--footer:#f7f5efed;--rule:#deddd5}body[data-theme="white"]{--paper:#fff;--ink:#222;--footer:#fffffff0;--rule:#ddd}body[data-theme="night"]{--paper:#202421;--ink:#e5e3dc;--footer:#202421ed;--rule:#414640}body[data-theme="sepia"]{--paper:#f3ebdc;--ink:#3e3223;--footer:#f3ebdced;--rule:#dfd3be}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:var(--paper);color:var(--ink);font:18px/2.05 Georgia,"Noto Serif SC","Songti SC",serif;transition:background .2s,color .2s}body[data-font="sans"]{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif}body[data-font="kaiti"]{font-family:"Kaiti SC","STKaiti","楷体",KaiTi,serif}body[data-font="serif"]{font-family:Georgia,"Noto Serif SC","Songti SC",serif}body[data-line="compact"]{line-height:1.65}body[data-line="normal"]{line-height:2.05}body[data-line="loose"]{line-height:2.45}#pages{position:absolute;inset:0;width:100vw;height:100dvh;overflow-x:auto;overflow-y:hidden;padding:34px 24px 68px;column-width:calc(100vw - 48px);column-gap:48px;column-fill:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;touch-action:pan-y;scrollbar-width:none}#pages::-webkit-scrollbar{display:none}#pages>*{break-inside:avoid-column}.epub-chapter{break-inside:auto}.epub-chapter:not([data-chapter="0"]){break-before:column}h1,h2,h3{font-weight:500;line-height:1.5;margin:0 0 1.2em}h1{font-size:1.45em}h2,h3{margin-top:1.4em}p{margin:0 0 1.2em;text-indent:2em}blockquote{margin:1.4em 0;padding-left:1em;border-left:2px solid #829182;color:inherit;opacity:.8}#page-footer{position:fixed;z-index:2;bottom:0;left:0;right:0;height:52px;padding:0 24px calc(env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;background:var(--footer);color:var(--ink);opacity:.82;font:11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backdrop-filter:blur(12px)}#progress{height:2px;flex:1;background:var(--rule)}#progress i{display:block;width:0;height:100%;background:#778d7d;transition:width .15s}@media(max-width:600px){body{font-size:17px}#pages{padding:28px 22px 64px;column-width:calc(100vw - 44px);column-gap:44px}#page-footer{height:calc(46px + env(safe-area-inset-bottom));padding:0 22px env(safe-area-inset-bottom)}}
   </style></head><body><main id="pages" aria-label="阅读内容"><h1>${safeTitle}</h1>${content}</main><footer id="page-footer"><span id="page-current">1</span><div id="progress"><i></i></div><span id="page-total">1</span></footer><script>
   const pages=document.getElementById('pages'),current=document.getElementById('page-current'),total=document.getElementById('page-total'),bar=document.querySelector('#progress i');let startX=0,startY=0,restoreReady=false,progressFrame=0,lastSentPage=0,lastSentTotal=0;
   function updateProgress(){const width=pages.clientWidth||1,base=Number(window.virtualBasePage)||0;const localPage=Math.min(Math.ceil(pages.scrollWidth/width)||1,Math.floor((pages.scrollLeft+width*.35)/width)+1);const localCount=Math.max(1,Math.ceil(pages.scrollWidth/width));const page=base+localPage,count=base+localCount;const totalKnown=!window.chapterLoadingEnabled||window.allChaptersLoaded;current.textContent=page;total.textContent=totalKnown?count:'…';bar.style.width=(Math.min(page,count)/count*100)+'%';const reportedTotal=totalKnown?count:0;if(restoreReady&&(page!==lastSentPage||reportedTotal!==lastSentTotal)){lastSentPage=page;lastSentTotal=reportedTotal;parent.postMessage({type:'reader-progress',page,total:reportedTotal},location.origin)}}
   function scheduleProgress(){if(progressFrame)return;progressFrame=requestAnimationFrame(()=>{progressFrame=0;updateProgress()})}
   function turn(direction){pages.scrollBy({left:direction*pages.clientWidth,behavior:'smooth'})}
-  window.addEventListener('message',event=>{if(event.origin!==location.origin)return;if(event.data?.type==='pages-turn')turn(Math.sign(event.data.direction||0));if(event.data?.type==='reader-restore'){restoreReady=!window.ensureReaderPage;if(window.ensureReaderPage)window.ensureReaderPage(Number(event.data.page||1));else{pages.scrollTo({left:Math.max(0,(Number(event.data.page||1)-1)*pages.clientWidth),behavior:'auto'});requestAnimationFrame(updateProgress)}}if(event.data?.type==='reader-settings'){document.body.dataset.theme=['paper','white','night'].includes(event.data.theme)?event.data.theme:'paper';document.body.style.fontSize=(18*Math.max(.8,Math.min(1.6,Number(event.data.fontScale)||1)))+'px'}});
+  window.addEventListener('message',event=>{if(event.origin!==location.origin)return;if(event.data?.type==='pages-turn')turn(Math.sign(event.data.direction||0));if(event.data?.type==='reader-restore'){restoreReady=!window.ensureReaderPage;if(window.ensureReaderPage)window.ensureReaderPage(Number(event.data.page||1));else{pages.scrollTo({left:Math.max(0,(Number(event.data.page||1)-1)*pages.clientWidth),behavior:'auto'});requestAnimationFrame(updateProgress)}}if(event.data?.type==='reader-settings'){document.body.dataset.theme=['paper','white','night','sepia'].includes(event.data.theme)?event.data.theme:'paper';document.body.dataset.font=['serif','sans','kaiti'].includes(event.data.fontFamily)?event.data.fontFamily:'serif';document.body.dataset.line=['compact','normal','loose'].includes(event.data.lineHeight)?event.data.lineHeight:'normal';document.body.style.fontSize=(18*Math.max(.8,Math.min(1.6,Number(event.data.fontScale)||1)))+'px'}});
   pages.addEventListener('touchstart',event=>{if(event.touches.length===1){startX=event.touches[0].clientX;startY=event.touches[0].clientY}},{passive:true});
   pages.addEventListener('touchend',event=>{if(!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-startX,dy=event.changedTouches[0].clientY-startY;if(Math.abs(dx)>42&&Math.abs(dx)>Math.abs(dy)*1.2)turn(dx<0?1:-1)},{passive:true});
   pages.addEventListener('click',event=>{const x=event.clientX/pages.clientWidth;if(x>.82)turn(1);else if(x<.18)turn(-1)});
@@ -457,7 +457,9 @@ function epubReaderHtml(title: string, chapter: string, token: string, itemId: s
   function pruneChapters(){if(restoringReaderPage||chapterRanges.length<5)return;const cutoff=activeChapterIndex()-2,remove=chapterRanges.filter(range=>range.index<cutoff);if(!remove.length)return;const width=pages.clientWidth||1,oldCount=pageCount(),oldLeft=pages.scrollLeft;for(const range of remove){range.node.remove()}chapterRanges.splice(0,remove.length);const first=chapterRanges[0]?.node;if(first)first.style.breakBefore='auto';const removedPages=Math.max(0,oldCount-pageCount());window.virtualBasePage=(Number(window.virtualBasePage)||0)+removedPages;pages.scrollLeft=Math.max(0,oldLeft-removedPages*width);requestAnimationFrame(updateProgress)}
   async function resetToStart(){for(const range of chapterRanges)range.node.remove();chapterRanges.length=0;window.virtualBasePage=0;chapterIndex=0;window.allChaptersLoaded=false;await loadChapter(0);requestAnimationFrame(updateProgress)}
   async function ensureReaderPage(page){restoringReaderPage=true;page=Math.max(1,Math.floor(Number(page)||1));if(page<=Number(window.virtualBasePage||0))await resetToStart();while(Number(window.virtualBasePage||0)+pageCount()<page&&!window.allChaptersLoaded){if(!await loadNextChapter())break}const width=pages.clientWidth||1;pages.scrollTo({left:Math.max(0,(page-Number(window.virtualBasePage||0)-1)*width),behavior:'auto'});restoreReady=true;restoringReaderPage=false;requestAnimationFrame(()=>{updateProgress();pruneChapters();maybeLoadChapter()})}
+  async function jumpToChapter(targetIdx){targetIdx=Math.max(0,Math.min(chapterTotal-1,Number(targetIdx)||0));restoringReaderPage=true;if(targetIdx===0){await resetToStart();pages.scrollTo({left:0,behavior:'auto'});restoringReaderPage=false;requestAnimationFrame(updateProgress);return}for(const range of chapterRanges)range.node.remove();chapterRanges.length=0;window.virtualBasePage=0;chapterIndex=targetIdx;window.allChaptersLoaded=chapterIndex>=chapterTotal;await loadChapter(targetIdx);pages.scrollTo({left:0,behavior:'auto'});restoringReaderPage=false;requestAnimationFrame(updateProgress)}
   function maybeLoadChapter(){if(!restoringReaderPage&&!window.allChaptersLoaded&&pages.scrollLeft+pages.clientWidth*2>=pages.scrollWidth)loadNextChapter()}
+  window.addEventListener('message',event=>{if(event.origin!==location.origin)return;if(event.data?.type==='reader-jump-chapter'){jumpToChapter(event.data.chapterIndex)}});
   pages.addEventListener('scroll',()=>{maybeLoadChapter();pruneChapters()},{passive:true});window.addEventListener('resize',()=>requestAnimationFrame(()=>{updateProgress();maybeLoadChapter()}));requestAnimationFrame(()=>{updateProgress();maybeLoadChapter()});
   </script>`;
   return doc.replace('</body></html>', script + '</body></html>');
@@ -538,6 +540,100 @@ function extractEpubChapter(zipBuffer: Buffer, cacheKey: string, chapterIndex: n
   const result = { html: bodyContent, count: totalChapters };
   epubChapterCache.set(fullCacheKey, result);
   return result;
+}
+
+function extractEpubToc(zipBuffer: Buffer, cacheKey: string): { title: string; index: number }[] {
+  const zip = new AdmZip(zipBuffer);
+  let spinePaths = epubSpinesCache.get(cacheKey);
+  if (!spinePaths) {
+    extractEpubChapter(zipBuffer, cacheKey, 0);
+    spinePaths = epubSpinesCache.get(cacheKey) || [];
+  }
+
+  const toc: { title: string; index: number }[] = [];
+  const ncxEntry = zip.getEntries().find(e => e.entryName.endsWith('.ncx'));
+  if (ncxEntry) {
+    try {
+      const ncxXml = zip.readAsText(ncxEntry);
+      const parsed = xmlParser.parse(ncxXml);
+      const navPoints = parsed.ncx?.navMap?.navPoint;
+      const points = Array.isArray(navPoints) ? navPoints : (navPoints ? [navPoints] : []);
+      for (const pt of points) {
+        const title = pt.navLabel?.text || pt['@_playOrder'] || '章节';
+        const src = pt.content?.['@_src'] || '';
+        const cleanSrc = src.split('#')[0];
+        const idx = spinePaths.findIndex(sp => sp.endsWith(cleanSrc));
+        toc.push({ title: String(title).trim(), index: idx >= 0 ? idx : 0 });
+      }
+    } catch {}
+  }
+
+  if (!toc.length && spinePaths.length) {
+    spinePaths.slice(0, 50).forEach((sp, i) => {
+      const entry = zip.getEntry(sp);
+      let title = `第 ${i + 1} 章`;
+      if (entry) {
+        const text = zip.readAsText(entry);
+        const match = text.match(/<h[1-3][^>]*>(.*?)<\/h[1-3]>/i) || text.match(/<title[^>]*>(.*?)<\/title>/i);
+        if (match && match[1]) {
+          const clean = match[1].replace(/<[^>]+>/g, '').trim();
+          if (clean && clean.length < 50) title = clean;
+        }
+      }
+      toc.push({ title, index: i });
+    });
+  }
+
+  return toc;
+}
+
+function extractEpubSearch(zipBuffer: Buffer, cacheKey: string, keyword: string): { chapterIndex: number; title: string; snippet: string; count: number }[] {
+  if (!keyword || !keyword.trim()) return [];
+  const term = keyword.trim().toLowerCase();
+  const zip = new AdmZip(zipBuffer);
+  let spinePaths = epubSpinesCache.get(cacheKey);
+  if (!spinePaths) {
+    extractEpubChapter(zipBuffer, cacheKey, 0);
+    spinePaths = epubSpinesCache.get(cacheKey) || [];
+  }
+
+  const toc = extractEpubToc(zipBuffer, cacheKey);
+  const results: { chapterIndex: number; title: string; snippet: string; count: number }[] = [];
+
+  for (let i = 0; i < spinePaths.length; i++) {
+    const entry = zip.getEntry(spinePaths[i]);
+    if (!entry) continue;
+    const raw = zip.readAsText(entry);
+    // Strip markup
+    const plain = raw.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                     .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
+                     .replace(/<[^>]+>/g, ' ')
+                     .replace(/\s+/g, ' ');
+    const lower = plain.toLowerCase();
+    const pos = lower.indexOf(term);
+    if (pos >= 0) {
+      let matchCount = 0;
+      let cur = 0;
+      while ((cur = lower.indexOf(term, cur)) !== -1) {
+        matchCount++;
+        cur += term.length;
+        if (matchCount > 50) break;
+      }
+      const start = Math.max(0, pos - 28);
+      const end = Math.min(plain.length, pos + term.length + 38);
+      const snippet = (start > 0 ? '…' : '') + plain.substring(start, end).trim() + (end < plain.length ? '…' : '');
+      const tocItem = toc.find(t => t.index === i);
+      const chapterTitle = tocItem ? tocItem.title : `第 ${i + 1} 章`;
+      results.push({
+        chapterIndex: i,
+        title: chapterTitle,
+        snippet,
+        count: matchCount
+      });
+      if (results.length >= 30) break;
+    }
+  }
+  return results;
 }
 
 // Express App
@@ -970,6 +1066,66 @@ app.get('/api/epub-chapter', async (req: Request, res: Response) => {
   }
 });
 
+app.get('/api/epub-toc', async (req: Request, res: Response) => {
+  const token = String(req.query.token || '');
+  const itemId = String(req.query.id || '');
+  const item = getOpdsSession(token, itemId);
+
+  if (!item || !item.download) {
+    res.status(403).json({ error: '书籍链接已失效。' });
+    return;
+  }
+
+  try {
+    const cacheKey = `${token}:${itemId}`;
+    let buffer = epubBufferCache.get(cacheKey);
+    if (!buffer) {
+      const remoteRes = await fetchRemote(item.download, item.username || '', item.password || '');
+      if (!remoteRes.ok) throw new Error('下载 EPUB 目录失败');
+      buffer = Buffer.from(await remoteRes.arrayBuffer());
+      epubBufferCache.set(cacheKey, buffer);
+    }
+
+    const toc = extractEpubToc(buffer, cacheKey);
+    res.json({ toc, count: toc.length });
+  } catch (err: any) {
+    res.status(400).json({ error: err.message || '无法读取 EPUB 目录。' });
+  }
+});
+
+app.get('/api/epub-search', async (req: Request, res: Response) => {
+  const token = String(req.query.token || '');
+  const itemId = String(req.query.id || '');
+  const query = String(req.query.q || '').trim();
+  const item = getOpdsSession(token, itemId);
+
+  if (!item || !item.download) {
+    res.status(403).json({ error: '书籍链接已失效。' });
+    return;
+  }
+
+  if (!query) {
+    res.json({ results: [], count: 0 });
+    return;
+  }
+
+  try {
+    const cacheKey = `${token}:${itemId}`;
+    let buffer = epubBufferCache.get(cacheKey);
+    if (!buffer) {
+      const remoteRes = await fetchRemote(item.download, item.username || '', item.password || '');
+      if (!remoteRes.ok) throw new Error('下载 EPUB 失败');
+      buffer = Buffer.from(await remoteRes.arrayBuffer());
+      epubBufferCache.set(cacheKey, buffer);
+    }
+
+    const results = extractEpubSearch(buffer, cacheKey, query);
+    res.json({ results, count: results.length, query });
+  } catch (err: any) {
+    res.status(400).json({ error: err.message || '搜索全文失败。' });
+  }
+});
+
 // Read endpoint
 app.get('/api/read', async (req: Request, res: Response) => {
   const token = String(req.query.token || '');
@@ -1074,5 +1230,5 @@ app.get('/', (_req: Request, res: Response) => {
 });
 
 app.listen(PORT, HOST, () => {
-  console.log(`页间阅读器 running on http://${HOST}:${PORT}`);
+  console.log(`拾阅阅读器 running on http://${HOST}:${PORT}`);
 });

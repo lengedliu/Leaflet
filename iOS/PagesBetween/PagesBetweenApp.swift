@@ -270,7 +270,7 @@ struct LibraryView: View {
             HStack(spacing: 10) {
                 Image(systemName: "book.closed.fill").font(.system(size: 15)).foregroundStyle(.white).frame(width: 34, height: 34).background(Color(red: 0.14, green: 0.30, blue: 0.24), in: RoundedRectangle(cornerRadius: 11))
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("页间").font(.system(size: 18, weight: .bold, design: .serif))
+                    Text("拾阅").font(.system(size: 18, weight: .bold, design: .serif))
                     HStack(spacing: 5) { Circle().fill(library.connected ? .green : .gray.opacity(0.45)).frame(width: 6, height: 6); Text(library.connected ? "书库已连接" : "私人书库阅读器").font(.system(size: 10)).foregroundStyle(.secondary) }
                 }
             }
@@ -299,7 +299,7 @@ struct LibraryView: View {
     private var emptyState: some View {
         VStack(spacing: 12) {
             Image(systemName: "books.vertical").font(.system(size: 29, weight: .light)).foregroundStyle(.secondary)
-            Text(library.connected ? "没有找到这本书" : "让你的书库连上页间").font(.system(size: 16, weight: .medium, design: .serif))
+            Text(library.connected ? "没有找到这本书" : "让你的书库连上拾阅").font(.system(size: 16, weight: .medium, design: .serif))
             Text(library.errorMessage ?? (library.connected ? "试试其他书名或作者。" : "输入 Calibre-Web 的 OPDS 地址，开始阅读你的藏书。"))
                 .font(.system(size: 12)).foregroundColor(library.errorMessage == nil ? Color.secondary : Color.red).multilineTextAlignment(.center)
             if !library.connected { Button("连接书库") { showingConnection = true }.font(.system(size: 13, weight: .semibold)).padding(.top, 2) }
